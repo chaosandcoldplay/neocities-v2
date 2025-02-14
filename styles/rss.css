@@ -1,0 +1,35 @@
+/* status content */ 
+body {
+  margin-top: 27px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 22px;
+  color: #484848;
+  font-family: "MS PGothic";
+  cursor: url(cursor.png), auto;
+}
+
+/* status title (your username) */
+a{
+  display: none;
+  text-decoration: none;
+  color: #ff729f;
+  cursor: url(select.png), pointer;
+  transition: 0.1s all ease-in-out;
+}
+a:visited{
+  color: #ff729f;
+}
+a:hover{
+  color: #ffc2d5;
+}
+
+ /* hide scrollbar */
+.example::-webkit-scrollbar {
+  display: none;
+}
+ 
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 

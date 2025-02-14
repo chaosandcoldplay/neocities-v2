@@ -1,0 +1,1954 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- tooltips -->
+    <script src="tooltip-jquary.js"></script>
+    <script src="tooltip.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="padding: 0 0 7px 2px">
+    <main>
+      <div class="col right">
+        <!-- header -->
+        <div class="url-info"></div>
+
+        <!-- top row -->
+        <div class="table-section" style="display: flex; flex-direction: column">
+          <div class="heading">
+            <h4>Quiz</h4>
+          </div>
+          <div class="quiz">
+            <form method="post" action="https://poll.pollcode.com/83933968" style="height: 100%">
+              <div
+                style="
+                  background:
+                    linear-gradient(360deg, rgb(255, 255, 255), transparent),
+                    url(scooper.jpg) center/cover;
+                  padding: 7px;
+                  width: 100%;
+                  cursor: url(cursor.png), auto;
+                  font-family: &quot;PC98&quot;;
+                  font-size: 18px;
+                  color: #2453d4;
+                  height: 100%;
+                  border-radius: 0 0 10px 10px;
+                  text-align: center;
+                ">
+                <div style="padding: 3px 0px 4px 2px"><strong>FANCY A DRINK?</strong></div>
+                <div align="center" style="padding-bottom: 5px">
+                  <select
+                    name="answer"
+                    style="
+                      border-radius: 3px;
+                      border-color: #000;
+                      width: 128px;
+                      font-size: 14px;
+                      cursor: url(cursor.png), auto;
+                    ">
+                    <option value="1">smoothie</option>
+                    <option value="2">latte</option>
+                    <option value="3">milkshake</option>
+                    <option value="4">frappe</option>
+                    <option value="5">sundae</option>
+                    <option value="6">tea</option>
+                  </select>
+                </div>
+                <div align="center" style="padding: 3px">
+                  <input
+                    type="submit"
+                    value=" Vote "
+                    style="
+                      color: #775a1d;
+                      background: #ffffff87;
+                      border: 1px solid #e6e600;
+                      padding: 3px;
+                      width: 60px;
+                      border-radius: 4px;
+                      cursor: url(select.png), pointer;
+                    " /> <input
+                    type="submit"
+                    name="view"
+                    value=" View "
+                    style="
+                      color: #775a1d;
+                      background: #ffffff87;
+                      border: 1px solid #e6e600;
+                      padding: 3px;
+                      width: 60px;
+                      border-radius: 4px;
+                      cursor: url(select.png), pointer;
+                    " />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="inner"
+            style="
+              background: url(ipod_vert.jpg);
+              background-size: cover;
+              background-position: center -2px;
+              border-radius: 15px;
+              height: 310px;
+              width: 200px;
+            ">
+            <div style="float:; position: absolute; margin: 15px 0 0 16.5px">
+              <img src="ipod_bar.jpg" width="165" loading="lazy" />
+            </div>
+
+            <div class="songbox">
+              <p style="margin: 27px 0 0 22px">1 of 1</p>
+              <div style="display: flex; flex-direction: row; margin-top: 7px; margin-left: 22px">
+                <img src="serani.jpeg" height="50px" width="50px" style="border: 2px ridge lightgray" />
+                <p style="margin: -1px 0 0 5px; line-height: 18px; text-decoration: underline">
+                  ぴぽぴぽ <br />
+                  Serani Poji <br />
+                  one-room survi..
+                </p>
+              </div>
+            </div>
+
+            <!-- music player code -->
+            <div id="musicplayer">
+              <div class="songtitlebox">
+                <div class="songtitle"></div>
+              </div>
+
+              <div class="seeking" style="width: 163px; margin-top: 117px; margin-left: 18px; position: absolute">
+                <div class="current-time">00:00</div>
+
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+
+                <div class="total-duration">0:00</div>
+              </div>
+
+              <audio id="music" src=""></audio>
+            </div>
+
+            <div class="controls">
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-pause"
+                  ><img
+                    src="pause.png"
+                    height="10"
+                    style="position: absolute; margin-left: -108px; margin-top: 268px"
+                    onclick="clicksound.playclip()"
+                /></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-section">
+          <div
+            class="inner"
+            style="padding: 15px 15px 20px 17px; height: 452.5px; width: 713px; margin: -0.5px 0 0 -35px">
+            <iframe name="mainbox" id="mainbox" src="title.html" allowtransparency="true" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <div style="float:; position: absolute; margin-left: 600px; margin-top: 630px; z-index: 900">
+          <img src="D06.png" height="38" loading="lazy" style="transform: rotate(35deg)" />
+        </div>
+
+        <!-- neighbors -->
+        <div class="blurbs">
+          <div class="heading">
+            <h4>Neighbors</h4>
+          </div>
+          <div class="inner">
+            <div class="section">
+              <div class="marquee">
+                <ul class="marquee__content">
+                  <li>
+                    <a href="http://sweetcharm.net/" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/6tvdpu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://getcubed.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gxbmf1.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://whirlwind.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZAkEYVkUN2HXHCu3/wwbutton.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jeith.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://jeith.com/jeith.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://touhouproject.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kixeco.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mwiron.neocities.org/ " target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cr6as9.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://genkwa.com/ " target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/sitebutton.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://comfort.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/v7jmog.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://burgeritchi.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/29hdqz.webp"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fujoshi.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/msp282.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tectrix.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/0m5wl1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gooooser.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8qxqkt.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://raizinc0re.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2woc62.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://klomfel.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9swtc1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sammylux.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/Zd2KO2NjlENDwhxN/pnL94nuB.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://pondering.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ns9iit.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://catboo.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/da6jb7.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://blumchen.cafe/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/nbn56h.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://frozenmicroobes.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/vql4x9.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://marea.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/rd76ox.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://venusinfoxfurs.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/55yjtx.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://melankorin.net/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xlf8i2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cyberstheb.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cnvvmb.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fawnie.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uuw23b.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://maplebear.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="http://i.imgur.com/I9cHT2L.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fuchi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gxrc8f.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gothiclolita.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/zaokie.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mn1ca.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kwax1s.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tehuan.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6o2rky.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doqmeat.com" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/fauhk9.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://yotsu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/p9808m.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://nalfae.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4wml7q.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gogogal.online/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/nrm3sm.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sweetlolita.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/0suz4c.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://aoki553.nekoweb.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/hqcka0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tsukinio.dorothea.us/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/sqaxk0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://electric-tenshi.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oc92ky.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://dogfish99.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/qy2bz5.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bokuwatetsuo.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/o48uot.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://marea.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6nmh1a.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://princss.online/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kdwofr.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://dawkie.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/jtw9ff.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cybertomboy.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.imgur.com/RKrGafi.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://choten.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xhawo6.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://lopster.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://i.postimg.cc/YSN66fWr/run-away.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://audreywasadiver.neocities.org" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/ikhwfw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://mewdere.neocities.org" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/8704g0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://raum.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://file.garden/ZR2QLXa-dUbt6tLS/sitebtn"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://wakadere.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/hwrpba.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://revolution909.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/x6fhci.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hmln.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4rybzj.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://layercake.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/h7nelz.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://angelgarden.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/iagj6p.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://furbee.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/1e7deu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mehlancholia.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6yrlhr.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kwaamfan.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/egpfu7.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bubbly.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/r1g3lt.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://philia995.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/h6gccq.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doffy.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uadc5m.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cyberdemon.neocities.org/" target="blank">
+                      <img src="https://files.catbox.moe/qjd2ub.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://410.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oo1ehb.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://madewithrealsugar.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/adivie.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://caitsith.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/flfjuk.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://unicodeangel.neocities.org" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/pyi1ij.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://aioi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cothyb.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ninja-web.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4v95ci.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ephemeralstar.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/pvnx4z.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://starlost.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZT7otS4GVhtuLR6D/strlstbutton2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://faegardens333.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/eksy9h.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doqmeat.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/1ugdwl.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kyu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gf8z2q.gif"
+                    /></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://fishstew.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/hknuil.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" onclick="clicksound.playclip()" href="https://cloudy.blue/">
+                      <img src="https://files.catbox.moe/g7ypdq.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" onclick="clicksound.playclip()" href="https://leizy8499.neocities.org">
+                      <img src="https://files.catbox.moe/y5lfr0.jpeg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://popisbubbles.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/iuej89.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jubiland.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2ymni0.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://allyratworld.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/bax2e9.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ultrakill.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/ultrakillinmene.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://meowlecules.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/meowlecules_01_alt.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://v4lent1ne.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/PnHuA4A.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://insidetheflesh.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/button.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://orbitarios.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/yx0dfw.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://burgercities.neocities.org/" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/ot2tin.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://denofelari.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ycr870.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://knoxstation.neocities.org//" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/52f9v1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sugarangel.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/a6ao4q.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kkul.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/y7l5rn.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mandarin.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3lt9h6.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://iwishyouroses.neocities.org//" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/367v3p.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cherrylotus.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8nfbpb.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mushmallow.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8ni558.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://makoenergy.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xmzq9o.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://seol.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZpKV1NGnsnK0DDYL/seol-button"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://audreywasadiver.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ikhwfw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://nyani58.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/k4kbag.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://puppyluv.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oq5qkr.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://item64.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/tpauau.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://suonti.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/i76phf.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://midosuji.neocities.org/pics/button%20(5).gif"
+                      target="_blank"
+                      onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/or937j.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kittyvomit.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ltt4mr.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://viscera.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/button.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://caramelles.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/carabutton.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://felixfever.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/felixinthissite.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kalachuchi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/kalachuchibutton.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bizly.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/bizly2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://usprisoner.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/usprisoner_button%20(1).gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://yumeoi.skin" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/yumeo.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ribbondoll.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/kygna2%20(1).gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sunfishdreamworld.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/sunfishdreamworld.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sanguineroyal.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xq5fmv.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://lunamilk.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/m51719.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jnkyrd.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/7hqlqk.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://rice.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3mz1ij.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hunipyon.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.imgur.com/EvAZO02.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://thingamabob.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ed4ctt.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://girlcreature.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3tx586.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://vivarism.net/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/pjdtrw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://daufuufaa.neocities.org/" target="blank">
+                      <img src="https://files.catbox.moe/48l6es.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://churuya.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/o1t5tc.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://galico.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/vlq4cp.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://snipchu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ey71yu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://pameluft.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uo3hf5.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sugarbunny.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2s8tx1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://silly.gg/tiara/" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9mzzpz.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hellomei.dev" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/hellomei.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sabrin.party/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.postimg.cc/BnyQ0pqr/sabrinparty2-0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hachiwa.re/" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9j12ro.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://amalinalai.github.io/precipice/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/js1mno.gif"
+                    /></a>
+                  </li>
+                </ul>
+
+                <!-- mirrors the content above -->
+
+                <ul class="marquee__content">
+                  <li>
+                    <a href="http://sweetcharm.net/" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/6tvdpu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://getcubed.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gxbmf1.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://whirlwind.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZAkEYVkUN2HXHCu3/wwbutton.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jeith.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://jeith.com/jeith.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://touhouproject.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kixeco.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mwiron.neocities.org/ " target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cr6as9.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://genkwa.com/ " target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/sitebutton.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://comfort.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/v7jmog.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://burgeritchi.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/29hdqz.webp"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fujoshi.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/msp282.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tectrix.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/0m5wl1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gooooser.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8qxqkt.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://raizinc0re.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2woc62.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://klomfel.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9swtc1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sammylux.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/Zd2KO2NjlENDwhxN/pnL94nuB.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://pondering.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ns9iit.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://catboo.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/da6jb7.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://blumchen.cafe/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/nbn56h.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://frozenmicroobes.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/vql4x9.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://marea.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/rd76ox.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://venusinfoxfurs.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/55yjtx.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://melankorin.net/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xlf8i2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cyberstheb.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cnvvmb.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fawnie.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uuw23b.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://maplebear.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="http://i.imgur.com/I9cHT2L.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fuchi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gxrc8f.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gothiclolita.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/zaokie.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mn1ca.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kwax1s.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tehuan.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6o2rky.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doqmeat.com" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/fauhk9.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://yotsu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/p9808m.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://nalfae.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4wml7q.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://gogogal.online/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/nrm3sm.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sweetlolita.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/0suz4c.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://aoki553.nekoweb.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/hqcka0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://tsukinio.dorothea.us/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/sqaxk0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://electric-tenshi.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oc92ky.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://dogfish99.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/qy2bz5.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bokuwatetsuo.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/o48uot.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://marea.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6nmh1a.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://princss.online/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/kdwofr.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://dawkie.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/jtw9ff.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cybertomboy.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.imgur.com/RKrGafi.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://choten.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xhawo6.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://lopster.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://i.postimg.cc/YSN66fWr/run-away.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://audreywasadiver.neocities.org" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/ikhwfw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://mewdere.neocities.org" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/8704g0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://raum.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://file.garden/ZR2QLXa-dUbt6tLS/sitebtn"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://wakadere.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/hwrpba.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://revolution909.neocities.org/" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/x6fhci.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hmln.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4rybzj.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://layercake.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/h7nelz.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://angelgarden.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/iagj6p.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://furbee.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/1e7deu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mehlancholia.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/6yrlhr.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kwaamfan.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/egpfu7.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bubbly.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/r1g3lt.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://philia995.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/h6gccq.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doffy.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uadc5m.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cyberdemon.neocities.org/" target="blank">
+                      <img src="https://files.catbox.moe/qjd2ub.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://410.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oo1ehb.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://madewithrealsugar.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/adivie.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://caitsith.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/flfjuk.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://unicodeangel.neocities.org" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/pyi1ij.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://aioi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/cothyb.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ninja-web.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/4v95ci.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ephemeralstar.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/pvnx4z.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://starlost.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZT7otS4GVhtuLR6D/strlstbutton2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://faegardens333.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/eksy9h.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://doqmeat.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/1ugdwl.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kyu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/gf8z2q.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://fishstew.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/hknuil.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" onclick="clicksound.playclip()" href="https://cloudy.blue/">
+                      <img src="https://files.catbox.moe/g7ypdq.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a target="_blank" onclick="clicksound.playclip()" href="https://leizy8499.neocities.org">
+                      <img src="https://files.catbox.moe/y5lfr0.jpeg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://popisbubbles.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/iuej89.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jubiland.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2ymni0.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://allyratworld.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/bax2e9.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ultrakill.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/ultrakillinmene.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://meowlecules.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/meowlecules_01_alt.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://v4lent1ne.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/PnHuA4A.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://insidetheflesh.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/button.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://orbitarios.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/yx0dfw.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://burgercities.neocities.org/" target="_blank" onclick="clicksound.playclip()"
+                      ><img src="https://files.catbox.moe/ot2tin.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://denofelari.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ycr870.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://knoxstation.neocities.org//" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/52f9v1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sugarangel.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/a6ao4q.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kkul.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/y7l5rn.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mandarin.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3lt9h6.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://iwishyouroses.neocities.org//" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/367v3p.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://cherrylotus.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8nfbpb.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://mushmallow.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/8ni558.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://makoenergy.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xmzq9o.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://seol.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZpKV1NGnsnK0DDYL/seol-button"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://audreywasadiver.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ikhwfw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://nyani58.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/k4kbag.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://puppyluv.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/oq5qkr.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://item64.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/tpauau.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://suonti.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/i76phf.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://midosuji.neocities.org/pics/button%20(5).gif"
+                      target="_blank"
+                      onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/or937j.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kittyvomit.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ltt4mr.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://viscera.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/button.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://caramelles.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/carabutton.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://felixfever.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/felixinthissite.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://kalachuchi.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/kalachuchibutton.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://bizly.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/bizly2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://usprisoner.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/usprisoner_button%20(1).gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://yumeoi.skin" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/yumeo.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://ribbondoll.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/kygna2%20(1).gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sunfishdreamworld.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/sunfishdreamworld.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sanguineroyal.com/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/xq5fmv.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://lunamilk.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/m51719.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://jnkyrd.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/7hqlqk.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://rice.nekoweb.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3mz1ij.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hunipyon.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.imgur.com/EvAZO02.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://thingamabob.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ed4ctt.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://girlcreature.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/3tx586.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://vivarism.net/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/pjdtrw.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://daufuufaa.neocities.org/" target="blank">
+                      <img src="https://files.catbox.moe/48l6es.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://churuya.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/o1t5tc.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://galico.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/vlq4cp.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://snipchu.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/ey71yu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://pameluft.neocities.org/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/uo3hf5.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sugarbunny.neocities.org" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/2s8tx1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://silly.gg/tiara/" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9mzzpz.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hellomei.dev" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://file.garden/ZxOOS50ya2Lt0FdH/hellomei.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://sabrin.party/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://i.postimg.cc/BnyQ0pqr/sabrinparty2-0.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://hachiwa.re/" target="blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/9j12ro.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://amalinalai.github.io/precipice/" target="_blank" onclick="clicksound.playclip()">
+                      <img src="https://files.catbox.moe/js1mno.gif"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- middle row -->
+        <div class="middle">
+          <div class="blog-preview">
+            <div class="heading">
+              <h4>Updates</h4>
+            </div>
+            <div class="blog-child">
+              <div class="blog-content">
+                <b>122424</b> archive 2.0 is finally up! trust it'll be updated consistently<br />
+                <b>112024</b> minor tweaks, new neighbor buttons, shrines layout up<br />
+                <b>102224</b> blog page added and further refined! <s>time to fill it up now</s><br />
+                <b>101924</b> added the diary and sitemap pages!<br />
+                <b>100624</b> v2 of milk-tea up after a torturous 4 week coding stint<br />
+                <b>082624</b> loading element + finished desk.html's layout, also search bars were added to archive
+                pages!<br />
+                <b>082124</b> minor tweaks, new diary.html entry + sitemap!<br />
+                <b>081724</b> archive (resources) page finished! desk otw<br />
+                <b>081224</b> added desk + about skeletons<br />
+                <b>080724</b> diary page finished + first entry up, added a sitemap page and converted all my assets to
+                webp<br />
+                <b>080624</b> diary page 85% done! first entry up tomorrow :3<br />
+                <b>080524</b> added a diary page, though barebones<br />
+                <b>080224</b> landing page updated, added profile + contact buttons<br />
+                <b>073124</b> milk-tea v1.5 (index) is up because im an indecisive fuck<br />
+                <b>072524</b> milk-tea v1 + index is up! (it was up a week ago i just made the updates tab 2day)<br />
+                <b>071024</b> milk-tea was conceived<br />
+              </div>
+              <div
+                style="
+                  font-family: &quot;Spirit&quot;;
+                  font-size: 25px;
+                  -webkit-text-fill-color: #ef91aa;
+                  -webkit-text-stroke: 0.5px #000;
+                  top: 35px;
+                  left: 180px;
+                  position: absolute;
+                ">
+                sitely
+              </div>
+            </div>
+            <div class="blog-child">
+              <div class="blog-content"><b>010125</b> new (extremely depressing) diary entry is up...<br /></div>
+              <div
+                style="
+                  font-family: &quot;Spirit&quot;;
+                  font-size: 25px;
+                  -webkit-text-fill-color: #ef91aa;
+                  -webkit-text-stroke: 0.5px #000;
+                  top: 133px;
+                  left: 180px;
+                  position: absolute;
+                ">
+                entry
+              </div>
+            </div>
+          </div>
+          <div class="friends">
+            <div class="guestbook">
+              <div class="guestlink">
+                SIGN MY GUESTBOOK
+                <a
+                  href="https://milk-tea.atabook.org/"
+                  target="_blank"
+                  onclick="popsound.playclip()"
+                  title="thank you for visiting!"
+                  >HERE</a
+                >
+              </div>
+            </div>
+            <div class="webrings">
+              <div
+                class="wentry"
+                style="font-family: Arial; font-size: 31px; letter-spacing: -1px; font-weight: bolder; padding: 5px">
+                webrings, co.
+              </div>
+              <div class="wentry-yume" style="padding: 8px 5px 10px 15px">
+                <div id="yume-ring">
+                  <script type="text/javascript" src="https://yume-ring.neocities.org/onionring-variables.js"></script>
+                  <script
+                    type="text/javascript"
+                    src="https://yume-ring.neocities.org/confession-widget/onionring-widget-c7.js"></script>
+                </div>
+              </div>
+              <div class="wentry" style="border: transparent; background: transparent; margin-bottom: -40px">
+                <div style="width: 100%">
+                  <iframe
+                    style="border: none; width: 100%; height: 275px"
+                    scrolling="no"
+                    src="https://neocities.jeith.com/wii-webring.html?site=https://milk-tea.neocities.org&variant=standard">
+                  </iframe>
+                </div>
+              </div>
+              <div class="wentry" style="padding: 6px 0 0">
+                <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+              </div>
+              <div class="wentry">
+                <div id="doodlering">
+                  <script
+                    type="text/javascript"
+                    src="https://evehibi.nekoweb.org/doodlering/onionring-variables.js"></script>
+                  <script
+                    type="text/javascript"
+                    src="https://evehibi.nekoweb.org/doodlering/onionring-widget.js"></script>
+                  <link rel="stylesheet" href="https://evehibi.nekoweb.org/doodlering/onionring.css" />
+                </div>
+              </div>
+              <div class="wentry" style="padding: 8px 0 8px">
+                <div id="shoujosei-ring">
+                  <script
+                    type="text/javascript"
+                    src="https://angeleyesprings.neocities.org/webring/onionring-variables.js"></script>
+                  <script
+                    type="text/javascript"
+                    src="https://angeleyesprings.neocities.org/webring/onionring-widget5.js"></script>
+                </div>
+              </div>
+              <div class="wentry" style="padding: 4px 0 0">
+                <table>
+                  <tr>
+                    <td>
+                      <a href="https://lopster.neocities.org/roring/lolzers/prev.html?id=24">
+                        <img src="https://lopster.neocities.org/roring/fotos/arr.png" height="30"
+                      /></a>
+                    </td>
+                    <td>
+                      <a href="https://lopster.neocities.org/roring/roring.html"
+                        ><img src="https://lopster.neocities.org/roring/fotos/roring%20chan.png" width="100"
+                      /></a>
+                    </td>
+                    <td>
+                      <a href="https://lopster.neocities.org/roring/lolzers/next.html?id=24"
+                        ><img src="https://lopster.neocities.org/roring/fotos/gimme.png" height="30"
+                      /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="wentry">
+                <journal-ring icon="blue"></journal-ring>
+                <script
+                  async
+                  src="https://cdn.jsdelivr.net/gh/js044/nenrikido@main/static/js/misc/journalring.js"></script>
+              </div>
+              <div class="wentry" style="padding: 8px 0">
+                <map name="noaimini2b">
+                  <area
+                    href="https://baccyflap.com/noai"
+                    target="_blank"
+                    shape="rect"
+                    coords="10,6,166,28"
+                    alt="no ai webring"
+                    title="no ai webring" />
+                  <area
+                    href="https://baccyflap.com/noai/?prv&s=tea"
+                    target="_top"
+                    shape="rect"
+                    coords="10,32,32,52"
+                    alt="previous"
+                    title="previous" />
+                  <area
+                    href="https://baccyflap.com/noai/?rnd"
+                    target="_top"
+                    shape="rect"
+                    coords="76,32,102,54"
+                    alt="random"
+                    title="random" />
+                  <area
+                    href="https://baccyflap.com/noai/?nxt&s=tea"
+                    target="_top"
+                    shape="rect"
+                    coords="144,32,166,52"
+                    alt="next"
+                    title="next" />
+                </map>
+                <img
+                  style="width: 176px; image-rendering: pixelated"
+                  usemap="#noaimini2b"
+                  src="https://baccyflap.com/noai/miniwidget2.gif"
+                  alt="a white rounded rectangle in red outline, with the words 'no ai webring'" />
+              </div>
+              <div class="wentry" style="margin-bottom: 0">
+                <div id="smallvocaring"><script src="https://webring.adilene.net/smallwebring.js"></script></div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <div
+                style="
+                  background: url(star.jpg) center/cover;
+                  background-size: 177px;
+                  border: 1px solid #000;
+                  border-radius: 6px;
+                  padding: 6px;
+                  height: 50%;
+                  width: 163px;
+                  margin-left: 8px;
+                  margin-bottom: 6px;
+                ">
+                <div class="stamp">
+                  <div class="image-container">
+                    <img id="sliderImage" src="button4.gif" />
+                    <span>
+                      <textarea readonly onClick="this.select();">
+<a href="https://milk-tea.neocities.org/" target="_blank"><img src="button-url"></a></textarea
+                      >
+                    </span>
+                  </div>
+                  <button class="next-button" onclick="nextImage()">next Button</button>
+                </div>
+              </div>
+              <div
+                style="
+                  border: 1px solid #000;
+                  border-radius: 6px;
+                  height: 50%;
+                  width: 163px;
+                  margin-left: 8px;
+                  padding: 10px;
+                  background: linear-gradient(to bottom, #e2f3ff 1%, #a5d5ff 49%, #85b4ff 51%, #ebf0f4 100%);
+                ">
+                <div
+                  style="
+                    border: 3px ridge #d7b999;
+                    border-radius: 6px;
+                    height: 100%;
+                    padding: 4px;
+                    display: flex;
+                    background: url(neobg.jpg);
+                    background-size: 300px;
+                  ">
+                  <p
+                    style="
+                      font-size: 37px;
+                      font-family: &quot;Spirit&quot;;
+                      -webkit-text-fill-color: #fff;
+                      color: #000;
+                      -webkit-text-stroke: 0.6px;
+                      letter-spacing: -1px;
+                      margin: 8px 0 0 4px;
+                      z-index: 105;
+                    ">
+                    Link Me?
+                  </p>
+                  <img
+                    src="frost1.png"
+                    height="145px"
+                    style="position: absolute; margin: 10px 0 0 -10px; z-index: 100" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="float:; position: absolute; margin-left: 445px; margin-top: -14px; z-index: 400">
+            <img src="clip.webp" height="100" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- lower row -->
+        <div class="friends" id="comments">
+          <div class="heading">
+            <h4>Chat Box</h4>
+          </div>
+          <div class="inner">
+            <iframe
+              src="https://iframe.chat/embed/index.html?chat=cafe_log"
+              id="chattable"
+              frameborder="none"
+              width="100%"
+              height="525px"
+              overflow-y="auto"></iframe>
+          </div>
+        </div>
+
+        <div id="pen" style="float:; position: absolute; margin-left: 700px; margin-top: 1150px; z-index: 900">
+          <img
+            src="pen.webp"
+            height="425"
+            loading="lazy"
+            style="
+              filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 0px 1px white) drop-shadow(0 0 1px #0000004d);
+              transform: rotate(55deg);
+            " />
+        </div>
+      </div>
+
+      <!-- title label -->
+      <div id="label">
+        Milk-Tea<sup>©</sup>
+        <div class="hl" style="margin-top: -5px; border-bottom: 2px solid #000"></div>
+        <div style="display: flex; flex-direction: row">
+          <div style="display: flex; flex-direction: column">
+            <p style="font-weight: 100; font-size: 14px; letter-spacing: 0; margin-top: 5px; margin-bottom: 0">
+              UNDER CONSTRUCTION
+            </p>
+            <div class="hl" style="margin-top: 0; border-bottom: 1px solid #000"></div>
+            <p style="font-weight: 600; font-size: 22px; letter-spacing: 0; margin-top: 0; margin-bottom: 5px">
+              EST. JULY, 2024
+            </p>
+          </div>
+          <div style="margin: 5px 0 0 10px; padding: 0; display: flex; justify-content: right">
+            <img src="barcode.jpg" height="40px" width="126px" />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get the image element
+          const myImage = document.getElementById("label");
+
+          if (myImage) {
+            // Add a scroll event listener to the window
+            window.addEventListener("scroll", function () {
+              console.log("Scroll position:", window.scrollY); // Check scroll position in console
+              if (window.scrollY > 0) {
+                console.log("Hiding the image");
+                myImage.classList.add("hidden"); // Hide the image
+              } else {
+                console.log("Showing the image");
+                myImage.classList.remove("hidden"); // Show the image
+              }
+            });
+          } else {
+            console.error("Image element with ID 'label' not found.");
+          }
+        });
+      </script>
+
+      <!-- music script -->
+      <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+
+        // create new audio element
+        let curr_track = document.getElementById("music");
+
+        let track_list = [
+          {
+            name: "Serani Poji - ぴぽぴぽ",
+            path: "https://file.garden/ZxOOS50ya2Lt0FdH/Serani%20Poji%20-%20Pipo%20Pipo.mp3"
+          }
+        ];
+        //
+        //
+        //
+        //
+        //
+
+        function loadTrack(track_index) {
+          clearInterval(updateTimer);
+          resetValues();
+
+          // load a new track
+          curr_track.src = track_list[track_index].path;
+          curr_track.load();
+
+          // set an interval of 1000 milliseconds for updating the seek slider
+          updateTimer = setInterval(seekUpdate, 1000);
+
+          // move to the next track if the current one finishes playing
+          curr_track.addEventListener("ended", nextTrack);
+        }
+
+        // reset values
+        function resetValues() {
+          curr_time.textContent = "0:00";
+          total_duration.textContent = "0:00";
+          seek_slider.value = 0;
+        }
+
+        // checks if song is playing
+        function playpauseTrack() {
+          if (!isPlaying) playTrack();
+          else pauseTrack();
+        }
+
+        // plays track when play button is pressed
+        function playTrack() {
+          curr_track.play();
+          isPlaying = true;
+
+          // replace icon with the pause icon
+          playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+          curr_track.pause();
+          isPlaying = false;
+
+          // replace icon with the play icon
+          playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+
+        // moves to the next track
+        function nextTrack() {
+          if (track_index < track_list.length - 1) track_index += 1;
+          else track_index = 0;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // moves to the previous track
+        function prevTrack() {
+          if (track_index > 0) track_index -= 1;
+          else track_index = track_list.length;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // seeker slider
+        function seekTo() {
+          seekto = curr_track.duration * (seek_slider.value / 100);
+          curr_track.currentTime = seekto;
+        }
+
+        function seekUpdate() {
+          let seekPosition = 0;
+
+          // check if the current track duration is a legible number
+          if (!isNaN(curr_track.duration)) {
+            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+            seek_slider.value = seekPosition;
+
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) {
+              currentSeconds = "0" + currentSeconds;
+            }
+            if (durationSeconds < 10) {
+              durationSeconds = "0" + durationSeconds;
+            }
+            if (currentMinutes < 10) {
+              currentMinutes = currentMinutes;
+            }
+            if (durationMinutes < 10) {
+              durationMinutes = durationMinutes;
+            }
+
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds;
+          }
+        }
+
+        // load the first track in the tracklist
+        loadTrack(track_index);
+      </script>
+      <!-- music script end -->
+
+      <!-- cbox -->
+      <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+      <script>
+        chattable.initialize({
+          stylesheet: "chattable.css"
+        });
+      </script>
+    </main>
+  </body>
+</html>
