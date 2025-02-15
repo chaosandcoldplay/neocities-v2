@@ -1,5 +1,5 @@
 body {
-    cursor: url(https://milk-tea.neocities.org/cursor.png), auto;
+    cursor: url(../assets/items/cursor.png), auto;
     font-family: "MS PGothic";
     background: var(--background-color);
 }
@@ -14,7 +14,7 @@ iframe {
 
 /* link styling */
 a {
-    cursor: url(https://milk-tea.neocities.org/select.png), pointer;
+    cursor: url(../assets/items/select.png), pointer;
     color: #2453d4;
 }
 
@@ -64,22 +64,22 @@ strong2 {
 
 @font-face {
     font-family: PC98;
-    src: url(pc-9800.ttf);
+    src: url(../assets/fonts/pc-9800.ttf);
 }
 
 @font-face {
     font-family: spirit;
-    src: url(Spirit.ttf);
+    src: url(../assets/fonts/Spirit.ttf);
 }
 
 @font-face {
     font-family: redaction;
-    src: url(Redaction.otf);
+    src: url(../assets/fonts/Redaction.otf);
 }
 
 @font-face {
     font-family: "Chirp";
-    src: url(chirp.otf);
+    src: url(../assets/fonts/chirp.otf);
     font-style: normal;
 }
 
@@ -164,16 +164,16 @@ body::-webkit-scrollbar-corner {
 
 .topbar img:hover {
     filter: brightness(103%);
-    cursor: url(select.png), pointer;
+    cursor: url(../assets/items/select.png), pointer;
 }
 
 .divider img:active {
     filter: brightness(97%) saturate(125%);
-    cursor: url(select.png), pointer;
+    cursor: url(../assets/items/select.png), pointer;
 }
 
 .login img:hover {
-    cursor: url(cursor.png), pointer;
+    cursor: url(../assets/items/cursor.png), pointer;
 }
 
 #leftwt {
@@ -207,7 +207,7 @@ header {
 .header-image {
     width: 400px;
     height: 130px;
-    background: url(purin-ice.webp);
+    background: url(../assets/images/purin-ice.webp);
     background-size: 600px;
     background-position: 100% 40%;
 }
@@ -218,7 +218,7 @@ header {
     margin: -55px 0 -5px 20px;
     border-radius: 100%;
     border: 4px #fff solid;
-    background: url(twticon.jpg);
+    background: url(../assets/images/twticon.jpg);
     background-size: 130px;
     background-position: center center;
     z-index: 100;
@@ -276,7 +276,7 @@ header {
 #bio-border {
     border: 1px solid #000;
     border-radius: 6px;
-    background: url(grid-blue.png);
+    background: url(../assets/backgrounds/grid-blue.png);
     background-size: 41px;
     height: 175px;
     width: 380px;
@@ -358,7 +358,7 @@ header {
     width: 36px;
     height: 36px;
     border-radius: 100%;
-    background: url(twticon.jpg);
+    background: url(../assets/images/twticon.jpg);
     background-size: 55px;
     background-position: center center;
 }
@@ -451,7 +451,7 @@ a.post-tag:hover {
     border-radius: 100%;
     background: transparent;
     margin: -8px 4px 0 0;
-    cursor: url(https://milk-tea.neocities.org/select.png), pointer;
+    cursor: url(../assets/items/select.png), pointer;
 }
 
 .post-footer a.reblog-button:hover i,

@@ -4,10 +4,10 @@ html {
 
 body {
     position: relative;
-    cursor: url(https://milk-tea.neocities.org/cursor.png), auto;
+    cursor: url(../assets/items/cursor.png), auto;
     overflow: hidden;
     font-family: "MS PGothic";
-    background: navajowhite url(checker.gif);
+    background: navajowhite url(../assets/backgrounds/checker.gif);
     background-attachment: fixed;
     background-size: 200px;
     margin: 0;
@@ -27,7 +27,7 @@ main {
 
 iframe {
     border: none;
-    cursor: url(https://milk-tea.neocities.org/cursor.png), default !important;
+    cursor: url(../assets/items/cursor.png), default !important;
 }
 
 .left-col {
@@ -51,7 +51,7 @@ iframe {
 
 /* link styling */
 a {
-    cursor: url(https://milk-tea.neocities.org/select.png), pointer;
+    cursor: url(../assets/items/select.png), pointer;
     color: #2453d4;
 }
 
@@ -99,12 +99,12 @@ p {
 
 @font-face {
     font-family: spirit;
-    src: url(Spirit.ttf);
+    src: url(../assets/fonts/Spirit.ttf);
 }
 
 @font-face {
     font-family: PC98;
-    src: url(pc-9800.ttf);
+    src: url(../assets/fonts/pc-9800.ttf);
 }
 
 /* heading styling */
@@ -304,7 +304,7 @@ footer {
 
 .general-about {
     background: #fff;
-    background-image: url(bg1.png);
+    background-image: url(../assets/images/bg1.png);
     background-size: cover;
     border-radius: 0 0 10px 10px !important;
     top: 65px;
@@ -347,7 +347,7 @@ footer {
 }
 
 .status {
-    background: url(bluenote.jpg) center/cover;
+    background: url(../assets/backgrounds/bluenote.jpg) center/cover;
     border: 4px ridge #d7b999;
     width: 263px;
     height: 135px;
@@ -492,7 +492,7 @@ footer p {
 #footer-pic {
     width: 165px;
     height: 99.5px;
-    background: url(pudding_slash.jpg) bottom/contain;
+    background: url(../assets/images/pudding_slash.jpg) bottom/contain;
     background-size: cover;
     border-radius: 10px 0 0 10px;
     border-right: 1px solid #000;
@@ -582,7 +582,7 @@ body:before {
     top: 0;
     left: 0;
     z-index: 999;
-    background-image: url("https://i.pinimg.com/originals/46/5f/7e/465f7ef36d283e300075ff47ca2b9743.gif");
+    background-image: url("../assets/gifs/load-screen.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

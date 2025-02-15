@@ -1,5 +1,5 @@
 body {
-    cursor: url(https://milk-tea.neocities.org/cursor.png), auto;
+    cursor: url(../assets/items/cursor.png), auto;
     font-family: "MS PGothic";
     background: transparent;
 }
@@ -14,7 +14,7 @@ input[type="submit"] {
 
 /* message styling */
 .msgWrapper {
-    background: url(https://milk-tea.neocities.org/grid.png);
+    background: url(../assets/backgrounds/grid.png);
     filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
         drop-shadow(0 0 1px white) drop-shadow(0 2px 2px #0000004d);
     border: 1px solid #2453d4;

@@ -6,7 +6,7 @@ body {
   line-height: 22px;
   color: #484848;
   font-family: "MS PGothic";
-  cursor: url(cursor.png), auto;
+  cursor: url(../assets/items/cursor.png), auto;
 }
 
 /* status title (your username) */
@@ -14,7 +14,7 @@ a{
   display: none;
   text-decoration: none;
   color: #ff729f;
-  cursor: url(select.png), pointer;
+  cursor: url(../assets/items/select.png), pointer;
   transition: 0.1s all ease-in-out;
 }
 a:visited{

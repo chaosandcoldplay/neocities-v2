@@ -9,7 +9,6 @@ var html5_audiotypes = {
 function createsoundbite(sound) {
     var html5audio = document.createElement("audio");
     if (html5audio.canPlayType) {
-        //check support for HTML5 audio
         for (var i = 0; i < arguments.length; i++) {
             var sourceel = document.createElement("source");
             sourceel.setAttribute("src", arguments[i]);
@@ -38,15 +37,11 @@ var popsound = createsoundbite("https://files.catbox.moe/6l7okm.mp3");
 
 /* frame load */
 function loadInNestedIframe(url) {
-    // Get the main iframe
     const mainFrame = document.getElementById("page");
 
-    // Ensure the main iframe has loaded content
     if (mainFrame.contentWindow) {
-        // Access the nested iframe
         const innerFrame = mainFrame.contentWindow.document.getElementById("mainbox");
 
-        // Change the src of the nested iframe
         if (innerFrame) {
             innerFrame.src = url;
         } else {
