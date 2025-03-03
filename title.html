@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- embed settings -->
@@ -17,117 +17,124 @@
     <!-- website settings -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
     <title>僕は答える—ぴぽぴぽ~♪</title>
 
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
-  <body style="overflow: hidden !important; margin: 6px 0 0">
+  <body class="title">
     <main>
-      <div style="float:; position: absolute; top: -22px; z-index: 100">
-        <img src="goop.webp" width="225" />
+      <div id="goop">
+        <img
+          src="assets/images/goop.webp"
+          width="225"
+          alt="a pink bowl of porridge"
+        />
       </div>
 
-      <div style="float:; position: absolute; margin: 60px 200px; z-index: 900">
-        <img src="F07.png" height="75px" loading="lazy" style="transform: rotate(-20deg)" />
+      <div id="torangesquig">
+        <img src="assets/items/F07.png" loading="lazy" alt="orange squiggle" />
       </div>
 
-      <div style="display: flex; flex-direction: column">
-        <div style="display: flex">
-          <div class="titlebox">
-            nice to meet you! i am TASHA and i love <strong>maximalism</strong>, <strong>bon-bons</strong> and
-            <strong>things you can poke around with</strong>. <br /><br />
-            <center><img src="chrome.png" /></center>
-            <br />
-            tired of the general web's insincerity at the moment, i wanted my own digital landpage for
-            <strong2>everything i love</strong2>! milk-tea, thus, is an amalgamation of inspiration derived from various
-            sites i've come across + absorbed from!
-          </div>
+      <div class="columnflex">
+        <div class="flexbox">
           <div class="miscbox">
             <div id="visitor">
-              <div style="display: flex; margin-bottom: 5px">
-                <img src="xbutton.webp" height="20px" />
-                <p style="margin: -1px 0 0 43px">VISITOR ID</p>
+              <div id="visitorid">
+                <img src="assets/items/xbutton.webp" height="20px" />
+                <p>VISITOR ID</p>
               </div>
               <div id="visitorbox" style="padding-left: 5px !important">
                 <!-- FC2 Counter  Starts here -->
                 <script
                   language="javascript"
                   type="text/javascript"
-                  src="//counter1.fc2.com/counter.php?id=39762849&main=1"></script>
-                <noscript><img src="//counter1.fc2.com/counter_img.php?id=39762849&main=1" /></noscript>
+                  src="//counter1.fc2.com/counter.php?id=39762849&main=1"
+                ></script>
+                <noscript
+                  ><img
+                    src="//counter1.fc2.com/counter_img.php?id=39762849&main=1"
+                /></noscript>
                 <!-- FC2 Counter  Ends here -->
               </div>
             </div>
             <div id="warning">
-              <p style="font-size: 30px; margin: -5px 0 0">WARNING!</p>
-              <p style="margin: -5px 0 0; text-decoration: underline">
-                THE MUSIC PLAY/PAUSE BUTTON WORKS ONLY ON SCROLLING DOWN A BIT CAUSE OF THE NOBUE GIF
+              <p id="warn1">WARNING!</p>
+              <p id="warn2">
+                THE MUSIC PLAY/PAUSE BUTTON WORKS ONLY ON SCROLLING DOWN A BIT
+                CAUSE OF THE NOBUE GIF
               </p>
             </div>
-            <img src="pommy.gif" />
+            <img src="assets/gifs/pommy.gif" />
+          </div>
+          <div class="titlebox">
+            nice to meet you! i am TASHA and i love <strong>maximalism</strong>,
+            <strong>bon-bons</strong> and
+            <strong>things you can poke around with</strong>. <br /><br />
+            <center><img src="assets/images/chrome.png" /></center>
+            <br />
+            tired of the general web's insincerity at the moment, i wanted my
+            own digital landpage for
+            <strong2>everything i love</strong2>! milk-tea, thus, is an
+            amalgamation of inspiration derived from various sites i've come
+            across + absorbed from!
           </div>
         </div>
         <div id="corkboard">
           <img
-            src="fusc53.png"
-            style="position: absolute; transform: rotate(-10deg); height: 125px; left: 10px; margin-top: -5px" />
+            id="tibluecard"
+            src="assets/items/fusc53.png"
+            alt="a blue postcard"
+          />
           <img
-            src="pine05.png"
-            style="
-              position: absolute;
-              transform: rotate(2deg);
-              height: 25px;
-              left: 290px;
-              margin-top: 8px;
-              z-index: 205;
-            " />
-          <img
-            src="me06g.png"
-            style="
-              position: absolute;
-              transform: rotate(2deg);
-              height: 140px;
-              left: 200px;
-              margin-top: 5px;
-              z-index: 200;
-            " />
-          <div class="sticky" style="position: absolute; transform: rotate(-11deg)">
+            id="tiyellowpin"
+            src="assets/items/pine05.png"
+            alt="a yellow corkpin"
+          />
+          <img id="tinote" src="assets/items/me06g.png" alt="a ruled note" />
+          <div class="sticky" style="transform: rotate(-11deg)">
             <input type="checkbox" /> musings<br />
             <input type="checkbox" /> a computer<br />
             <input type="checkbox" /> an ipad<br />
             <input type="checkbox" /> whimsy<br />
           </div>
-          <div
-            class="sticky_head"
-            style="position: absolute; transform: rotate(-11deg); left: 130px; margin-top: -25px">
+          <div class="sticky_head stickyh1">
             <p>FIND</p>
-            <p style="margin-top: -48px; font-size: 28px">HERE</p>
+            <p class="stickyhere">HERE</p>
           </div>
-          <div
-            class="sticky"
-            style="position: absolute; transform: rotate(1.4deg); left: 190px; top: 300px; z-index: 210">
-            <p style="font-family: &quot;Spirit&quot;; font-size: 28px; color: #7b3a16; margin: -7px 0 10px">to-do:</p>
+          <div class="sticky stickyh2">
+            <p>to-do:</p>
             <input type="checkbox" /> mobile-friendly<br />
             <input type="checkbox" /> remaining pages<br />
             <input type="checkbox" /> add more silliness<br />
           </div>
           <img
-            src="fuc11.png"
-            style="position: absolute; height: 110px; left: 370px; margin-top: -25px; z-index: 200" />
-          <img
-            src="boobear.jpg"
-            style="
-              position: absolute;
-              height: 72px;
-              left: 370px;
-              margin: -8px 35px 0;
-              z-index: 210;
-              filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-                drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
-            " />
+            id="tibluebubble"
+            src="assets/items/fuc11.png"
+            alt="a blue speech bubble"
+          />
+          <img id="tiboo" src="assets/images/boobear.jpg" />
+          <div
+            id="tisquare1"
+            style="background: url(assets/images/title3.jpg) center/cover"
+          ></div>
+          <div
+            id="tisquare2"
+            style="background: url(assets/images/title4.jpg) center/cover"
+          ></div>
+          <div
+            id="tisquare3"
+            style="background: url(assets/images/title1.jpg) center/cover"
+          ></div>
+          <div
+            id="tisquare4"
+            style="background: url(assets/images/title2.jpg) center/cover"
+          ></div>
+        </div>
+        <div id="tipudding">
+          <img src="assets/images/pudding-tag.webp" height="125px" />
         </div>
       </div>
     </main>

@@ -1,324 +1,390 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- embed settings -->
-        <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
-        <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
+  <head>
+    <!-- embed settings -->
+    <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
+    <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
 
-        <meta property="og:image" content="embed_image.png" />
+    <meta property="og:image" content="embed_image.png" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="description" content="tash's personal website ★" />
-        <meta name="keywords" content="kawaii, 2000s, dreamy" />
-        <meta name="author" content="tasha" />
-        <meta name="twitter:description" content="tash's personal website ★" />
-        <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="tash's personal website ★" />
+    <meta name="keywords" content="kawaii, 2000s, dreamy" />
+    <meta name="author" content="tasha" />
+    <meta name="twitter:description" content="tash's personal website ★" />
+    <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
 
-        <!-- website settings -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
-        <title>僕は答える—ぴぽぴぽ~♪</title>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
 
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-        <!-- tooltips -->
-        <script src="tooltip-jquary.js"></script>
-        <script src="tooltip.js"></script>
+    <!-- tooltips -->
+    <script src="scripts/tooltip-jquary.js"></script>
+    <script src="scripts/tooltip.js"></script>
 
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="home.css" />
-    </head>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/home.css" />
+  </head>
 
-    <body>
-        <nav class="">
-            <!-- navigation -->
-            <ul class="links">
-                <li class="active">
-                    <a
-                        href="javascript:void(0);"
-                        onclick="clicksound.playclip(), loadInNestedIframe('sitemap.html')"
-                        >Sitemap</a
-                    >
-                </li>
-                <li class="">
-                    <a href="javascript:void(0);" onclick="clicksound.playclip(), window.location.reload(); return false;">Home</a>
-                </li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">About</a></li>
-                <li class="">
-                    <a
-                        href="javascript:void(0);"
-                        onclick="clicksound.playclip(), loadInNestedIframe('diary.html')"
-                        >Diary</a
-                    >
-                </li>
-                <li class="">
-                    <a
-                        href="javascript:void(0);"
-                        onclick="clicksound.playclip(), loadInNestedIframe('https://milk-tea.nekoweb.org/blog.html#toggled')"
-                        >Blog</a
-                    >
-                </li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Logs</a></li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Scrapbook</a></li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Album</a></li>
-                <li class="">
-                    <a
-                        href="javascript:void(0);"
-                        onclick="clicksound.playclip(), loadInNestedIframe('shrines.html')"
-                        >Shrines</a
-                    >
-                </li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Studio</a></li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Café</a></li>
-                <li class=""><a href="javascript:void(0);" target="page" onclick="clicksound.playclip()">Cosmos</a></li>
-                <li>
-                    <a
-                        href="javascript:void(0);"
-                        onclick="clicksound.playclip(), loadInNestedIframe('archive.html#home')"
-                        >Archive</a
-                    >
-                </li>
-                <li class="">
-                    <a href="https://milk-tea.atabook.org/" target="_blank" onclick="clicksound.playclip()"
-                        >Guestbook</a
-                    >
-                </li>
-                <li class="">
-                    <a href="https://neocities.org/site/milk-tea" target="_blank" onclick="clicksound.playclip()"
-                        >Profile</a
-                    >
-                </li>
-            </ul>
-        </nav>
+  <body>
+    <nav class="">
+      <!-- navigation -->
+      <ul class="links">
+        <li class="active">
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), loadInNestedIframe('sitemap.html')"
+            >Sitemap</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), window.location.reload(); return false;"
+            >Home</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >About</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), loadInNestedIframe('diary.html')"
+            >Diary</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), loadInNestedIframe('https://milk-tea.nekoweb.org/blog.html#toggled')"
+            >Blog</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Logs</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Scrapbook</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Album</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), loadInNestedIframe('shrines.html')"
+            >Shrines</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Studio</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Café</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="javascript:void(0);"
+            target="page"
+            onclick="clicksound.playclip()"
+            >Cosmos</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            onclick="clicksound.playclip(), loadInNestedIframe('archive.html#home')"
+            >Archive</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="https://milk-tea.atabook.org/"
+            target="_blank"
+            onclick="clicksound.playclip()"
+            >Guestbook</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="https://neocities.org/site/milk-tea"
+            target="_blank"
+            onclick="clicksound.playclip()"
+            >Profile</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-        <main>
-            <!-- left column -->
-            <div class="left-col profile">
-                <h1>Tasha</h1>
-                <div class="general-about">
-                    <div class="profile-pic">
-                        <img class="pfp-fallback" src="pfp.png" />
-                    </div>
-                    <div id="about">
-                        <p>
-                            <b>21</b> Any Pronouns <br />
-                            Lesbian ☆ Brown
-                            <a href="#" title="all about the webmastah!"
-                                >More <br />
-                                Here</a
-                            >
-                        </p>
-                        <p class="online"><b>ONLINE!</b></p>
-                    </div>
-                    <div class="status">
-                        <!-- start sw-rss-feed code -->
-                        <script type="text/javascript">
-                            <!--
-                            rssfeed_url = new Array();
-                            rssfeed_url[0] = "https://status.cafe/users/tea.atom";
-                            rssfeed_frame_width = "215";
-                            rssfeed_frame_height = "120";
-                            rssfeed_scroll = "off";
-                            rssfeed_scroll_step = "6";
-                            rssfeed_scroll_bar = "off";
-                            rssfeed_target = "_blank";
-                            rssfeed_font_size = "12";
-                            rssfeed_font_face = "";
-                            rssfeed_border = "on";
-                            rssfeed_css_url = "https://milk-tea.neocities.org/rss.css";
-                            rssfeed_title = "off";
-                            rssfeed_title_name = "";
-                            rssfeed_title_bgcolor = "#3366ff";
-                            rssfeed_title_color = "#fff";
-                            rssfeed_title_bgimage = "";
-                            rssfeed_footer = "off";
-                            rssfeed_footer_name = "rss feed";
-                            rssfeed_footer_bgcolor = "#fff";
-                            rssfeed_footer_color = "#333";
-                            rssfeed_footer_bgimage = "";
-                            rssfeed_item_title_length = "0";
-                            rssfeed_item_title_color = "#666";
-                            rssfeed_item_bgcolor = "#fff";
-                            rssfeed_item_bgimage = "";
-                            rssfeed_item_border_bottom = "off";
-                            rssfeed_item_source_icon = "off";
-                            rssfeed_item_date = "on";
-                            rssfeed_item_description = "on";
-                            rssfeed_item_description_length = "200";
-                            rssfeed_item_description_color = "#000";
-                            rssfeed_item_description_link_color = "#00f";
-                            rssfeed_item_description_tag = "off";
-                            rssfeed_no_items = "1";
-                            rssfeed_cache = "8fd190c670668383692d89b730024b96";
-                            //-->
-                        </script>
-                        <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
-                        <!-- end sw-rss-feed code -->
-                    </div>
-                </div>
+    <main>
+      <!-- left column -->
+      <div class="left-col profile">
+        <h1>Tasha</h1>
+        <div class="general-about">
+          <div class="profile-pic">
+            <img class="pfp-fallback" src="assets/images/pfp.png" />
+          </div>
+          <div id="about">
+            <p>
+              <b>21</b> Any Pronouns <br />
+              Lesbian ☆ Brown
+              <a href="#" title="all about the webmastah!"
+                >More <br />
+                Here</a
+              >
+            </p>
+            <p class="online"><b>ONLINE!</b></p>
+          </div>
+          <div class="status">
+            <!-- start sw-rss-feed code -->
+            <script type="text/javascript">
+              <!--
+              rssfeed_url = new Array();
+              rssfeed_url[0] = "https://status.cafe/users/tea.atom";
+              rssfeed_frame_width = "215";
+              rssfeed_frame_height = "120";
+              rssfeed_scroll = "off";
+              rssfeed_scroll_step = "6";
+              rssfeed_scroll_bar = "off";
+              rssfeed_target = "_blank";
+              rssfeed_font_size = "12";
+              rssfeed_font_face = "";
+              rssfeed_border = "on";
+              rssfeed_css_url = "https://milk-tea.neocities.org/rss.css";
+              rssfeed_title = "off";
+              rssfeed_title_name = "";
+              rssfeed_title_bgcolor = "#3366ff";
+              rssfeed_title_color = "#fff";
+              rssfeed_title_bgimage = "";
+              rssfeed_footer = "off";
+              rssfeed_footer_name = "rss feed";
+              rssfeed_footer_bgcolor = "#fff";
+              rssfeed_footer_color = "#333";
+              rssfeed_footer_bgimage = "";
+              rssfeed_item_title_length = "0";
+              rssfeed_item_title_color = "#666";
+              rssfeed_item_bgcolor = "#fff";
+              rssfeed_item_bgimage = "";
+              rssfeed_item_border_bottom = "off";
+              rssfeed_item_source_icon = "off";
+              rssfeed_item_date = "on";
+              rssfeed_item_description = "on";
+              rssfeed_item_description_length = "200";
+              rssfeed_item_description_color = "#000";
+              rssfeed_item_description_link_color = "#00f";
+              rssfeed_item_description_tag = "off";
+              rssfeed_no_items = "1";
+              rssfeed_cache = "8fd190c670668383692d89b730024b96";
+              //-->
+            </script>
+            <script
+              type="text/javascript"
+              src="//feed.surfing-waves.com/js/rss-feed.js"
+            ></script>
+            <!-- end sw-rss-feed code -->
+          </div>
+        </div>
 
-                <div id="left-tape">
-                    <img src="L30.png" height="37" loading="lazy" style="transform: rotate(28deg)" />
-                </div>
+        <div id="left-tape">
+          <img src="assets/items/L30.png" loading="lazy" alt="a blue tape" />
+        </div>
 
-                <div class="mood">Mood?</div>
+        <div class="mood">Mood?</div>
 
-                <div class="contact">
-                    <div class="heading">
-                        <h4>Contact</h4>
-                    </div>
-                    <div class="inner">
-                        <div class="appset">
-                            <a
-                                href="https://neocities.org/site/milk-tea"
-                                title="PROFILE"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div
-                                    class="app"
-                                    style="margin-right: 8px; background: url(K36.png) center/cover; padding: 4px">
-                                    <div style="border: 1px dashed #000; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                            <a
-                                href="https://teasized.tumblr.com/"
-                                title="TUMBLR"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div
-                                    class="app"
-                                    style="margin-right: 8px; background: url(tmblr.png) center/cover; padding: 4px">
-                                    <div style="border: 1px dashed #fff; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                            <a
-                                href="mailto:teasized@gmail.com"
-                                title="E-MAIL"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div
-                                    class="app"
-                                    style="
-                                        margin-right: 8px;
-                                        background: url(shortcake.webp) center/cover;
-                                        background-size: 140px;
-                                        padding: 4px;
-                                    ">
-                                    <div style="border: 1px dashed #000; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                            <a
-                                href="https://www.instagram.com/teasized/"
-                                title="INSTAGRAM"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div class="app" style="background: url(flower_icon.JPEG) center/cover; padding: 4px">
-                                    <div style="border: 1px dashed #fff; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                        </div>
-                        <div class="appset" style="margin-top: -1px; margin-bottom: 4px">
-                            <a
-                                href="https://discord.com/users/803280527804334110"
-                                title="DISCORD"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div
-                                    class="app"
-                                    style="margin-right: 8px; background: url(discord.jpg) center/cover; padding: 4px">
-                                    <div style="border: 1px dashed #fff; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                            <a
-                                href="https://status.cafe/users/tea"
-                                title="STATUS"
-                                target="_blank"
-                                onclick="popsound.playclip()">
-                                <div
-                                    class="app"
-                                    style="
-                                        margin-right: 8px;
-                                        background: url(love_icon.JPEG) bottom/cover;
-                                        padding: 4px;
-                                    ">
-                                    <div style="border: 1px dashed #000; border-radius: 6px; height: 100%"></div>
-                                </div>
-                            </a>
-                            <a
-                                href="https://open.spotify.com/user/f57laq2gy6a3ue96bdrzln7sn"
-                                title="SPOTIFY"
-                                target="_blank"
-                                onclick="popsound.playclip()">
-                                <div
-                                    class="app"
-                                    style="
-                                        margin-right: 8px;
-                                        background: url(music_icon.JPEG) center/cover;
-                                        padding: 4px;
-                                    ">
-                                    <div style="border: 1px dashed #fff; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                            <a
-                                href="https://www.twitter.com/teasized/"
-                                title="TWITTER"
-                                target="_blank"
-                                onclick="popsound.playclip()"
-                                ><div class="app" style="background: url(twt.png) center/cover; padding: 4px">
-                                    <div style="border: 1px dashed #fff; border-radius: 6px; height: 100%"></div></div
-                            ></a>
-                        </div>
-                    </div>
-                </div>
+        <div class="contact">
+          <div class="heading">
+            <h4>Contact</h4>
+          </div>
+          <div class="inner">
+            <div class="appset">
+              <a
+                href="https://neocities.org/site/milk-tea"
+                title="PROFILE"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app appfix"
+                  style="background: url(assets/images/K36.png) center/cover"
+                >
+                  <div class="appblack"></div></div
+              ></a>
+              <a
+                href="https://teasized.tumblr.com/"
+                title="TUMBLR"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app appfix"
+                  style="background: url(assets/images/tmblr.png) center/cover"
+                >
+                  <div class="appwhite"></div></div
+              ></a>
+              <a
+                href="mailto:teasized@gmail.com"
+                title="E-MAIL"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app appfix"
+                  style="
+                    background: url(assets/images/shortcake.webp) center/cover;
+                    background-size: 140px;
+                  "
+                >
+                  <div class="appblack"></div></div
+              ></a>
+              <a
+                href="https://www.instagram.com/teasized/"
+                title="INSTAGRAM"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app"
+                  style="
+                    background: url(assets/images/flower_icon.JPEG) center/cover;
+                  "
+                >
+                  <div class="appwhite"></div></div
+              ></a>
             </div>
-
-            <!-- footer -->
-            <footer>
-                <div id="footer-pic"></div>
-                <p>
-                    Adapted from 'インターウェブ' <br />
-                    by @danocc, Neocities
-                    <a href="https://neocities.org/site/milk-tea/"
-                        >&copy;2024-beyond infinity <br />
-                        milk-tea, tasha ☆
-                    </a>
-                </p>
-            </footer>
-
-            <!-- right column -->
-            <div class="col">
-                <iframe
-                    name="page"
-                    id="page"
-                    src="main.html"
-                    allowtransparency="true"></iframe>
+            <div class="appset" style="margin-top: -1px; margin-bottom: 4px">
+              <a
+                href="https://discord.com/users/803280527804334110"
+                title="DISCORD"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app appfix"
+                  style="
+                    background: url(assets/images/discord.jpg) center/cover;
+                  "
+                >
+                  <div class="appwhite"></div></div
+              ></a>
+              <a
+                href="https://status.cafe/users/tea"
+                title="STATUS"
+                target="_blank"
+                onclick="popsound.playclip()"
+              >
+                <div
+                  class="app appfix"
+                  style="
+                    background: url(assets/images/love_icon.JPEG) bottom/cover;
+                  "
+                >
+                  <div class="appblack"></div>
+                </div>
+              </a>
+              <a
+                href="https://open.spotify.com/user/f57laq2gy6a3ue96bdrzln7sn"
+                title="SPOTIFY"
+                target="_blank"
+                onclick="popsound.playclip()"
+              >
+                <div
+                  class="app appfix"
+                  style="
+                    background: url(assets/images/music_icon.JPEG) center/cover;
+                  "
+                >
+                  <div class="appwhite"></div></div
+              ></a>
+              <a
+                href="https://www.twitter.com/teasized/"
+                title="TWITTER"
+                target="_blank"
+                onclick="popsound.playclip()"
+                ><div
+                  class="app appfix"
+                  style="background: url(assets/images/twt.png) center/cover"
+                >
+                  <div class="appwhite"></div></div
+              ></a>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- smoker -->
-            <div
-                style="
-                    float:;
-                    position: fixed;
-                    left: 170px;
-                    bottom: 25px;
-                    z-index: 900;
-                    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-                        drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-                        drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
-                ">
-                <img src="smoker.gif" height="300" />
-            </div>
-        </main>
+      <!-- footer -->
+      <footer>
+        <div id="footer-pic"></div>
+        <p>
+          Adapted from 'インターウェブ' <br />
+          by @danocc, Neocities
+          <a href="https://neocities.org/site/milk-tea/"
+            >&copy;2024-beyond infinity <br />
+            milk-tea, tasha ☆
+          </a>
+        </p>
+      </footer>
 
-        <!-- makeshift responsive script -->
-        <script>
-            let targetWidth = 1280;
-            let targetHeight = 598;
-            let currentWidth = window.innerWidth;
-            let currentHeight = window.innerHeight;
-            let widthDifference = ((currentWidth - targetWidth) / targetWidth) * 100;
-            let heightDifference = ((currentHeight - targetHeight) / targetHeight) * 100;
-            var zoomPercentage = Math.min(widthDifference, heightDifference);
-            zoomPercentage = Math.max(zoomPercentage, 0);
-            console.log(`Zoom Difference: ${zoomPercentage.toFixed(2)}%`);
-            document.body.style.zoom = 1 + zoomPercentage / 100;
-        </script>
-    </body>
+      <!-- right column -->
+      <div class="col">
+        <iframe
+          name="page"
+          id="page"
+          src="main.html"
+          allowtransparency="true"
+        ></iframe>
+      </div>
+
+      <!-- smoker -->
+      <div id="smoker">
+        <img src="assets/gifs/smoker.gif" height="300" />
+      </div>
+    </main>
+
+    <!-- makeshift responsive script -->
+    <script>
+      let targetWidth = 1280;
+      let targetHeight = 598;
+      let currentWidth = window.innerWidth;
+      let currentHeight = window.innerHeight;
+      let widthDifference = ((currentWidth - targetWidth) / targetWidth) * 100;
+      let heightDifference =
+        ((currentHeight - targetHeight) / targetHeight) * 100;
+      var zoomPercentage = Math.min(widthDifference, heightDifference);
+      zoomPercentage = Math.max(zoomPercentage, 0);
+      console.log(`Zoom Difference: ${zoomPercentage.toFixed(2)}%`);
+      document.body.style.zoom = 1 + zoomPercentage / 100;
+    </script>
+  </body>
 </html>
