@@ -1,447 +1,344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- embed settings -->
-        <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
-        <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
+  <head>
+    <!-- embed settings -->
+    <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
+    <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
 
-        <meta property="og:image" content="embed_image.png" />
+    <meta property="og:image" content="embed_image.png" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="description" content="tash's personal website ★" />
-        <meta name="keywords" content="kawaii, 2000s, dreamy" />
-        <meta name="author" content="tasha" />
-        <meta name="twitter:description" content="tash's personal website ★" />
-        <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="tash's personal website ★" />
+    <meta name="keywords" content="kawaii, 2000s, dreamy" />
+    <meta name="author" content="tasha" />
+    <meta name="twitter:description" content="tash's personal website ★" />
+    <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
 
-        <!-- website settings -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
-        <title>僕は答える—ぴぽぴぽ~♪</title>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
 
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+    <script src="scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/zero-md@3?register"
+    ></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-    <body style="overflow: hidden; margin: 1px">
-        <main>
-            <div class="lines"></div>
-            <div class="pc">
-                <div class="screen">
-                    <img class="showimage" src="folder.png" width="50px" style="margin-right: 7px" />
-                    <p style="margin-left: 8px; margin-top: 4px">2024</p>
-                    <img class="showimage" src="folder.png" width="50px" />
-                    <p style="margin-left: 8px; margin-top: 4px">2025</p>
-                    <a href="https://milk-tea.nekoweb.org/blog.html#toggled">
-                        <img src="twt.png" width="47px" style="margin-left: 2px; border-radius: 8px" />
-                        <p style="margin-top: 4px">Twitter</p></a
-                    >
-                </div>
+  <body class="diary">
+    <main>
+      <div class="lines"></div>
+      <div class="pc">
+        <div class="screen">
+          <img
+            class="showimage"
+            src="assets/images/folder.png"
+            width="50px"
+            style="margin-right: 7px"
+          />
+          <p style="margin-left: 8px; margin-top: 4px">2024</p>
+          <img class="showimage" src="assets/images/folder.png" width="50px" />
+          <p style="margin-left: 8px; margin-top: 4px">2025</p>
+          <a href="https://milk-tea.nekoweb.org/blog.html#toggled">
+            <img
+              src="assets/images/twt.png"
+              width="47px"
+              style="margin-left: 2px; border-radius: 8px"
+            />
+            <p style="margin-top: 4px">Twitter</p></a
+          >
+        </div>
+      </div>
+      <div class="startbar">
+        <span
+          ><button id="start_button" class="button">
+            <img
+              src="assets/images/WindowsIcon.png"
+              width="33px"
+              alt="windows logo"
+            /></button
+        ></span>
+        <div id="clock"></div>
+      </div>
+
+      <!-- year window -->
+      <div class="ywindow hidden draggable toggle">
+        <div class="divider">
+          <img
+            class="hideimage"
+            style="float: right; margin-top: -20px"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+          <img
+            style="float: right; margin: -20px 21px 0 0"
+            src="assets/items/button_1.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="screen2">
+          <div class="folderflex">
+            <div class="itemflex">
+              <div class="folder_item" style="margin-left: 3px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">aug 7.txt</p>
+              </div>
+              <div class="folder_item" style="margin-left: -4px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">aug 21.txt</p>
+              </div>
+              <div class="folder_item" style="margin-left: -4px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">dream log</p>
+              </div>
+              <div class="folder_item" style="margin-left: -4px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">muse log</p>
+              </div>
             </div>
-            <div class="startbar">
-                <span
-                    ><button id="start_button" class="button">
-                        <img src="WindowsIcon.png" width="33px" /></button
-                ></span>
-                <div id="clock"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ywindow hidden draggable toggle" style="margin-top: -250px">
+        <div class="divider">
+          <img
+            class="hideimage"
+            style="float: right; margin-top: -20px"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+          <img
+            style="float: right; margin-top: -20px; margin-right: 21px"
+            src="assets/items/button_1.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="screen2">
+          <div class="folderflex">
+            <div class="itemflex">
+              <div class="folder_item" style="margin-left: 3px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">jan 1.txt</p>
+              </div>
+              <div class="folder_item" style="margin-left: -4px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">dream log</p>
+              </div>
+              <div class="folder_item" style="margin-left: -4px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">muse log</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- year window -->
-            <div class="ywindow hidden draggable toggle">
-                <div class="divider">
-                    <img
-                        class="hideimage"
-                        style="float: right; margin-top: -20px"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                    <img
-                        style="float: right; margin-top: -20px; margin-right: 21px"
-                        src="button_1.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="screen2">
-                    <div class="folderflex">
-                        <div class="itemflex">
-                            <div class="folder_item" style="margin-left: 3px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">aug 7.txt</p>
-                            </div>
-                            <div class="folder_item" style="margin-left: -4px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">aug 21.txt</p>
-                            </div>
-                            <div class="folder_item" style="margin-left: -4px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">dream log</p>
-                            </div>
-                            <div class="folder_item" style="margin-left: -4px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">muse log</p>
-                            </div>
-                            <!-- <div class="folder_item">
-                                <img class="showimage" src="folder.png" width="45px" style="margin-top: 4px" />
-                                <p style="margin-top: 6px">dream log</p>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- 2024 -->
 
-            <div class="ywindow hidden draggable toggle" style="margin-top: -250px">
-                <div class="divider">
-                    <img
-                        class="hideimage"
-                        style="float: right; margin-top: -20px"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                    <img
-                        style="float: right; margin-top: -20px; margin-right: 21px"
-                        src="button_1.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="screen2">
-                    <div class="folderflex">
-                        <div class="itemflex">
-                            <div class="folder_item" style="margin-left: 3px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">jan 1.txt</p>
-                            </div>
-                            <div class="folder_item" style="margin-left: -4px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">dream log</p>
-                            </div>
-                            <div class="folder_item" style="margin-left: -4px">
-                                <img class="showimage" src="notepad.png" width="30px" />
-                                <p style="margin-top: 5px">muse log</p>
-                            </div>
-                            <!-- <div class="folder_item">
-                                <img class="showimage" src="folder.png" width="45px" style="margin-top: 4px" />
-                                <p style="margin-top: 6px">dream log</p>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- entries -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          aug 7.txt
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2024-1.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <!-- 2024 -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          aug 21.txt
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2024-2.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <!-- entries -->
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    aug 7.txt
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    8.7.24 5:35PM<br /><br />
-                    <strong2>FIRST EVER DIARY ENTRY ON HERE WOOOO</strong2> thats definitely something. i'd abandoned
-                    every diary-adjacent paraphernalia maybe 7 or 8 years earlier so this is also extremely refreshing
-                    and weirdly nostalgic for whatever reason? except the entire experience is profoundly improved upon
-                    by the sheer fact of it existing in a site slash object that i've crafted from the ground-up.
-                    <img src="https://file.garden/ZAkEYVkUN2HXHCu3/web/graphics/imademywebsite.gif" /> i'm still in awe
-                    of this here nugget of the internet that i've molded to my preferences as someone who knew jackshit
-                    about html or css <strong>just a month earlier</strong>, on the 1st of july. incidentally, this was
-                    also the day i started my 2 week long summer course on gravitational wave astronomy @ ICTS except
-                    i've forever been a slacker at heart (i've always worked best when procrastinating on a different
-                    task) which meant full immersion into front-end development, or at least learning to make sense of
-                    html's head and body (pun intended)<br />
-                    i distinctly remember coming across a website that highly struck my fancy (not disclosing which :-P)
-                    and by then i'd had an underlying desire to "make a neocities" for the longest time after seeing it
-                    everywhere over my time on the internet, so i copied the entire site's code into a burner neocities
-                    account to try and make modifications to it, eventually building it up to a vision i was satisfied
-                    with. this was the <strong>best/gravest mistake</strong> of my life.<br />
-                    not going into too many details about my gruelling experience traversing the rocky terrains of
-                    html/css/a dash of javascript as a <strong2>total (bumbling) beginner</strong2> but i remember
-                    tinkering with the copied site code for maybe a week until i got frustrated over it not being in
-                    line with the aesthetic i'd envisioned, mainly because (<strong
-                        >keep this in mind if you're a beginner like me!</strong
-                    >) when you copy code from someplace else, unspooling the customization an element is put through
-                    takes 3x times more than what you'd take to just code it out on your own if you know what the fuck's
-                    happening. this was my no.1 takeaway from the 1-week familiarization stint. another thing that
-                    helped me quite a bit was stumbling across an unknown term or attribute in a code snippet of my
-                    liking and immediately looking it up on w3schools, reddit or several online forums which was
-                    spontaneous enough to keep me engaged while also adding an assortment of new weapons to my css
-                    arsenal, to the point my mind felt stuffy after prolonged ventures into diverse rabbitholes. but it
-                    is so so worth it, and so <strong>fulfilling!</strong> im glad i finally have an independent space
-                    on the internet i can customize to my heart's content. the month-long obsession has also forced a
-                    (initially unintentional) complete <strong>wipeout of my social media cravings</strong> although one
-                    of my closest friends called me up because she was concerned about my radio silence everywhere LOL
-                    (i asked her to sign my guestbook here but she's still a no-show..)<br />
-                    anyway, the only reason i'm able to code day and night with near-hourly updates to my site is
-                    because i'm currently a NEET (it's been a good 2 months out of college #iHaveaBachelorsDegreeNow)
-                    and awaiting college decisions for <strong>masters in berlin</strong>. if i do get in, it'd solve
-                    every, or most of, my problems at the moment because i need to get out of this country
-                    expeditiously, if i don't, well, i don't even want to actualize what'd happen by writing it out
-                    here! it's been <strong2>2 fucking months</strong2> and they still haven't given me as much as an
-                    alert like GUYSSSSS im desperate :-( their decisions timeline concludes on the 31st of august
-                    though, so the neverending hope persists, and the click-clacking continues. the all-pervading
-                    anxiety and doubt because of the situation i'm in right now has resulted in really violent
-                    existential episodes at night and i've been voluntarily amplifying this shit by reading similar
-                    books and watching movies of the same ilk LMFAO i need to be stopped. regardless, i keep wondering
-                    why (re:this website or any creative pursuit) i even put so much effort into anything i do or into
-                    beautifying my situational environments (<strong2>both online and offline</strong2>) so fervently,
-                    because what use lies in preserving something that ultimately amounts to nothing? i tell myself it's
-                    to keep myself occupied for the extent of my life but my mind can filter out bullshit pretty easily,
-                    even if the spouter of them is me and i fear i'll mentally collapse if i don't read a whole lot of
-                    positive absurdist philosophy to counter this wave of destructive nihility i've been objected to
-                    lately. or receive a decision from the university i've applied to in berlin but we can't always have
-                    what we want. for now though, while i work on my perpetually deteriorating attention span, i'm going
-                    to keep chipping away at my website! if you've made it this far,
-                    <strong>here's a biscuit for you</strong>
-                    <img src="https://wilardo.crd.co/assets/images/gallery02/032264f6_original.gif" /> here's to many
-                    many years more of whining on this website of my creation! so excited to see everything else my
-                    aggravating brain has in store for both me and all of you ^__^<br /><br />
-                    <strong>p.s tomorrow marks 1 month of this site's existence</strong> (confetti starts falling out of
-                    every conceivable nook of whatever conceptual space the reader of this entry is in)
-                </div>
-            </div>
+      <!-- log entries -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          dream log
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2024-DR.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    aug 21.txt
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    8.21.24 8:46PM<br /><br />
-                    <strong2>evening!</strong2> couldn't muster more of an enthusiastic energy because i just got
-                    rejected (excluded? it wasn't a rejection since my bachelors degree wasn't apparently enough for
-                    their rigorous coursework and they considered me unfit right off the bat for their masters program)
-                    from the college i was aiming at, but for whatever reason it hasn't affected me as much as i thought
-                    it would. this could just be my <strong>complacence</strong> in the face of misfortune that has
-                    built over the years but regardless, i feel... okay. the world didn't end when i fucked up my school
-                    leaving examinations 3 years earlier, the world didn't end when my inbox pinged 2 nights back,
-                    bearing news potent enough to shatter several plans and fantasies of a better future i had woven to
-                    keep myself alive over the past year or two. the world is <strong>rigged</strong> as it is,
-                    nothing's real! am i even here? is everything just a figment of somebody's extremely grotesque
-                    daydream? the beauty lies in the void of not knowing i suppose. <br />
-                    depressing drivel aside, i've actually come across an opportunity of a masters program that'd
-                    surpass the benefits of the german plan i'd made even, if it does in fact happen. i've discovered
-                    <strong2>chile</strong2> and its
-                    <strong2>extremely astronomy-driven public universities</strong2>!!! if things go right i'd not only
-                    be doing a course completely focused on observational astronomy but it'll help me work on a possible
-                    PHd thesis beforehand due to a faculty solely dedicated to astronomy! eventually my job prospects
-                    should also unfold in chile itself due to the extent of observatories in there. genuinely so hyped @
-                    imagining my life there because i would've had to move to Santiago or to the US for a plethora of
-                    job openings in my desired field as it stands, and settling there so much earlier would ease things
-                    up a lot..also i'd finally get to <strong2>learn spanish</strong2>. and
-                    <strong2>rizz up latinas</strong2>. exciting. the results should be out by mid-Nov so i've got 2
-                    more months of agonizing waiting Yet Again, although i'm planning on upping the skincare and
-                    exercise regimens coupled with spanish lessons and an absolute brush-up of my cosmology and quantum
-                    mechanics foundations since i'm already beginning to forget :P maybe get my red belt in taekwondo in
-                    the meanwhile as well, i've been stuck at blue for far too long. one thing's for sure though, no
-                    more moping around waiting for something to magically click,
-                    <strong>change starts whenever i want it to</strong>.<br /><br />
-                    <strong
-                        >p.s i hate how i've got to go coding hunched over like a 90s hacker just to get a diary entry
-                        up??</strong
-                    >
-                    i think i'm going to better my backend dev skills so i can formulate a web form interface of some
-                    kind that i can upload a diary entry to like a normal, say, blogging website, and have the
-                    javascript sort itself out automatically. this is kind of clunky but hey i'm just starting out ^__^
-                </div>
-            </div>
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          muse log
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2024-MS.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <!-- log entries -->
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    dream log
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    9.7.24<br /><br />
-                    short dream because i woke up in an hour or so but it started with some kind of..muscular, old guy
-                    (looked like sylvester stallone? or perhaps an amalgamation of several similarly aged old men i've
-                    come across in my 21 years of living) spanning the walls of a gym-ish room on all fours like
-                    spiderman. on entering the room, i happened to be extremely impressed at this feat and went so far
-                    as to ask him how he was doing this. he showed me a back/shoulder clench exercise to be done several
-                    times in a row for one set, 10 to 15 times (or perferably more) in order to up my back flexibility.
-                    pretty sure doing that alone doesn't give you spidey powers but i caught myself trying it out while
-                    showering anyway
-                    <br /><br /><br />
+      <!-- 2025 -->
 
-                    9.8.24<br /><br />
-                    extremely embarrassing thing to type out but today's dream was purely brainrot-centered. don't
-                    recall most of it but it involved hitting a skibidi toilet rendition in a cubicle that somehow
-                    spawned in the center of a busy street several times with lava-like laser beams, which is hard to
-                    believe given i had no weapons of any kind in the dream. i'm not even sure how it ended but i'm glad
-                    it did
-                </div>
-            </div>
+      <!-- entries -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          jan 1.txt
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2025-1.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    muse log
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    <strong2>drums</strong2> - listened to stargaze shelter's
-                    <a href="https://youtube.com/watch?v=f7383YNxGkg&pp=ygUZc3RhcmdhemUgc2hlbHRlciBvcHRpY2FsIA%3D%3D"
-                        >optical</a
-                    ><br />
-                    <strong2>dance</strong2> -
-                    <a href="https://vt.tiktok.com/ZS2PkTRgv/">standing next to you</a> choreo<br />
-                    <strong2>vocals</strong2> - <a href="https://instagram.com/reel/C7sEUW3SI9N/">rachel chiu</a> on
-                    ig<br />
-                    <strong2>chinese</strong2> -
-                    <a href="https://youtube.com/watch?v=oNCE3q8t9ko&pp=ygUVbGluayBjbGljayBvdmVyIHRoaW5r">overthink</a>
-                    from link click<br />
-                    <strong2>vocals</strong2> -
-                    <a href="https://youtube.com/watch?v=XKV-r_oZs5Y&pp=ygUMbG92ZWx5IHNld2Vy">lovely sewer</a>, yves
-                    tumor<br />
-                    <strong2>medicine</strong2> - <a href="https://anilist.co/anime/7724/Shiki/">shiki</a><br />
-                    <strong2>dance</strong2> - <a href="https://instagram.com/reel/C5wu7swJ_gc/">notauraa</a> on ig<br />
-                    <strong2>music (creation, as a whole)</strong2> -
-                    <a href="https://youtube.com/watch?v=3x097JbiHOA&pp=ygUTYmxvb2QgcHJvbWlzZSBzd2Fucw%3D%3D"
-                        >blood promise</a
-                    ><br />
-                    <strong2>vocals</strong2> - <a href="https://instagram.com/reel/DA6hfE4vdwt/">celina fang</a> on
-                    ig<br />
-                    <strong2>vocals, music</strong2> -
-                    <a href="https://www.instagram.com/reel/C9FGKMfouQt/">hetvi</a> on ig<br />
-                </div>
-            </div>
+      <!-- log entries -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          dream log
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2025-DR.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
 
-            <!-- 2025 -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          muse log
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/2025-MS.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
+    </main>
 
-            <!-- entries -->
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    jan 1.txt
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    8.7.24 5:35PM<br /><br />
-                    <strong2>unhappy new year</strong2> Lol..i'll cut the theatrics actually but i've never felt worse.
-                    its not even because i'm....physically or situationally having an objectively bad time. things could
-                    not be more stable, and that stagnancy is exactly what i despise. i feel stuck, repeating the same
-                    year since 2020 again and again like i'm in somebody's horrible idea of a time loop and it just
-                    feels like my youth is passing me by <strong>(i'm 21 and a half apples tall)</strong>. lately i've
-                    come to realize that physics has lost the charm it had, and i really don't know if i want to make a
-                    career out of it and spend the next 4 to 5 years studying for a job that i don't even know i'll like
-                    in case it isn't what my childhoood dream was. academia is bleak. mathematics is bleak. life
-                    currently is bleak. i seriously wish i was pursuing a masters in psychology in thailand right now
-                    instead...and living with my parents is sapping every last bit of my sanity and i do not know what
-                    to do to break out of this vicious cycle of depression and lack of initiative without a steady
-                    source of income which, again, i can't be receiving due to being a full-time student at a shit from
-                    butt univeristy. i seriously wish i wasn't a sentient being at the moment, it's dreary as fuck. i
-                    can't even find joy in the things i like, or used to like, every single day is nothing but an
-                    experiment in wasting time within the confines of my worn out mind. and still i trudge on. despite
-                    my mental state i want to read more books and try my hand at newer things this year, at least in the
-                    moments i can steal away from my <strong2>partially self-inflicted purgatory</strong2>. on the
-                    brighter side of things, i might be getting a new computer by next month! and i'll at least be able
-                    to immerse myself into <strong>ts4</strong> once again hitch-free. and over the last few weeks, i've
-                    been watching season 1 of true detective, basically just laboring through the episodes one by one
-                    whenever i'm on break or @ the bus stop while i wait. rust is my
-                    <strong2>spirit animal</strong2> and i wish i could have his entire dialogue sheet available on
-                    demand to quote at any given point of time because he's kind of like, my mirror image in the word's
-                    purest sense. remember when i talked about wanting to read some amount of positive absurdist
-                    philosophy to counter the persistent wave of destructive nihilism i was suffering from? although the
-                    pretentious left (or right idgaf) could reduce true detective's essence or rust's character to an
-                    edgy 9th grader's rant, it still decidedly put my mind at peace, more so than reading the myth of
-                    sisyphus (but that might probably be because i wasn't paying a whole lot of attention reading it the
-                    first time). i think it really doesn't matter what the grade or phrenic quality of any given media
-                    is, i could literally have the Grinch move my heart if it was meant to because all art is human and
-                    meant to strike a human chord, no matter what kind. lately, i've also been religiously playing every
-                    morning and afternoon with a set of puppies on my campus. they're beautiful, and so guileless, and
-                    definitely one of the greater highlights of my life at the moment. its moments like these that i've
-                    been consciously adding to the general spectrum of my lived experiences and if viewed in terms of
-                    miniscule events of unadulterated bliss, i think my <strong>stupid chungus life</strong> could be
-                    worth adoring!<br /><br />
-                    anyway before signing off, just wanted to put this image up here because i've been thinking about it
-                    for quite some time. <br /><br /><img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/GVqxEloXEAAV29w.jpg"
-                        height="290px" /><br /><br />may the new yuri bring us all unexpected gay encounters and a
-                    better shot at existing, amen
-                </div>
-            </div>
-
-            <!-- log entries -->
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    dream log
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">1.1.25<br /><br /></div>
-            </div>
-
-            <div class="entry hidden draggable toggle">
-                <div class="note_header">
-                    muse log
-                    <img
-                        class="hideimage"
-                        style="float: right; cursor: url(select.png), pointer"
-                        src="button_3.gif"
-                        alt=""
-                        onclick="clicksound.playclip()" />
-                </div>
-                <div class="note">
-                    <strong2>drums</strong2> - listened to portishead's
-                    <a href="https://open.spotify.com/album/4BnNSzOWadogStvyYshJIo?si=1fbf36f9f2554a78">third</a><br />
-                    <strong2>vocals</strong2> -
-                    <a href="https://www.instagram.com/reel/C-zi1U0SPlX/">maytree music</a> on ig<br />
-                    <strong2>vocals</strong2> -
-                    <a href="https://www.youtube.com/watch?v=uT_YCsUHUEg">double</a> milgram, mikoto's voice<br />
-                </div>
-            </div>
-        </main>
-
-        <!-- timer -->
-        <script>
-            function updateClock() {
-                var now = new Date();
-                var hours = now.getHours();
-                var minutes = now.getMinutes();
-                var seconds = now.getSeconds();
-                hours = hours % 12;
-                hours = hours ? hours : 12; // Handle midnight
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-                var timeString = hours + ":" + minutes + ":" + seconds + " ";
-                // Display the time string in the HTML element with id="clock"
-                document.getElementById("clock").textContent = timeString;
-            }
-            // Update the clock every second
-            setInterval(updateClock, 1000);
-            // Initial call to display the clock immediately
-            updateClock();
-        </script>
-    </body>
+    <!-- timer -->
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        hours = hours % 12;
+        hours = hours ? hours : 12; // Handle midnight
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        var timeString = hours + ":" + minutes + ":" + seconds + " ";
+        // Display the time string in the HTML element with id="clock"
+        document.getElementById("clock").textContent = timeString;
+      }
+      // Update the clock every second
+      setInterval(updateClock, 1000);
+      // Initial call to display the clock immediately
+      updateClock();
+    </script>
+  </body>
 </html>

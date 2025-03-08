@@ -473,6 +473,18 @@ footer {
   height: 37px;
 }
 
+#hosparkle {
+  position: absolute;
+  margin-left: -95px;
+  top: 70px;
+  z-index: 890;
+}
+
+#hosparkle img {
+  transform: rotate(15deg);
+  height: 46px;
+}
+
 #smoker {
   float: ;
   position: fixed;

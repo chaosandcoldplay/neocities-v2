@@ -1,394 +1,688 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- embed settings -->
-        <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
-        <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
+  <head>
+    <!-- embed settings -->
+    <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
+    <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
 
-        <meta property="og:image" content="embed_image.png" />
+    <meta property="og:image" content="embed_image.png" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="description" content="tash's personal website ★" />
-        <meta name="keywords" content="kawaii, 2000s, dreamy" />
-        <meta name="author" content="tasha" />
-        <meta name="twitter:description" content="tash's personal website ★" />
-        <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="tash's personal website ★" />
+    <meta name="keywords" content="kawaii, 2000s, dreamy" />
+    <meta name="author" content="tasha" />
+    <meta name="twitter:description" content="tash's personal website ★" />
+    <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
 
-        <!-- website settings -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
-        <title>僕は答える—ぴぽぴぽ~♪</title>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
 
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/d10173a287.js"></script>
-        <link rel="stylesheet" href="blog.css" />
-    </head>
+    <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/d10173a287.js"></script>
+    <link rel="stylesheet" href="styles/blog.css" />
+  </head>
 
-    <body style="overflow: hidden; margin: 1px">
-        <main>
-            <div class="topbar">
-                <div class="login">
-                    <img src="loading.gif" width="17px" style="margin-right: 10px; margin-top: -2px" />
-                    https://twitter.com/creamroll
+  <body>
+    <main>
+      <div class="topbar">
+        <div class="login">
+          <div id="loadinggif"><img src="assets/pixels/loading.gif" /></div>
+          https://twitter.com/creamroll
+        </div>
+        <a href="diary.html">
+          <img
+            id="barbutton1"
+            src="assets/items/button_3.gif"
+            width="21px"
+            onclick="clicksound.playclip()"
+        /></a>
+        <img
+          id="barbutton2"
+          src="assets/items/button_2.gif"
+          width="21px"
+          onclick="clicksound.playclip()"
+        />
+      </div>
+
+      <div style="display: flex">
+        <div id="leftwt">
+          <header>
+            <div class="header-image"></div>
+            <div class="header-right">
+              <a href="https://milk-tea.neocities.org/" target="_blank"
+                ><i class="fak fa-chirp-external"></i
+              ></a>
+              <a href="https://milk-tea.atabook.org/" target="_blank"
+                ><i class="fak fa-chirp-message"></i
+              ></a>
+              <a
+                class="f-link"
+                href="https://neocities.org/site/milk-tea"
+                target="_blank"
+                >Follow</a
+              >
+            </div>
+            <div class="header-avatar"></div>
+            <div class="bio">
+              <div id="bio-border"></div>
+              <div id="headerstyle">
+                <div class="bio-name">tash 𖦹ᯅ𖦹</div>
+                <div class="bio-url">@creamroll</div>
+                <div class="bio-description">cake haver and eater</div>
+                <div id="joinedbio">
+                  <i class="fak fa-chirp-calendar"></i>Joined October, 2024
                 </div>
-                <a href="diary.html">
-                    <img
-                        style="float: right; margin-top: -22px"
-                        src="button_3.gif"
-                        width="21px"
-                        onclick="clicksound.playclip()"
-                /></a>
+                <div class="extras">
+                  <a href="#"
+                    ><b>91</b>
+                    <span class="extragrey" style="margin-right: 10px"
+                      >Following</span
+                    ></a
+                  >
+                  <a href="#"
+                    ><b>225</b> <span class="extragrey">Followers</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div class="post">
+            <div class="post-header">
+              <span id="pinnedspan"><i class="fak fa-chirp-pinned"></i></span
+              >Pinned
+            </div>
+            <div class="post-author">
+              <div class="post-pfp"></div>
+              <div class="author-name">tash 𖦹ᯅ𖦹</div>
+              <div class="author-url">@creamroll</div>
+            </div>
+            <div class="post-body">
+              welcome to my blog/microblog/rambling station! navigate across
+              tags from the What's Happening box on the right. not nsfw but
+              could be on occasions? enjoy ^__^
+              <div class="post-media">
                 <img
-                    style="float: right; margin-top: -22px; margin-right: 23px"
-                    src="button_2.gif"
-                    width="21px"
-                    onclick="clicksound.playclip()" />
+                  src="assets/gifs/heart-pad.gif"
+                  width="100%"
+                  style="margin-bottom: -5px"
+                />
+              </div>
+            </div>
+            <div class="post-tags">
+              <a id="pseudo-link" class="post-tag" href="#toggled"
+                >#all posts</a
+              >
+            </div>
+            <div class="post-footer">
+              <div class="footer-left">
+                <i class="fak fa-chirp-reply"></i>
+                <span>7&nbsp;&nbsp;·&nbsp;&nbsp; 21 October, 2024</span>
+              </div>
+              <div class="footer-right">
+                <a class="reblog-button">
+                  <i class="fak fa-chirp-retweet"></i>
+                </a>
+                <a class="like-button">
+                  <i class="fak fa-chirp-like"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="jnav">
+            <!-- <div class="post"></div> POSTS START HERE -->
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                MILB (Man I Fucking Love Broccoli)
+                <div class="post-media">
+                  <img
+                    src="https://i.pinimg.com/736x/22/ca/42/22ca42ea62fa398b56189e7aa4f738c9.jpg"
+                    width="100%"
+                    loading="lazy"
+                    style="margin-bottom: -3px"
+                  />
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 4 March, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <div style="display: flex">
-                <div id="leftwt">
-                    <header>
-                        <div class="header-image"></div>
-                        <div class="header-right">
-                            <a href="https://milk-tea.neocities.org/" target="_blank"
-                                ><i class="fak fa-chirp-external"></i
-                            ></a>
-                            <a href="https://milk-tea.atabook.org/" target="_blank"
-                                ><i class="fak fa-chirp-message"></i
-                            ></a>
-                            <a class="f-link" href="https://neocities.org/site/milk-tea" target="_blank">Follow</a>
-                        </div>
-                        <div class="header-avatar"></div>
-                        <div class="bio">
-                            <div id="bio-border"></div>
-                            <div style="z-index: 100; position: relative; !important">
-                                <div class="bio-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="bio-url">@creamroll</div>
-                                <div class="bio-description">cake haver and eater</div>
-                                <div style="color: #71767b; margin-top: 11px">
-                                    <i class="fak fa-chirp-calendar" style="margin-right: 4px"></i>Joined October, 2024
-                                </div>
-                                <div class="extras">
-                                    <a href="#"
-                                        ><b>91</b> <span style="margin-right: 10px; color: #71767b">Following</span></a
-                                    >
-                                    <a href="#"><b>225</b> <span style="color: #71767b">Followers</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-
-                    <div class="post">
-                        <div class="post-header">
-                            <span style="margin-right: 5px"><i class="fak fa-chirp-pinned"></i></span>Pinned
-                        </div>
-                        <div class="post-author">
-                            <div class="post-pfp"></div>
-                            <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                            <div class="author-url">@creamroll</div>
-                        </div>
-                        <div class="post-body">
-                            welcome to my blog/microblog/rambling station! navigate across tags from the What's
-                            Happening box on the right. not nsfw but could be on occasions? enjoy ^__^
-                            <div class="post-media">
-                                <img src="heart-pad.gif" width="100%" style="margin-bottom: -5px" />
-                            </div>
-                        </div>
-                        <div class="post-tags">
-                            <a id="pseudo-link" class="post-tag" href="#toggled">#all posts</a>
-                        </div>
-                        <div class="post-footer">
-                            <div class="footer-left">
-                                <i class="fak fa-chirp-reply"></i>
-                                <span>7&nbsp;&nbsp;·&nbsp;&nbsp; 21 October, 2024</span>
-                            </div>
-                            <div class="footer-right">
-                                <a class="reblog-button">
-                                    <i class="fak fa-chirp-retweet"></i>
-                                </a>
-                                <a class="like-button">
-                                    <i class="fak fa-chirp-like"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="jnav">
-                        <!-- <div class="post"></div> -->
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                2025 ins: hydration and skin care, finishing my to-do lists, directing all extra time to
-                                hobbies and website/website upkeep<br /><br />
-                                2025 outs: dehydration, mood swings (#LockIn), waiting for something to happen
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 1 January, 2025</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                GAP...GAP the series...made me cry...how gay (derogatory) could i possibly be dude
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 31 December, 2024</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                Me
-                                <div class="post-media">
-                                    <img
-                                        src="https://file.garden/ZxOOS50ya2Lt0FdH/GfJXnpKbkAEIZN8.jpg"
-                                        width="100%"
-                                        style="margin-bottom: -5px" />
-                                </div>
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 19 December, 2024</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                sent twitter oomf an nsfw art of natasha and she was as unenthusiastic as a piece of
-                                cardboard Like okay so you think im a freak
-                                <div class="post-media">
-                                    <img
-                                        src="https://file.garden/ZxOOS50ya2Lt0FdH/bbed8b5e-7613-4b33-8e99-743b1bb0e08d.gif"
-                                        width="100%"
-                                        style="margin-bottom: -5px" />
-                                </div>
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 19 December, 2024</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                redownloaded sims4 on my stupid fucking trashy laptop and although its gasping for air
-                                as expected at least i made my ui cuter!
-                                <div class="post-media">
-                                    <img
-                                        src="https://file.garden/ZxOOS50ya2Lt0FdH/2024-10-29%20(1).png"
-                                        width="100%"
-                                        style="margin-bottom: -5px" />
-                                </div>
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 29 October, 2024</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="post toggled status">
-                            <div class="post-author">
-                                <div class="post-pfp"></div>
-                                <div class="author-name">tash 𖦹ᯅ𖦹</div>
-                                <div class="author-url">@creamroll</div>
-                            </div>
-                            <div class="post-body">
-                                i'm genuinely so fucking tired of having to live like this..Please let me get into grad
-                                school this is the one thing i've wanted most in life. whoever's up there or
-                                realistically to the energy that fuels entropy, you've gotta make this happen i implore
-                                you
-                                <div class="post-media">
-                                    <img src="https://file.garden/ZxOOS50ya2Lt0FdH/GYGKVA7WwAAXgZX.jpg" width="100%" />
-                                </div>
-                            </div>
-                            <div class="post-tags"><a class="post-tag">#status</a></div>
-                            <div class="post-footer">
-                                <div class="footer-left">
-                                    <i class="fak fa-chirp-reply"></i>
-                                    <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 22 October, 2024</span>
-                                </div>
-                                <div class="footer-right">
-                                    <a class="reblog-button">
-                                        <i class="fak fa-chirp-retweet"></i>
-                                    </a>
-                                    <a class="like-button">
-                                        <i class="fak fa-chirp-like"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                never fell this hard in love with something in recent times im
+                shook
+                <div class="post-media">
+                  <img
+                    src="https://file.garden/ZxOOS50ya2Lt0FdH/Screenshot%202025-03-06%20180636dt.png"
+                    width="100%"
+                    loading="lazy"
+                    style="margin-bottom: -3px"
+                  />
                 </div>
-
-                <div id="rightwt">
-                    <div id="togglenav">
-                        <div id="toggle-header">
-                            <b>What’s happening</b>
-                        </div>
-                        <div id="allposts">
-                            <img src="K35.png" />
-                            <div style="display: flex; flex-direction: column">
-                                <a id="real-link" href="#toggled">#All Posts</a>
-                                <div class="subtitles" style="margin-top: 5px">View all&nbsp;·&nbsp;LIVE</div>
-                            </div>
-                        </div>
-                        <div id="tags">
-                            <div class="subtitles" style="margin-top: 5px">Mood&nbsp;·&nbsp;390K posts</div>
-                            <a href="#status" style="margin-bottom: 10px">#status</a>
-                            <div class="subtitles" style="margin-top: 5px">Writing&nbsp;·&nbsp;120K posts</div>
-                            <a href="#poetry">#poetry</a>
-                        </div>
-                    </div>
-                    <div id="mutuals">
-                        <div id="mutuals-header">
-                            <b>Who to follow</b>
-                        </div>
-
-                        <div class="mutual-entry">
-                            <div class="mutual-avatar1"></div>
-                            <div style="margin: 5px 7px">
-                                <div class="bio-name" style="font-size: 14px">elly</div>
-                                <div class="bio-url" style="margin-top: 2px">@bunfluff</div>
-                            </div>
-                            <div class="mutual-follow">
-                                <a href="https://catboo.neocities.org/microblog" target="_blank">Follow</a>
-                            </div>
-                        </div>
-                        <div class="mutual-entry" style="margin-top: -15px">
-                            <div class="mutual-avatar2"></div>
-                            <div style="margin: 5px 0 5px 5px">
-                                <div class="bio-name" style="font-size: 14px; margin-left: 2px">jeith</div>
-                                <div class="bio-url" style="margin-top: 2px">@jeith.com</div>
-                            </div>
-                            <div class="mutual-follow"><a href="https://jeith.com/" target="_blank">Follow</a></div>
-                        </div>
-                        <div class="mutual-entry" style="margin-top: -15px">
-                            <div class="mutual-avatar3"></div>
-                            <div style="margin: 5px 0 5px 5px">
-                                <div class="bio-name" style="font-size: 14px; margin: 0 32px 0 2px">krish</div>
-                                <div class="bio-url" style="margin-top: 2px">@krish</div>
-                            </div>
-                            <div class="mutual-follow">
-                                <a href="https://rpgmaker.cafe/users/krish" target="_blank">Follow</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="post quotebody">
+                <div class="post-author">
+                  <div class="post-pfp"></div>
+                  <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                  <div class="author-url">@creamroll</div>
                 </div>
+                <div class="post-body">
+                  Getting really into The Smiths @ the ripe age of 21. who
+                  would've thunk
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 4 March, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-        </main>
 
-        <!-- link switch click -->
-        <script>
-            document.getElementById("pseudo-link").addEventListener("click", function (e) {
-                e.preventDefault();
-                document.getElementById("real-link").click();
-            });
-        </script>
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                Getting really into The Smiths @ the ripe age of 21. who
+                would've thunk
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 4 March, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-        <!-- like button functionality -->
-        <script>
-            document.querySelectorAll(".post-footer a").forEach((button) => {
-                button.addEventListener("click", function () {
-                    // Toggle the 'active' class when the button is clicked
-                    this.classList.toggle("active");
-                });
-            });
-        </script>
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                good coffee great coffee downloaded ✅
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 27 February, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-        <script>
-            document.querySelectorAll(".like-button").forEach((button) => {
-                button.addEventListener("click", function () {
-                    const icon = this.querySelector("i"); // Select the icon inside the button
-                    icon.classList.toggle("fa-chirp-like");
-                    icon.classList.toggle("fa-chirp-liked");
-                });
-            });
-        </script>
-    </body>
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                been wanting to talk about this person but theyre (or their muts
+                are) literally everywhere so. lets call them ao. i fucking HATE
+                seeing their profile and i moved accounts because of how much it
+                pissed me off but now theyre talking to me again on a creative
+                acc +
+              </div>
+              <div class="reply-line"></div>
+              <div class="replybody">
+                <div class="post-author">
+                  <div class="post-pfp"></div>
+                  <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                  <div class="author-url">@creamroll</div>
+                </div>
+                <div class="post-body">
+                  As if nothing ever happened....i gen have half a mind to block
+                  them everywhere but its too many places and Also i still like
+                  their literary work. i rlly thought over the past i think, 3
+                  years? (discounting 2025 since i tried my best to keep away
+                  from them since 24) that we were "good" friends 😂 Silly me ig
+                </div>
+              </div>
+              <div
+                class="reply-line"
+                style="height: 19.5%; margin-top: -118px"
+              ></div>
+              <div class="replybody">
+                <div class="post-author">
+                  <div class="post-pfp"></div>
+                  <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                  <div class="author-url">@creamroll</div>
+                </div>
+                <div class="post-body">
+                  sure man add literally fucking everybody and their moms no
+                  matter if you met them a week back to your coveted circles
+                  account or whatever i dont even need to be there I literally
+                  do not matter after all! its painfully apparent. fuck you man
+                </div>
+              </div>
+              <div class="reply-line"></div>
+              <div class="replybody">
+                <div class="post-author">
+                  <div class="post-pfp"></div>
+                  <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                  <div class="author-url">@creamroll</div>
+                </div>
+                <div class="post-body">
+                  i was somewhat getting over feeling like a fucking clown for
+                  my interactions over the past years (being so...idk full of
+                  familiarity because i truly thought we were at an okayish
+                  degree of friendship) but you come back nonchalantly and take
+                  my art and recolor it with your ugly ass painting like Idgaf?
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 21 February, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                2025 ins: hydration and skin care, finishing my to-do lists,
+                directing all extra time to hobbies and website/website
+                upkeep<br /><br />
+                2025 outs: dehydration, mood swings (#LockIn), waiting for
+                something to happen
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 1 January, 2025</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                GAP...GAP the series...made me cry...how gay (derogatory) could
+                i possibly be dude
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 31 December, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                Me
+                <div class="post-media">
+                  <img
+                    src="https://file.garden/ZxOOS50ya2Lt0FdH/GfJXnpKbkAEIZN8.jpg"
+                    width="100%"
+                    loading="lazy"
+                    style="margin-bottom: -5px"
+                  />
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 19 December, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                sent twitter oomf an nsfw art of natasha and she was as
+                unenthusiastic as a piece of cardboard Like okay so you think im
+                a freak
+                <div class="post-media">
+                  <img
+                    src="https://file.garden/ZxOOS50ya2Lt0FdH/bbed8b5e-7613-4b33-8e99-743b1bb0e08d.gif"
+                    width="100%"
+                    loading="lazy"
+                    style="margin-bottom: -5px"
+                  />
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 19 December, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                Icb im rocking out to a song called october all over in fucking
+                november
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 20 November, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                redownloaded sims4 on my stupid fucking trashy laptop and
+                although its gasping for air as expected at least i made my ui
+                cuter!
+                <div class="post-media">
+                  <img
+                    src="https://file.garden/ZxOOS50ya2Lt0FdH/2024-10-29%20(1).png"
+                    width="100%"
+                    loading="lazy"
+                    style="margin-bottom: -5px"
+                  />
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 29 October, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="post toggled status">
+              <div class="post-author">
+                <div class="post-pfp"></div>
+                <div class="author-name">tash 𖦹ᯅ𖦹</div>
+                <div class="author-url">@creamroll</div>
+              </div>
+              <div class="post-body">
+                i'm genuinely so fucking tired of having to live like
+                this..Please let me get into grad school this is the one thing
+                i've wanted most in life. whoever's up there or realistically to
+                the energy that fuels entropy, you've gotta make this happen i
+                implore you
+                <div class="post-media">
+                  <img
+                    src="https://file.garden/ZxOOS50ya2Lt0FdH/GYGKVA7WwAAXgZX.jpg"
+                    width="100%"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="post-tags"><a class="post-tag">#status</a></div>
+              <div class="post-footer">
+                <div class="footer-left">
+                  <i class="fak fa-chirp-reply"></i>
+                  <span>0&nbsp;&nbsp;·&nbsp;&nbsp; 22 October, 2024</span>
+                </div>
+                <div class="footer-right">
+                  <a class="reblog-button">
+                    <i class="fak fa-chirp-retweet"></i>
+                  </a>
+                  <a class="like-button">
+                    <i class="fak fa-chirp-like"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="rightwt">
+          <div id="togglenav">
+            <div id="toggle-header">
+              <b>What’s happening</b>
+            </div>
+            <div id="allposts">
+              <img src="assets/images/K35.png" alt="cartoon pigeon" />
+              <div style="display: flex; flex-direction: column">
+                <a id="real-link" href="#toggled">#All Posts</a>
+                <div class="subtitles" style="margin-top: 5px">
+                  View all&nbsp;·&nbsp;LIVE
+                </div>
+              </div>
+            </div>
+            <div id="tags">
+              <div class="subtitles" style="margin-top: 5px">
+                Mood&nbsp;·&nbsp;390K posts
+              </div>
+              <a href="#status" style="margin-bottom: 10px">#status</a>
+              <div class="subtitles" style="margin-top: 5px">
+                Writing&nbsp;·&nbsp;120K posts
+              </div>
+              <a href="#poetry">#poetry</a>
+            </div>
+          </div>
+          <div id="mutuals">
+            <div id="mutuals-header">
+              <b>Who to follow</b>
+            </div>
+
+            <div class="mutual-entry">
+              <div class="mutual-avatar1"></div>
+              <div style="margin: 5px 7px">
+                <div class="bio-name" style="font-size: 14px">elly</div>
+                <div class="bio-url" style="margin-top: 2px">@bunfluff</div>
+              </div>
+              <div class="mutual-follow">
+                <a href="https://catboo.neocities.org/microblog" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+            <div class="mutual-entry" style="margin-top: -15px">
+              <div class="mutual-avatar2"></div>
+              <div style="margin: 5px 0 5px 5px">
+                <div class="bio-name" style="font-size: 14px; margin-left: 2px">
+                  jeith
+                </div>
+                <div class="bio-url" style="margin-top: 2px">@jeith.com</div>
+              </div>
+              <div class="mutual-follow">
+                <a href="https://jeith.com/" target="_blank">Follow</a>
+              </div>
+            </div>
+            <div class="mutual-entry" style="margin-top: -15px">
+              <div class="mutual-avatar3"></div>
+              <div style="margin: 5px 0 5px 5px">
+                <div
+                  class="bio-name"
+                  style="font-size: 14px; margin: 0 32px 0 2px"
+                >
+                  krish
+                </div>
+                <div class="bio-url" style="margin-top: 2px">@krish</div>
+              </div>
+              <div class="mutual-follow">
+                <a href="https://rpgmaker.cafe/users/krish" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- link switch click -->
+    <script>
+      document
+        .getElementById("pseudo-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("real-link").click();
+        });
+    </script>
+
+    <!-- like button functionality -->
+    <script>
+      document.querySelectorAll(".post-footer a").forEach((button) => {
+        button.addEventListener("click", function () {
+          // Toggle the 'active' class when the button is clicked
+          this.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".like-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const icon = this.querySelector("i"); // Select the icon inside the button
+          icon.classList.toggle("fa-chirp-like");
+          icon.classList.toggle("fa-chirp-liked");
+        });
+      });
+    </script>
+  </body>
 </html>
