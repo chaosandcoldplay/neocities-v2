@@ -604,7 +604,7 @@ body::-webkit-scrollbar-corner {
 
 /* pixel mask */
 .general-about img {
-  -webkit-mask-image: url(https://i.postimg.cc/Hk6D7BxQ/868-sin-t-tulo-20240429140043.png);
+  -webkit-mask-image: url(../assets/items/pixelmask.png);
   -webkit-mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
