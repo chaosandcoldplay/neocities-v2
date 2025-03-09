@@ -35,8 +35,7 @@ body.title {
   margin: 6px 0 0;
 }
 
-body.archive,
-body.shrines {
+body.archive {
   overflow: clip !important;
   margin: 1px;
 }
@@ -193,8 +192,6 @@ strong2 {
   display: flex;
   flex-direction: column;
 }
-
-/* main page */
 
 /* header */
 .url-info {
@@ -1328,14 +1325,6 @@ body::-webkit-scrollbar-corner {
   z-index: 300;
 }
 
-#smpencil {
-  position: absolute;
-  top: 200px;
-  left: 510px;
-  transform: rotate(200deg);
-  z-index: 100;
-}
-
 #smcoffee {
   position: absolute;
   top: 215px;
@@ -1888,22 +1877,6 @@ button:active {
   margin: -5px 0 4px;
 }
 
-#ipad-header {
-  border-radius: 5px;
-  margin-bottom: 2px;
-}
-
-#ipad-footer {
-  background: transparent;
-}
-
-#ipad-footer img {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  border-radius: 20px;
-}
-
 .iflex-1 {
   display: flex;
   flex-direction: column;
@@ -1943,27 +1916,16 @@ button:active {
   height: 79px;
 }
 
-#ireminders {
-  background-image: url(../assets/images/shrinote.webp);
-  background-size: 170px;
-  background-position: 0% 5%;
+#ipad-img {
+  background: url() center/cover no-repeat;
   border: 1px black solid;
   border-radius: 10px;
   margin: 4px;
   height: 151px;
 }
 
-#ireminders:hover {
-  opacity: 0.9;
-  transition: 0.1s ease;
-  transform: scale(1.05);
-}
-
-#ipad-img {
-  background-image: url(../assets/gifs/snookums.gif);
-  background-size: 170px;
-  background-position: 40% 0%;
-
+#imusicbox {
+  background: navajowhite;
   background-size: cover;
   border: 1px solid #000;
   border-radius: 10px;
@@ -1971,7 +1933,7 @@ button:active {
   height: 151px;
 }
 
-#imusicbox {
+#ireminders {
   border: 1px black solid;
   border-radius: 10px;
   margin: 4px;
