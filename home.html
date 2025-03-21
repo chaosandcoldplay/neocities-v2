@@ -28,6 +28,7 @@
     <script src="scripts/tooltip-jquary.js"></script>
     <script src="scripts/tooltip.js"></script>
 
+    <script src="https://melonking.net/scripts/frame-link.js"></script>
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/home.css" />
   </head>
@@ -44,9 +45,7 @@
           >
         </li>
         <li class="">
-          <a
-            href="javascript:void(0);"
-            onclick="clicksound.playclip(), window.location.reload(); return false;"
+          <a href="main.html" target="page" onclick="clicksound.playclip()"
             >Home</a
           >
         </li>
@@ -365,7 +364,8 @@
       <div class="col">
         <iframe
           name="page"
-          id="page"
+          id="mainframe"
+          class="page"
           src="main.html"
           allowtransparency="true"
         ></iframe>

@@ -541,7 +541,7 @@ footer p {
 }
 
 /* page iframe */
-#page {
+.page {
   height: 568px;
   width: 960px;
   overflow: auto;

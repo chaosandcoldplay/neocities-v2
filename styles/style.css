@@ -417,7 +417,7 @@ strong2 {
   margin: -0.5px 0 0 -35px;
 }
 
-#mainbox {
+.mainbox {
   height: 100%;
   width: 100%;
   background: #fff;
@@ -1909,7 +1909,7 @@ button:active {
 
 /* shrines */
 .ipad-in {
-  background: url(../assets/backgrounds/bluenote.jpg);
+  background: url(../assets/backgrounds/grid.png);
   background-size: 630px;
   left: 0;
   top: 0;
@@ -2106,6 +2106,7 @@ button:active {
   margin: -290px 213px;
   position: absolute;
   z-index: 2000;
+  transform: scale(0.92);
 }
 
 .shfheader {

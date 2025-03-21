@@ -37,16 +37,16 @@ var popsound = createsoundbite("https://files.catbox.moe/6l7okm.mp3");
 
 /* frame load */
 function loadInNestedIframe(url) {
-    const mainFrame = document.getElementById("page");
-
-    if (mainFrame.contentWindow) {
-        const innerFrame = mainFrame.contentWindow.document.getElementById("mainbox");
-
+    const mainFrame = document.getElementsByClassName("page")[0];
+    if (mainFrame && mainFrame.contentWindow) {
+        const innerFrame = mainFrame.contentWindow.document.getElementsByClassName("mainbox")[0];
         if (innerFrame) {
             innerFrame.src = url;
         } else {
             console.error("nested iframe not found!");
         }
+    } else {
+        console.error("main iframe or its contentWindow not found!");
     }
 }
 
