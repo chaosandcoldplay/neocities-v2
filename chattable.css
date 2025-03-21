@@ -1,0 +1,42 @@
+body {
+  cursor: url(https://milk-tea.neocities.org/assets/items/cursor.png), auto;
+  font-family: "MS PGothic";
+  background: transparent;
+}
+
+/* link styling */
+a,
+button,
+input[type="button"],
+input[type="submit"] {
+  color: #2453d4;
+}
+
+/* message styling */
+.msgWrapper {
+  background: url(https://milk-tea.neocities.org/assets/backgrounds/grid.png);
+  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
+    drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
+    drop-shadow(0 0 1px white) drop-shadow(0 2px 2px #0000004d);
+  border: 1px solid #2453d4;
+  border-radius: 8px;
+  margin: 0 30px 20px;
+}
+
+.msgWrapper:first-child {
+  margin-top: 20px;
+}
+
+.ctxMenuOption li {
+  list-style: none;
+}
+
+#input {
+  background-color: #fff;
+  border-radius: 0 !important;
+  border-top: 1px solid #000 !important;
+}
+
+#top_banner {
+  display: none;
+}

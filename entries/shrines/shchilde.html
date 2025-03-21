@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- tooltips -->
+    <script src="scripts/tooltip-jquary.js"></script>
+    <script src="scripts/tooltip.js"></script>
+
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body class="shrinei">
+    <main>
+      <div class="shitopbar">
+        <div class="shilogin">
+          <div id="shiloadinggif"><img src="assets/pixels/loading.gif" /></div>
+          https://milk-tea.neocities.org/childe
+        </div>
+        <a href="main.html">
+          <img
+            id="shibarbutton1"
+            src="assets/items/button_3.gif"
+            width="21px"
+            onclick="clicksound.playclip()"
+        /></a>
+        <img
+          id="shibarbutton2"
+          src="assets/items/button_2.gif"
+          width="21px"
+          onclick="clicksound.playclip()"
+        />
+      </div>
+      <div class="col right">
+        <!-- header -->
+        <div class="url-info"></div>
+
+        <!-- top row -->
+        <div class="table-section columnflex">
+          <div class="heading">
+            <h4>Quiz</h4>
+          </div>
+          <div class="quiz">
+            <form
+              method="post"
+              action="https://poll.pollcode.com/83933968"
+              style="height: 100%"
+            >
+              <div class="quizbg">
+                <div class="quiztitle">
+                  <strong>FANCY A DRINK?</strong>
+                </div>
+                <div align="center" style="padding-bottom: 5px">
+                  <select name="answer" class="quizanswer">
+                    <option value="1">smoothie</option>
+                    <option value="2">latte</option>
+                    <option value="3">milkshake</option>
+                    <option value="4">frappe</option>
+                    <option value="5">sundae</option>
+                    <option value="6">tea</option>
+                  </select>
+                </div>
+                <div align="center" style="padding: 3px">
+                  <input
+                    type="submit"
+                    name="vote"
+                    value=" Vote "
+                    class="quizvote"
+                  /> 
+                  <input
+                    type="submit"
+                    name="view"
+                    value=" View "
+                    class="quizview"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="mipodmain">
+            <div class="mipodbar">
+              <img
+                src="assets/images/ipod_bar.jpg"
+                width="165"
+                loading="lazy"
+                alt="ipod bar"
+              />
+            </div>
+
+            <div class="songbox">
+              <p class="songboxp">1 of 1</p>
+              <div class="mipodalbum">
+                <img
+                  src="assets/images/serani.jpeg"
+                  alt="serani poji album cover"
+                />
+                <p>
+                  ぴぽぴぽ <br />
+                  Serani Poji <br />
+                  one-room survi..
+                </p>
+              </div>
+            </div>
+
+            <!-- music player code -->
+            <div id="musicplayer">
+              <div class="songtitlebox">
+                <div class="songtitle"></div>
+              </div>
+
+              <div class="seeking mseeking">
+                <div class="current-time">00:00</div>
+
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="0"
+                  class="seek_slider"
+                  onchange="seekTo()"
+                />
+
+                <div class="total-duration">0:00</div>
+              </div>
+
+              <audio id="music" src=""></audio>
+            </div>
+
+            <div class="controls">
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-pause"
+                  ><img
+                    src="assets/items/pause.png"
+                    height="10"
+                    class="mpausebtn"
+                    alt="a pause button"
+                    onclick="clicksound.playclip()"
+                /></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-section mtable-section">
+          <div class="inner"></div>
+        </div>
+
+        <!-- neighbors -->
+        <div class="blurbs">
+          <div class="heading">
+            <h4>Neighbors</h4>
+          </div>
+          <div class="inner">
+            <div class="section"></div>
+          </div>
+        </div>
+
+        <!-- middle row -->
+        <div class="middle">
+          <div class="blog-preview">
+            <div class="heading">
+              <h4>Updates</h4>
+            </div>
+            <div class="blog-child">
+              <div class="mblogsitely">sitely</div>
+            </div>
+            <div class="blog-child">
+              <div class="blog-content">
+                <b>030525</b> brand new batch of blog entries!!! visit tashblog
+                NOW<br />
+                <b>010125</b> new (extremely depressing) diary entry is up...<br />
+              </div>
+              <div class="mblogentry">entry</div>
+            </div>
+          </div>
+          <div class="friends">
+            <div class="guestbook">
+              <div class="guestlink">
+                SIGN MY GUESTBOOK
+                <a
+                  href="https://milk-tea.atabook.org/"
+                  target="_blank"
+                  onclick="popsound.playclip()"
+                  title="thank you for visiting!"
+                  >HERE</a
+                >
+              </div>
+            </div>
+            <div class="columnflex">
+              <div class="buttonbg">
+                <div class="stamp">
+                  <div class="image-container">
+                    <img id="sliderImage" src="assets/buttons/button4.gif" />
+                    <span>
+                      <textarea readonly onClick="this.select();">
+<a href="https://milk-tea.neocities.org/" target="_blank"><img src="button-url"></a></textarea
+                      >
+                    </span>
+                  </div>
+                  <button class="next-button" onclick="nextImage()">
+                    next Button
+                  </button>
+                </div>
+              </div>
+              <div class="mlinkme"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- lower row -->
+        <div class="friends" id="comments">
+          <div class="heading">
+            <h4>Chat Box</h4>
+          </div>
+          <div class="inner">
+            <iframe
+              src="https://iframe.chat/embed/index.html?chat=cafe_log"
+              id="chattable"
+              frameborder="none"
+              width="100%"
+              height="525px"
+              overflow-y="auto"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- title label -->
+      <div id="label">
+        Milk-Tea<sup>©</sup>
+        <div class="hl labelline1"></div>
+        <div class="rowflex">
+          <div class="columnflex">
+            <p class="labelconst">UNDER CONSTRUCTION</p>
+            <div class="hl labelline2"></div>
+            <p class="labelest">EST. JULY, 2024</p>
+          </div>
+          <div class="labelimg">
+            <img src="assets/images/barcode.jpg" height="40px" width="126px" />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get the image element
+          const myImage = document.getElementById("label");
+
+          if (myImage) {
+            // Add a scroll event listener to the window
+            window.addEventListener("scroll", function () {
+              console.log("Scroll position:", window.scrollY); // Check scroll position in console
+              if (window.scrollY > 0) {
+                console.log("Hiding the image");
+                myImage.classList.add("hidden"); // Hide the image
+              } else {
+                console.log("Showing the image");
+                myImage.classList.remove("hidden"); // Show the image
+              }
+            });
+          } else {
+            console.error("Image element with ID 'label' not found.");
+          }
+        });
+      </script>
+
+      <!-- music script -->
+      <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+
+        // create new audio element
+        let curr_track = document.getElementById("music");
+
+        let track_list = [
+          {
+            name: "Serani Poji - ぴぽぴぽ",
+            path: "https://file.garden/ZxOOS50ya2Lt0FdH/Serani%20Poji%20-%20Pipo%20Pipo.mp3",
+          },
+        ];
+        //
+        //
+        //
+        //
+        //
+
+        function loadTrack(track_index) {
+          clearInterval(updateTimer);
+          resetValues();
+
+          // load a new track
+          curr_track.src = track_list[track_index].path;
+          curr_track.load();
+
+          // set an interval of 1000 milliseconds for updating the seek slider
+          updateTimer = setInterval(seekUpdate, 1000);
+
+          // move to the next track if the current one finishes playing
+          curr_track.addEventListener("ended", nextTrack);
+        }
+
+        // reset values
+        function resetValues() {
+          curr_time.textContent = "0:00";
+          total_duration.textContent = "0:00";
+          seek_slider.value = 0;
+        }
+
+        // checks if song is playing
+        function playpauseTrack() {
+          if (!isPlaying) playTrack();
+          else pauseTrack();
+        }
+
+        // plays track when play button is pressed
+        function playTrack() {
+          curr_track.play();
+          isPlaying = true;
+
+          // replace icon with the pause icon
+          playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+          curr_track.pause();
+          isPlaying = false;
+
+          // replace icon with the play icon
+          playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+
+        // moves to the next track
+        function nextTrack() {
+          if (track_index < track_list.length - 1) track_index += 1;
+          else track_index = 0;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // moves to the previous track
+        function prevTrack() {
+          if (track_index > 0) track_index -= 1;
+          else track_index = track_list.length;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // seeker slider
+        function seekTo() {
+          seekto = curr_track.duration * (seek_slider.value / 100);
+          curr_track.currentTime = seekto;
+        }
+
+        function seekUpdate() {
+          let seekPosition = 0;
+
+          // check if the current track duration is a legible number
+          if (!isNaN(curr_track.duration)) {
+            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+            seek_slider.value = seekPosition;
+
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(
+              curr_track.currentTime - currentMinutes * 60
+            );
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(
+              curr_track.duration - durationMinutes * 60
+            );
+
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) {
+              currentSeconds = "0" + currentSeconds;
+            }
+            if (durationSeconds < 10) {
+              durationSeconds = "0" + durationSeconds;
+            }
+            if (currentMinutes < 10) {
+              currentMinutes = currentMinutes;
+            }
+            if (durationMinutes < 10) {
+              durationMinutes = durationMinutes;
+            }
+
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent =
+              durationMinutes + ":" + durationSeconds;
+          }
+        }
+
+        // load the first track in the tracklist
+        loadTrack(track_index);
+      </script>
+      <!-- music script end -->
+    </main>
+  </body>
+</html>

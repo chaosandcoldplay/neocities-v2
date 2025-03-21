@@ -17,7 +17,7 @@ body {
 
 body.index {
   overflow: hidden;
-  margin-top: 6%;
+  margin-top: 7%;
   margin-left: 59px;
   transform: scale(0.97);
 }
@@ -42,6 +42,11 @@ body.shrines {
 }
 
 body.diary {
+  overflow: hidden;
+  margin: 1px;
+}
+
+body.shrinei {
   overflow: hidden;
   margin: 1px;
 }
@@ -82,6 +87,21 @@ input[type="checkbox"] {
 
 .section:first-child {
   border-bottom: 1px dashed #f9bddd;
+}
+
+/* outer wrapper */
+.wrapper {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  transform-origin: top left;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    transform: scale(calc(100vw / 1200));
+  }
 }
 
 /* link styling */
@@ -153,6 +173,12 @@ strong2 {
 @font-face {
   font-family: "Chirp";
   src: url(../assets/fonts/chirp.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPRO";
+  src: url(../assets/fonts/SFPRO.otf);
   font-style: normal;
 }
 
@@ -414,6 +440,18 @@ strong2 {
 #myellowtape img {
   transform: rotate(35deg);
   height: 38px;
+}
+
+#mexclm {
+  position: absolute;
+  margin-left: 210px;
+  margin-top: 1070px;
+  z-index: 900;
+}
+
+#mexclm img {
+  transform: rotate(-10deg);
+  height: 81px;
 }
 
 /* neighbors */
@@ -1871,9 +1909,8 @@ button:active {
 
 /* shrines */
 .ipad-in {
-  background: url(../assets/images/pinkflurry.JPG);
-  background-size: 700px 410px;
-  background-position: 50% 0%;
+  background: url(../assets/backgrounds/bluenote.jpg);
+  background-size: 630px;
   left: 0;
   top: 0;
   padding: 0;
@@ -1884,49 +1921,52 @@ button:active {
 .ipad-main {
   display: flex;
   flex-direction: row;
-  padding: 0 70px;
+  padding: 0 80px;
   margin: -5px 0 4px;
+  font-family: "SFPRO";
+  transform: scale(0.97);
 }
 
 #ipad-header {
-  border-radius: 5px;
-  margin-bottom: 2px;
+  border-radius: 8px;
+  margin: -3px 0 2px;
 }
 
 #ipad-footer {
   background: transparent;
+  margin-top: -4px;
 }
 
 #ipad-footer img {
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 180px;
   border-radius: 20px;
 }
 
 .iflex-1 {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  width: 170px;
 }
 
 .iflex-2 {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  width: 170px;
   margin: 0 2px 0;
 }
 
 .iflex-3 {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  width: 170px;
 }
 
 .appset {
   display: flex;
   flex-direction: row;
-  padding: 4px;
+  padding: 13px;
 }
 
 .app:hover {
@@ -1939,16 +1979,28 @@ button:active {
 .app {
   flex: 1;
   border: 1px black solid;
-  border-radius: 10px;
-  height: 79px;
+  border-radius: 18px;
+  height: 68px;
+  cursor: url(../assets/items/select.png), pointer;
+}
+
+.shname {
+  margin-top: -8px;
+  font-size: 12px;
+}
+
+#shnamedown {
+  margin: 328px 36px;
+  position: absolute;
+  font-size: 12px;
 }
 
 #ireminders {
   background-image: url(../assets/images/shrinote.webp);
-  background-size: 170px;
+  background-size: 163px;
   background-position: 0% 5%;
   border: 1px black solid;
-  border-radius: 10px;
+  border-radius: 18px;
   margin: 4px;
   height: 151px;
 }
@@ -1964,23 +2016,34 @@ button:active {
   background-size: 290px;
   background-position: 40% 0%;
   border: 1px solid #000;
-  border-radius: 10px;
-  margin: 4px;
-  height: 151px;
+  border-radius: 18px;
+  margin: 5px 4px;
+  height: 141px;
 }
 
 #imusicbox {
+  background: url(../assets/images/stickers1.webp);
+  background-size: 830px;
+  background-position: -50px -160px;
   border: 1px black solid;
-  border-radius: 10px;
+  border-radius: 18px;
   margin: 4px;
   height: 238px;
 }
 
 #iclock {
-  border: 1px black solid;
-  border-radius: 10px;
+  border: 4px rgb(255, 221, 173) ridge;
+  border-radius: 18px;
   margin: 4px;
+  padding: 16px 0 0;
   height: 79px;
+  font-family: "Redaction";
+  -webkit-text-stroke: 0.0001px #00f;
+  color: #fff;
+  text-shadow: -1px 1px #fff, 1px -1px #fff, -1px -1px #fff, 1px 1px #fff;
+  font-size: 39px;
+  font-weight: 900;
+  text-align: center;
 }
 
 .img-hover {
@@ -1992,6 +2055,131 @@ button:active {
     drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
     drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
     drop-shadow(0px 0px 1px white) drop-shadow(0 0 1px #0000004d);
+}
+
+.shitopbar {
+  width: 957px;
+  padding: 6px 4px 6px;
+  border-bottom: 2px solid #ffc9c6;
+  font-family: sans-serif;
+  font-size: 14px;
+  background: #fffcec;
+  color: #464646;
+}
+
+.shilogin {
+  width: 500px;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #ad4944;
+  border-radius: 20px;
+  padding: 5px 3px 0;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+#shiloadinggif {
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+#shiloadinggif img {
+  width: 17px;
+}
+
+#shibarbutton1 {
+  float: right;
+  margin-top: -22px;
+}
+
+#shibarbutton2 {
+  float: right;
+  margin-top: -22px;
+  margin-right: 23px;
+}
+
+.shafolder {
+  background: rgba(134, 134, 134, 0.797);
+  backdrop-filter: blur(10px);
+  width: 252px;
+  height: 280px;
+  border-radius: 18px;
+  margin: -290px 213px;
+  position: absolute;
+  z-index: 2000;
+}
+
+.shfheader {
+  margin: -38px 0 0;
+  font-size: 21px;
+  font-family: "SFPRO";
+  color: #fff;
+}
+
+.shfooter {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-family: "SFPRO";
+  color: #fff;
+}
+
+.shfooter a {
+  color: inherit;
+}
+
+.shscreen2 {
+  margin: 15px 5px 3px;
+  padding: 6px 14.5px 14px;
+  font-family: "SFPRO";
+  font-size: 14px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.shscreen2 img {
+  width: 54.5px;
+  margin: 15px 5px 3px;
+  border-radius: 12px;
+}
+
+.shscreen2 img:hover {
+  background: #d2d2d2;
+  transition: 0.1s ease;
+  transform: scale(1.08);
+  cursor: url(../assets/items/select.png), pointer;
+}
+
+.shappfrow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.shfnames {
+  margin: 1px 13px 2px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.ipad-main.toggle {
+  position: fixed;
+  z-index: 1000;
+}
+
+body.shrines::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  display: none;
+}
+
+body.shrines.blurred::before {
+  display: block;
 }
 
 /* archive */
