@@ -20,56 +20,56 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
-  <body class="main">
+  <body class="logs">
     <main>
-      <div class="col right">
-        <!-- header -->
-        <div class="url-info"></div>
-
-        <!-- top row -->
-        <div class="table-section columnflex">
-          <div class="heading">
-            <h4>Quiz</h4>
-          </div>
-          <div class="quiz">
-            <form
-              method="post"
-              action="https://poll.pollcode.com/83933968"
-              style="height: 100%"
-            >
-              <div class="quizbg">
-                <div class="quiztitle">
-                  <strong>FANCY A DRINK?</strong>
-                </div>
-                <div align="center" style="padding-bottom: 5px">
-                  <select name="answer" class="quizanswer">
-                    <option value="1">smoothie</option>
-                    <option value="2">latte</option>
-                    <option value="3">milkshake</option>
-                    <option value="4">frappe</option>
-                    <option value="5">sundae</option>
-                    <option value="6">tea</option>
-                  </select>
-                </div>
-                <div align="center" style="padding: 3px">
-                  <input
-                    type="submit"
-                    name="vote"
-                    value=" Vote "
-                    class="quizvote"
-                  /> 
-                  <input
-                    type="submit"
-                    name="view"
-                    value=" View "
-                    class="quizview"
-                  />
-                </div>
+      <div class="rowflex">
+        <div class="table-section ltable-section">
+          <div class="inner rowflex">
+            <div class="small-content-updates" style="margin-left: -7px">
+              <div class="small-content-toolbar">
+                <span data-text="toolbar text">ANIME</span>
               </div>
-            </form>
+
+              <div id="ltrackers" class="fade-in">
+                <span>
+                  <ul>
+                    <li>085</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="small-content-updates">
+              <div class="small-content-toolbar">
+                <span data-text="toolbar text">ANIME</span>
+              </div>
+
+              <div id="ltrackers" class="fade-in">
+                <span>
+                  <ul>
+                    <li>099</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="small-content-updates">
+              <div class="small-content-toolbar">
+                <span data-text="toolbar text">ANIME</span>
+              </div>
+
+              <div id="ltrackers" class="fade-in">
+                <span>
+                  <ul>
+                    <li>117</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="mipodmain">
-            <div class="mipodbar">
+        </div>
+
+        <div class="table-section columnflex" style="margin-left: 10px">
+          <div class="lipodmain">
+            <div class="lipodbar">
               <img
                 src="assets/images/ipod_bar.jpg"
                 width="165"
@@ -80,15 +80,15 @@
 
             <div class="songbox">
               <p class="songboxp">1 of 1</p>
-              <div class="mipodalbum">
+              <div class="lipodalbum">
                 <img
-                  src="assets/images/serani.jpeg"
+                  src="assets/images/squeezal.webp"
                   alt="serani poji album cover"
                 />
                 <p>
-                  ぴぽぴぽ <br />
-                  Serani Poji <br />
-                  one-room survi..
+                  clover <br />
+                  Plus-Tech Squ.. <br />
+                  FAKEVOX
                 </p>
               </div>
             </div>
@@ -126,108 +126,63 @@
                   ><img
                     src="assets/items/pause.png"
                     height="10"
-                    class="mpausebtn"
+                    class="lpausebtn"
                     alt="a pause button"
                     onclick="clicksound.playclip()"
                 /></i>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="table-section mtable-section">
-          <div class="inner"></div>
-        </div>
-
-        <!-- neighbors -->
-        <div class="blurbs">
-          <div class="heading">
-            <h4>Neighbors</h4>
-          </div>
-          <div class="inner">
-            <div class="section"></div>
+          <div class="lquiz" title="@getmadz on twitter">
+            <div id="lmikuborder"></div>
           </div>
         </div>
+      </div>
 
-        <!-- middle row -->
+      <div class="col right">
         <div class="middle">
           <div class="blog-preview">
             <div class="heading">
               <h4>Updates</h4>
             </div>
-            <div class="blog-child">
-              <div class="mblogsitely">sitely</div>
-            </div>
-            <div class="blog-child">
-              <div class="blog-content">
-                <b>030525</b> brand new batch of blog entries!!! visit tashblog
-                NOW<br />
-                <b>010125</b> new (extremely depressing) diary entry is up...<br />
-              </div>
-              <div class="mblogentry">entry</div>
-            </div>
           </div>
           <div class="friends">
-            <div class="guestbook">
-              <div class="guestlink">
-                SIGN MY GUESTBOOK
-                <a
-                  href="https://milk-tea.atabook.org/"
-                  target="_blank"
-                  onclick="popsound.playclip()"
-                  title="thank you for visiting!"
-                  >HERE</a
-                >
-              </div>
-            </div>
-            <div class="columnflex">
-              <div class="buttonbg">
-                <div class="stamp">
-                  <div class="image-container">
-                    <img id="sliderImage" src="assets/buttons/button4.gif" />
-                    <span>
-                      <textarea readonly onClick="this.select();">
-<a href="https://milk-tea.neocities.org/" target="_blank"><img src="button-url"></a></textarea
-                      >
-                    </span>
-                  </div>
-                  <button class="next-button" onclick="nextImage()">
-                    next Button
-                  </button>
-                </div>
-              </div>
-              <div class="mlinkme"></div>
-            </div>
+            <div class="guestbook"></div>
+            <div class="columnflex"></div>
           </div>
         </div>
 
-        <!-- lower row -->
+        <div class="lblurbs">
+          <div class="inner">
+            <div class="section"></div>
+          </div>
+        </div>
+
         <div class="friends" id="comments">
           <div class="heading">
             <h4>Chat Box</h4>
           </div>
-          <div class="inner">
-            <iframe
-              src="https://iframe.chat/embed/index.html?chat=cafe_log"
-              id="chattable"
-              frameborder="none"
-              width="100%"
-              height="525px"
-              overflow-y="auto"
-            ></iframe>
-          </div>
+          <div class="inner"></div>
         </div>
       </div>
 
+      <div id="lcontr">
+        <img
+          src="assets/images/controller.webp"
+          loading="lazy"
+          alt="a white knob"
+        />
+      </div>
+
       <!-- title label -->
-      <div id="label">
-        Milk-Tea<sup>©</sup>
-        <div class="hl labelline1"></div>
+      <div id="llabel">
+        Medialog<sup>©</sup>
+        <div class="hl llabelline1"></div>
         <div class="rowflex">
           <div class="columnflex">
             <p class="labelconst">UNDER CONSTRUCTION</p>
             <div class="hl labelline2"></div>
-            <p class="labelest">EST. JULY, 2024</p>
+            <p class="llabelest">EST. MARCH, 2025</p>
           </div>
           <div class="labelimg">
             <img src="assets/images/barcode.jpg" height="40px" width="126px" />
@@ -238,7 +193,7 @@
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           // Get the image element
-          const myImage = document.getElementById("label");
+          const myImage = document.getElementById("llabel");
 
           if (myImage) {
             // Add a scroll event listener to the window
@@ -253,7 +208,7 @@
               }
             });
           } else {
-            console.error("Image element with ID 'label' not found.");
+            console.error("image element with ID 'llabel' not found!");
           }
         });
       </script>
@@ -281,7 +236,7 @@
         let track_list = [
           {
             name: "Serani Poji - ぴぽぴぽ",
-            path: "https://file.garden/ZxOOS50ya2Lt0FdH/Serani%20Poji%20-%20Pipo%20Pipo.mp3",
+            path: "https://file.garden/ZxOOS50ya2Lt0FdH/clover-FAKEVOX.mp3",
           },
         ];
         //

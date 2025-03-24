@@ -357,9 +357,9 @@ footer {
   top: 185px;
   font-size: 41px;
   font-family: "Spirit";
-  background: -webkit-linear-gradient(#fff, #ef91aa, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(#fff, #ef91aa, #fff);
+  background-clip: text;
+  color: transparent;
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
