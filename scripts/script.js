@@ -51,7 +51,12 @@ function loadInNestedIframe(url) {
 }
 
 /* next button */
-const images = ["../assets/buttons/button4.gif", "../assets/buttons/button2.gif", "../assets/buttons/button.gif", "../assets/buttons/button3.png"];
+const images = [
+    "assets/buttons/button4.gif",
+    "assets/buttons/button2.gif",
+    "assets/buttons/button.gif",
+    "assets/buttons/button3.png"
+  ];
 let currentIndex = 0;
 
 function nextImage() {

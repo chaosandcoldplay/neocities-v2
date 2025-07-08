@@ -488,6 +488,7 @@ footer {
 #smoker {
   float: ;
   position: fixed;
+  pointer-events: none;
   left: 170px;
   bottom: 25px;
   z-index: 900;

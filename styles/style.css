@@ -457,8 +457,8 @@ strong2 {
 
 #mexclm {
   position: absolute;
-  margin-left: 210px;
-  margin-top: 1070px;
+  margin-left: 670px;
+  margin-top: 1050px;
   z-index: 900;
 }
 
@@ -524,11 +524,11 @@ strong2 {
 
 .blog-preview .heading {
   height: 22px !important;
-  width: 280.5px !important;
+  width: 280px !important;
   border-radius: 10px 10px 0 0;
   background: var(--accent) !important;
   border: 1px solid #000;
-  margin: 0 0 0 -1px !important;
+  margin: 0 0 0 -0.5px !important;
   font-weight: 400;
   font-size: 14px !important;
   box-shadow: 0 -2px 2px 3px rgba(255, 255, 255, 0.5) inset;
@@ -549,7 +549,7 @@ strong2 {
 
 .blog-preview {
   position: relative;
-  order: 1;
+  order: 2;
   width: 280px;
   display: block;
   background: #fff;
@@ -557,7 +557,7 @@ strong2 {
   border: 1px solid #000;
   border-top: 0;
   border-radius: 20px 20px 0 0;
-  margin-right: 10px !important;
+  margin-left: 10px !important;
 }
 
 .blog-child {
@@ -612,7 +612,7 @@ strong2 {
 }
 
 .friends:not(#comments) {
-  order: 2;
+  order: 1;
   height: 299px !important;
   width: 633px;
   border: 1px solid #000;
@@ -652,7 +652,7 @@ strong2 {
   height: 100%;
   width: 220px;
   overflow-y: auto;
-  margin-left: 8px;
+  margin: 0px 8px;
 }
 
 .webrings::-webkit-scrollbar {
@@ -822,7 +822,7 @@ textarea {
 /* lower row */
 #comments .heading {
   height: 22px !important;
-  width: 771px !important;
+  width: 743px !important;
   border-radius: 10px 10px 0 0;
   background: var(--accent) !important;
   border: 1px solid #000;
@@ -849,7 +849,7 @@ textarea {
 .friends .inner {
   background: url(../assets/images/cover.jpg) !important;
   background-size: 758px !important;
-  width: 771px !important;
+  width: 743px !important;
   border: 1px solid #000;
   border-radius: 0 0 10px 10px;
   border-top: 0;
@@ -858,7 +858,7 @@ textarea {
 #comments {
   position: relative;
   grid-column: span 2;
-  order: 4;
+  right: -180px;
   width: fit-content;
   height: 540px !important;
 }
@@ -869,10 +869,10 @@ textarea {
   overflow: hidden;
 }
 
-#comments::after {
+#comments::before {
   top: -7px;
-  right: -152px;
-  width: 140px;
+  right: 751px;
+  width: 172px;
   height: 545px;
   margin-top: 7px;
   content: "";
@@ -896,18 +896,18 @@ textarea {
 
 #mpen {
   position: absolute;
-  margin-left: 700px;
+  margin-left: 160px;
   margin-top: 1150px;
   z-index: 900;
 }
 
 #mpen img {
-  height: 425px;
+  height: 390px;
+  transform: rotate(225deg);
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
-  transform: rotate(55deg);
 }
 
 /* marquee styling */
@@ -1151,44 +1151,6 @@ body::-webkit-scrollbar-corner {
 #label.hidden {
   opacity: 0;
   visibility: hidden;
-}
-
-#llabel {
-  position: fixed;
-  font-family: "Arial";
-  font-size: 65px;
-  font-weight: 700;
-  letter-spacing: -2px;
-  border: 1px solid #000;
-  background: #fff;
-  text-align: left !important;
-  padding: 0 5.5px 0;
-  transform: rotate(3deg);
-  left: 470px;
-  top: 240px;
-  z-index: 400;
-  width: fit-content;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  opacity: 1;
-  visibility: visible;
-}
-
-#llabel.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.llabelline1 {
-  margin-top: 1px;
-  border-bottom: 2px solid #000;
-}
-
-.llabelest {
-  font-weight: 600;
-  font-size: 19px;
-  letter-spacing: 0;
-  margin-top: 0;
-  margin-bottom: 5px;
 }
 
 .labelline1 {
@@ -1967,91 +1929,7 @@ button:active {
   padding: 15px 15px 20px 17px;
   height: 508px;
   width: 713px;
-  margin: -10px 0 0 0;
-}
-
-#ltrackers {
-  height: auto !important;
-  padding: 0px 12px;
-  margin: 30px 12px 12px;
-  border: 1.5px solid #c9c9c9;
-  background-image: url(../assets/backgrounds/yellownotetx.jpg);
-  background-size: 250px;
-  border-radius: 18px;
-  box-shadow: inset 0px 0px 5px 0px rgb(202, 202, 202),
-    0px -4px 5px -3px #bbbbbb, 0px 5px 1px -3px #ffffff;
-}
-
-#ltrackers span {
-  font-family: "DSDIGIT", sans-serif;
-  font-size: 87px;
-  text-align: center;
-  -webkit-text-stroke: 1px #00f;
-  color: #fff;
-}
-
-.small-content-updates {
-  position: relative;
-  margin: -4px 4px 0px 4px;
-  width: 225px;
-  height: 225px;
-  background-image: linear-gradient(
-    90deg,
-    #fafbfb 0%,
-    #f7f7f7 50%,
-    #fafbfb 100%
-  );
-  border: 1.5px solid #c9c9c9;
-  border-radius: 22px;
-  z-index: 1;
-  box-shadow: inset 0px -5px 5px -4px #dadada, 0px 0px 5px 0px #dadada;
-}
-
-.small-content-toolbar {
-  position: relative;
-  height: 25px;
-  margin-left: 3px;
-  margin-right: 3px;
-  border-radius: 25px 25px 15px 15px;
-  padding: 12px 16px;
-  background-color: #f0f0f0;
-  background-image: radial-gradient(
-      75% 50% at 50% 0%,
-      rgb(244, 248, 255),
-      transparent
-    ),
-    radial-gradient(75% 50% at 50% 70%, #ffffff, transparent);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 100px;
-    width: 97%;
-    height: 50px;
-    background-image: linear-gradient(
-      180deg,
-      rgb(255, 255, 255) 5%,
-      rgb(239, 242, 245) 20%,
-      rgb(255, 255, 255) 80%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-clip: border-box;
-    opacity: 1;
-  }
-}
-
-.small-content-toolbar span {
-  position: relative;
-
-  font-size: 70px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  color: transparent;
-  margin: -4px 10px 0;
-  z-index: 100 !important;
+  margin: -8px 0 0 0;
 }
 
 .lipodmain {
@@ -2108,38 +1986,133 @@ button:active {
   background-size: 330px;
   background-position: 44% 49%;
   width: 199px;
-  height: 190px;
+  height: 192px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
   margin: 8px 0;
 }
 
-.lblurbs {
+.lmiddle {
   grid-column: span 2;
+  display: flex;
+  width: 710 !important;
+  height: 299px;
+  margin-bottom: 100px;
+  margin-top: -7px;
 }
 
-.lblurbs .inner {
-  width: 923px !important;
-  margin-bottom: 10px;
-  border: 1px solid #000;
-  border-radius: 10px !important;
-  padding: 12px 0 15px;
+.cd-insert {
+  width: 713px;
+  height: 395px !important;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 8px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 17px 17px 41px #d4d4d4, -17px -17px 41px #ffffff;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
-#lcontr {
+.cd-main {
+  width: 360px;
+  height: 360px;
+  margin: 11px;
+  border: 1px solid #e4e4e4;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+  box-shadow: inset 8px 8px 16px #c4c4c4, inset -8px -8px 16px #ffffff;
+}
+
+.cd-grip {
   position: absolute;
-  margin-left: 680px;
-  margin-top: -470px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d0d0d0, #e8e8e8);
+  box-shadow: inset 8px 8px 16px #c4c4c4, inset -8px -8px 16px #ffffff;
+  bottom: calc(50% - 80px - 10px);
+  right: calc(50% - 80px + 36px);
+}
+
+.cd-hub {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff,
+    inset 0 0 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  margin: 150px 148px;
   z-index: 900;
 }
 
-#lcontr img {
-  height: 200px;
-  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
+.cd-hub::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  margin: 4px;
+  border-radius: 50%;
+  border: 2px solid hwb(0 89% 11%);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.cdone {
+  margin: 2px 1px;
+  z-index: 900;
+  height: 355px !important;
+  transition: transform 0.3s ease;
+}
+
+.cd-main:hover {
+  animation: spinOnce 2s ease-in-out; /* Single spin on hover */
+}
+
+/* All CDs (images) - hidden by default */
+.cd-img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Active CD */
+.cd-img.active {
+  opacity: 1;
+}
+
+/* Buttons */
+.cd-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cd-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes spinOnce {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* shrines */
@@ -2629,8 +2602,8 @@ body.shrines.blurred::before {
   font-size: 70px;
   font-weight: 700;
   letter-spacing: -1px;
-  transform: rotate(-7deg);
-  margin: 155px 0 0 -275px;
+  transform: rotate(-4.9deg) scale(0.95);
+  margin: 165px 0 0 -295px;
   border: 1px solid #000;
   background: #fff;
   width: 320px;
@@ -2768,16 +2741,28 @@ body.shrines.blurred::before {
   transform: rotate(22deg);
 }
 
+#inclip {
+  position: absolute;
+  margin-left: 425px;
+  margin-top: -247px;
+  z-index: 993;
+}
+
+#inclip img {
+  transform: rotate(21deg);
+  height: 81px;
+}
+
 #inblueswirl {
   position: absolute;
-  margin-left: 420px;
-  margin-top: -290px;
+  margin-left: 670px;
+  margin-top: -230px;
   z-index: 993;
 }
 
 #inblueswirl img {
-  transform: rotate(5deg);
-  height: 77px;
+  transform: rotate(-15deg);
+  height: 80px;
 }
 
 #indonuts {
@@ -2793,6 +2778,19 @@ body.shrines.blurred::before {
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
   height: 270px;
+}
+
+#invelope {
+  position: absolute;
+  margin-left: 285px;
+  margin-top: -232px;
+  transform: rotate(2deg);
+  z-index: 900;
+}
+
+#invelope img {
+  border: 1px solid #000;
+  height: 188px;
 }
 
 #inparent {

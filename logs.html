@@ -25,45 +25,14 @@
       <div class="rowflex">
         <div class="table-section ltable-section">
           <div class="inner rowflex">
-            <div class="small-content-updates" style="margin-left: -7px">
-              <div class="small-content-toolbar">
-                <span data-text="toolbar text">ANIME</span>
-              </div>
-
-              <div id="ltrackers" class="fade-in">
-                <span>
-                  <ul>
-                    <li>085</li>
-                  </ul>
-                </span>
-              </div>
-            </div>
-            <div class="small-content-updates">
-              <div class="small-content-toolbar">
-                <span data-text="toolbar text">ANIME</span>
-              </div>
-
-              <div id="ltrackers" class="fade-in">
-                <span>
-                  <ul>
-                    <li>099</li>
-                  </ul>
-                </span>
-              </div>
-            </div>
-            <div class="small-content-updates">
-              <div class="small-content-toolbar">
-                <span data-text="toolbar text">ANIME</span>
-              </div>
-
-              <div id="ltrackers" class="fade-in">
-                <span>
-                  <ul>
-                    <li>117</li>
-                  </ul>
-                </span>
-              </div>
-            </div>
+            <iframe
+              name="mainbox"
+              id="mainframe"
+              class="mainbox"
+              src=""
+              allowtransparency="true"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
 
@@ -140,78 +109,101 @@
       </div>
 
       <div class="col right">
-        <div class="middle">
-          <div class="blog-preview">
-            <div class="heading">
-              <h4>Updates</h4>
+        <div class="lmiddle">
+          <div class="cd-insert">
+            <div class="cd-main">
+              <img
+                src="assets/images/cdillit.webp"
+                class="cd-img cdone active"
+                loading="lazy"
+                alt="a cd scan"
+                id="cd-1"
+              />
+
+              <img
+                src="assets/images/cdcibo.webp"
+                class="cd-img cdone"
+                id="cd-2"
+                loading="lazy"
+                alt="a cd scan"
+              />
+
+              <img
+                src="assets/images/cdfaye.webp"
+                class="cd-img cdone"
+                style="transform: rotate(45deg)"
+                id="cd-3"
+                loading="lazy"
+                alt="a cd scan"
+              />
+
+              <img
+                src="assets/images/cdbjork.webp"
+                class="cd-img cdone"
+                id="cd-4"
+                loading="lazy"
+                alt="a cd scan"
+              />
+
+              <img
+                src="assets/images/cdsmiths.webp"
+                class="cd-img cdone"
+                id="cd-5"
+                loading="lazy"
+                alt="a cd scan"
+              />
+
+              <img
+                src="assets/images/cdtommy.webp"
+                class="cd-img cdone"
+                id="cd-6"
+                loading="lazy"
+                alt="a cd scan"
+              />
+
+              <img
+                src="assets/images/cdyves.webp"
+                class="cd-img cdone"
+                id="cd-7"
+                loading="lazy"
+                alt="a cd scan"
+              />
             </div>
+            <div class="cd-hub"></div>
+            <div class="cd-grip"></div>
           </div>
-          <div class="friends">
-            <div class="guestbook"></div>
-            <div class="columnflex"></div>
+
+          <!-- Buttons -->
+          <div class="cd-buttons">
+            <button class="cd-btn" data-cd="1">1</button>
+            <button class="cd-btn" data-cd="2">2</button>
+            <button class="cd-btn" data-cd="3">3</button>
+            <button class="cd-btn" data-cd="4">4</button>
+            <button class="cd-btn" data-cd="5">5</button>
+            <button class="cd-btn" data-cd="6">6</button>
+            <button class="cd-btn" data-cd="7">7</button>
           </div>
-        </div>
 
-        <div class="lblurbs">
-          <div class="inner">
-            <div class="section"></div>
-          </div>
-        </div>
+          <!-- a -->
 
-        <div class="friends" id="comments">
-          <div class="heading">
-            <h4>Chat Box</h4>
-          </div>
-          <div class="inner"></div>
-        </div>
-      </div>
+          <!-- cd script -->
+          <script>
+            document.querySelectorAll(".cd-btn").forEach((button) => {
+              button.addEventListener("click", () => {
+                const cdId = button.dataset.cd;
 
-      <div id="lcontr">
-        <img
-          src="assets/images/controller.webp"
-          loading="lazy"
-          alt="a white knob"
-        />
-      </div>
+                // Hide all CDs
+                document.querySelectorAll(".cd-img").forEach((cd) => {
+                  cd.classList.remove("active");
+                });
 
-      <!-- title label -->
-      <div id="llabel">
-        Medialog<sup>©</sup>
-        <div class="hl llabelline1"></div>
-        <div class="rowflex">
-          <div class="columnflex">
-            <p class="labelconst">UNDER CONSTRUCTION</p>
-            <div class="hl labelline2"></div>
-            <p class="llabelest">EST. MARCH, 2025</p>
-          </div>
-          <div class="labelimg">
-            <img src="assets/images/barcode.jpg" height="40px" width="126px" />
-          </div>
-        </div>
-      </div>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Get the image element
-          const myImage = document.getElementById("llabel");
-
-          if (myImage) {
-            // Add a scroll event listener to the window
-            window.addEventListener("scroll", function () {
-              console.log("Scroll position:", window.scrollY); // Check scroll position in console
-              if (window.scrollY > 0) {
-                console.log("Hiding the image");
-                myImage.classList.add("hidden"); // Hide the image
-              } else {
-                console.log("Showing the image");
-                myImage.classList.remove("hidden"); // Show the image
-              }
+                // Show selected CD
+                document.getElementById(`cd-${cdId}`).classList.add("active");
+              });
             });
-          } else {
-            console.error("image element with ID 'llabel' not found!");
-          }
-        });
-      </script>
+          </script>
+        </div>
+      </div>
 
       <!-- music script -->
       <script>
