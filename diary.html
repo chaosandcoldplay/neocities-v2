@@ -160,6 +160,14 @@
                 />
                 <p style="margin-top: 5px">mar 14.txt</p>
               </div>
+              <div class="folder_item" style="margin-left: 3px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">jul 9.txt</p>
+              </div>
               <div class="folder_item" style="margin-left: -4px">
                 <img
                   class="showimage"
@@ -298,6 +306,25 @@
         </div>
         <div class="note">
           <zero-md src="entries/diary/2025-2.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
+
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          jul 9.txt
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/diary/2025-3.md">
             <template>
               <link rel="stylesheet" href="styles/style.css" />
             </template>
