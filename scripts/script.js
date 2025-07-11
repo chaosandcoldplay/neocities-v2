@@ -52,10 +52,9 @@ function loadInNestedIframe(url) {
 
 /* next button */
 const images = [
-    "assets/buttons/button4.gif",
+    "assets/buttons/button3.gif",
     "assets/buttons/button2.gif",
-    "assets/buttons/button.gif",
-    "assets/buttons/button3.png"
+    "assets/buttons/button.gif"
   ];
 let currentIndex = 0;
 
@@ -83,25 +82,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
         hideImages[i].addEventListener("click", () => {
             toggleDivs[i].classList.add("hidden");
         });
-    }
-});
-
-/* hashtag toggle */
-$(document).ready(function () {
-    $("main .toggled").hide();
-    $("main.showall .toggled").show();
-    $("#togglenav a").click(function () {
-        $("main .toggled").hide();
-
-        var toggleId = $(this).attr("href").substr(1);
-        $("." + toggleId).toggle();
-    });
-
-    if (window.location.hash) {
-        var hash = window.location.hash.substring(1);
-        $("main .toggled").hide();
-        $(".toggled." + hash).show();
-    } else {
-        $("main .overview").show();
     }
 });

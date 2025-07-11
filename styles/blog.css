@@ -518,22 +518,27 @@ a.post-tag:hover {
 
 .quotebody {
   width: 337px;
-  margin: 10px 48px 8px;
+  margin: 10px -5px 8px;
   padding-bottom: 11px;
-}
-
-.replybody {
-  background: transparent;
-  margin-top: 35px;
 }
 
 .reply-line {
   position: absolute;
-  margin-top: -97px;
-  left: 25px;
+  margin: 0 0 0 -26px;
+  top: 49px;
+  bottom: 0;
   width: 2px;
-  height: 17%;
   background-color: #e8eced;
+  z-index: 0;
+}
+
+.replybody {
+  margin: 30px 0 0 -53px;
+  padding: 0;
+  width: 390px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 #togglenav {
@@ -577,6 +582,27 @@ a.post-tag:hover {
   display: flex;
   flex-direction: column;
   margin: -10px 0 0 12px;
+}
+
+#load-more-btn {
+  all: unset;
+  display: inline-block;
+  margin: 2rem auto;
+  margin-top: -13px;
+  text-align: center;
+  font-family: "Chirp";
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: #1d9bf0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+#load-more-btn:hover {
+  text-decoration: underline;
+  color: #1a8cd8;
 }
 
 #toggle-header {
