@@ -31,24 +31,9 @@ function createsoundbite(sound) {
     }
 }
 
-var mouseoversound = createsoundbite("https://files.catbox.moe/c23vyj.mp3");
-var clicksound = createsoundbite("https://files.catbox.moe/i9vbgs.mp3");
-var popsound = createsoundbite("https://files.catbox.moe/6l7okm.mp3");
-
-/* frame load */
-function loadInNestedIframe(url) {
-    const mainFrame = document.getElementsByClassName("page")[0];
-    if (mainFrame && mainFrame.contentWindow) {
-        const innerFrame = mainFrame.contentWindow.document.getElementsByClassName("mainbox")[0];
-        if (innerFrame) {
-            innerFrame.src = url;
-        } else {
-            console.error("nested iframe not found!");
-        }
-    } else {
-        console.error("main iframe or its contentWindow not found!");
-    }
-}
+var mouseoversound = createsoundbite("https://file.garden/ZxOOS50ya2Lt0FdH/c23vyj.mp3");
+var clicksound = createsoundbite("https://file.garden/ZxOOS50ya2Lt0FdH/i9vbgs.mp3");
+var popsound = createsoundbite("https://file.garden/ZxOOS50ya2Lt0FdH/6l7okm.mp3");
 
 /* next button */
 const images = [
@@ -83,4 +68,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
             toggleDivs[i].classList.add("hidden");
         });
     }
+});
+
+/* hashtag toggle */
+$(document).ready(function () {
+    $("main .toggled").hide();
+    $("main.showall .toggled").show();
+    $("#togglenavi a").click(function () {
+        $("main .toggled").hide();
+
+        var toggleId = $(this).attr("href").substr(1);
+        $("." + toggleId).toggle();
+    });
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        $("main .toggled").hide();
+        $(".toggled." + hash).show();
+    } else {
+    $("main .toggled").hide();
+    $(".toggled.home").show(); // or use your default class name
+    window.location.hash = "#home"; // sets the visible hash in the URL
+}
 });

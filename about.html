@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- tooltips -->
+    <script src="scripts/tooltip-jquary.js"></script>
+    <script src="scripts/tooltip.js"></script>
+
+    <script src="https://melonking.net/scripts/frame-link.js"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body class="main">
+    <main>
+      <div class="rowflex">
+        <div class="table-section columnflex" style="margin-left: 10px">
+          <div class="lipodmain">
+            <div class="lipodbar">
+              <img
+                src="assets/images/ipod_bar.jpg"
+                width="165"
+                loading="lazy"
+                alt="ipod bar"
+              />
+            </div>
+
+            <div class="songbox">
+              <p class="songboxp">1 of 1</p>
+              <div class="lipodalbum">
+                <img
+                  src="assets/images/squeezal.webp"
+                  alt="serani poji album cover"
+                />
+                <p>
+                  clover <br />
+                  Plus-Tech Squ.. <br />
+                  FAKEVOX
+                </p>
+              </div>
+            </div>
+
+            <!-- music player code -->
+            <div id="musicplayer">
+              <div class="songtitlebox">
+                <div class="songtitle"></div>
+              </div>
+
+              <div class="seeking mseeking">
+                <div class="current-time">00:00</div>
+
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="0"
+                  class="seek_slider"
+                  onchange="seekTo()"
+                />
+
+                <div class="total-duration">0:00</div>
+              </div>
+
+              <audio id="music" src=""></audio>
+            </div>
+
+            <div class="controls">
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fas fa-pause"
+                  ><img
+                    src="assets/items/pause.png"
+                    height="10"
+                    class="lpausebtn"
+                    alt="a pause button"
+                    onclick="clicksound.playclip()"
+                /></i>
+              </div>
+            </div>
+          </div>
+          <div class="lquiz" title="@getmadz on twitter"></div>
+        </div>
+
+        <div class="table-section ltable-section">
+          <div class="inner rowflex">
+            <div name="mainbox" id="mainframe" class="mainbox">
+              UNDER CONSTRUCTION!!!!!! AHHHHHHH
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col right">
+        <div id="myellowtape">
+          <img
+            src="assets/items/D06.png"
+            loading="lazy"
+            alt="a yellow checkered tape"
+          />
+        </div>
+
+        <!-- neighbors -->
+        <div class="blurbs">
+          <div class="heading">
+            <h4>Neighbors</h4>
+          </div>
+          <div class="inner">
+            <div class="section">
+              <div class="marquee">
+                <ul class="abmq__content">
+                  <li>
+                    <a
+                      href="https://kyou.nu/bokuto/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/l9410n.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://mydei.after-death.org"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_05.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.wings.nu/pompompurin/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/pp03.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/emu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/011.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://reigen.arataka.moe"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-2.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://lost-boy.org/kaeya/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/2007nd.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://uzumaki.ichigo.nu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/nhrbr3.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/madoka"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/008.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://frshery.info/hinata/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50501.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/senku/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/012.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.reikou.org/luffy/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_08.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://lost-boy.org/aventurine/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/vfuury.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://anthy.net/utena/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/utena04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://sakura.farron.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/fykch0.PNG"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.asuka.nu/asuka"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-01.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://eren.ichigo.nu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/pnb6fu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hellokitty.ravenbeauty.net/mymelody/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5ib7l3.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://moomins.fanfreak.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/1dde30222320b6_50x7.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hoshi.nu/lain/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/lain04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/kaori/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/019.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://tectrix.neocities.org/tintin/fanlisting"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://tectrix.neocities.org/tintin/tintin-fanlisting/calculus-50x50.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hellokitty.ravenbeauty.net/twinstars/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/9zoo6y.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://musashi.treasure-chest.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/bf3454.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/emma/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/007.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://asuka.nu/fan/lelouch/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-03.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://victor.shinshoku.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/megan_50x50.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/yuno/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/028.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://yandere.nu/johan/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/s7nbjw.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.celes.net/stelle/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/jvxte1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/chisato/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/008.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://kaworu.shinshoku.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_03.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://inangeling.net/miwako/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/courtney1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ryo.whorehau.se/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50satan2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://riza.hagaren.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/g63qts.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.celes.net/phainon/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-05.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/power/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/004.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://huacheng.whorehau.se/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_huacheng2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://towa.whorehau.se"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_12.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/misa/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/035.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.marheavenj.net/rena/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/rena36.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.kiri-no-hana.net/rika/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50505rika.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://fan.asuka.nu/light/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-03.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://imaginary.nu/lawliet/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_39.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hoshi.nu/chii/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/04.1650353711.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://michiru.org/uranus"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/w3mq9i.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ai.after-death.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_10.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.kiri-no-hana.net/mami/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-001.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/protagonist"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/003.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.kiri-no-hana.net/ann/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-009.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://gintoki.treasure-chest.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/wykplu.JPEG"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/karma/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/016.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://love.luxstella.org/kafka/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/810_kafka50x50_04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://firaga.org/howl/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://celes.net/tifa/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-annie1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://makoto.lost-boy.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-014.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://precious-memory.net/snoopy/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/0ffc262285dc1f_snoopy50x50-6.gif"
+                    /></a>
+                  </li>
+                </ul>
+
+                <!-- mirrors the content above -->
+
+                <ul class="abmq__content">
+                  <li>
+                    <a
+                      href="https://kyou.nu/bokuto/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/l9410n.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://mydei.after-death.org"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_05.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.wings.nu/pompompurin/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/pp03.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/emu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/011.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://reigen.arataka.moe"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-2.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://lost-boy.org/kaeya/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/2007nd.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://uzumaki.ichigo.nu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/nhrbr3.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/madoka"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/008.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://frshery.info/hinata/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50501.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/senku/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/012.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.reikou.org/luffy/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_08.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://lost-boy.org/aventurine/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/vfuury.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://anthy.net/utena/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/utena04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://sakura.farron.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/fykch0.PNG"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fan.asuka.nu/asuka"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-01.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://eren.ichigo.nu/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/pnb6fu.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hellokitty.ravenbeauty.net/mymelody/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5ib7l3.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://moomins.fanfreak.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/1dde30222320b6_50x7.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hoshi.nu/lain/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/lain04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/kaori/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/019.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://tectrix.neocities.org/tintin/fanlisting"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://tectrix.neocities.org/tintin/tintin-fanlisting/calculus-50x50.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hellokitty.ravenbeauty.net/twinstars/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/9zoo6y.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://musashi.treasure-chest.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/bf3454.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/emma/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/007.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://asuka.nu/fan/lelouch/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-03.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://victor.shinshoku.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/megan_50x50.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/yuno/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/028.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://yandere.nu/johan/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/s7nbjw.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.celes.net/stelle/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/jvxte1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/chisato/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/008.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://kaworu.shinshoku.net/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_03.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://inangeling.net/miwako/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/courtney1.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ryo.whorehau.se/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50satan2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://riza.hagaren.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/g63qts.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.celes.net/phainon/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-05.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/power/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/004.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://huacheng.whorehau.se/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_huacheng2.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://towa.whorehau.se"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_12.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/misa/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/035.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.marheavenj.net/rena/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/rena36.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.kiri-no-hana.net/rika/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50505rika.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://fan.asuka.nu/light/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-03.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://imaginary.nu/lawliet/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_39.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hoshi.nu/chii/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/04.1650353711.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://michiru.org/uranus"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/w3mq9i.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ai.after-death.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_10.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.kiri-no-hana.net/mami/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-001.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/protagonist"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/003.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.kiri-no-hana.net/ann/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-009.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://gintoki.treasure-chest.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/wykplu.JPEG"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.marheavenj.net/karma/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/016.jpg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://love.luxstella.org/kafka/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/810_kafka50x50_04.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://firaga.org/howl/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50_2.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://celes.net/tifa/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/50x50-annie1.gif"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://makoto.lost-boy.org/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/5050-014.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://precious-memory.net/snoopy/"
+                      target="_blank"
+                      onclick="clicksound.playclip()"
+                    >
+                      <img
+                        src="https://file.garden/ZxOOS50ya2Lt0FdH/fanlistings/0ffc262285dc1f_snoopy50x50-6.gif"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- middle row -->
+        <div class="middle">
+          <div class="friends">
+            <div class="columnflex" style="margin-left: -8px">
+              <div class="buttonbg">
+                <div class="stamp">
+                  <div class="image-container">
+                    <img id="sliderImage" src="assets/buttons/button3.gif" />
+                    <span>
+                      <textarea readonly onClick="this.select();">
+<a href="https://milk-tea.neocities.org/" target="_blank"><img src="button-url"></a></textarea
+                      >
+                    </span>
+                  </div>
+                  <button class="next-button" onclick="nextImage()">
+                    next Button
+                  </button>
+                </div>
+              </div>
+              <div class="mlinkme">
+                <div class="mlinkmebg">
+                  <p>Link Me?</p>
+                  <img src="assets/images/frost1.png" height="145px" />
+                </div>
+              </div>
+            </div>
+
+            <div class="webrings">
+              <div class="wentry wentitle">webrings, co.</div>
+            </div>
+
+            <div class="guestbook">
+              <div class="guestlink">
+                SIGN MY GUESTBOOK
+                <a
+                  href="https://milk-tea.atabook.org/"
+                  target="_blank"
+                  onclick="popsound.playclip()"
+                  title="thank you for visiting!"
+                  >HERE</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-preview">
+            <div class="heading">
+              <h4>Updates</h4>
+            </div>
+            <div class="blog-child">
+              <div class="mblogsitely">sitely</div>
+            </div>
+            <div class="blog-child">
+              <div class="mblogentry">entry</div>
+            </div>
+          </div>
+
+          <div id="mclip">
+            <img src="assets/images/clip.webp" loading="lazy" alt="a clip" />
+          </div>
+        </div>
+
+        <!-- lower row -->
+        <div class="friends" id="comments">
+          <div class="heading">
+            <h4>Chat Box</h4>
+          </div>
+          <div class="inner"></div>
+        </div>
+      </div>
+
+      <!-- music script -->
+      <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+
+        // create new audio element
+        let curr_track = document.getElementById("music");
+
+        let track_list = [
+          {
+            name: "Serani Poji - ぴぽぴぽ",
+            path: "https://file.garden/ZxOOS50ya2Lt0FdH/Serani%20Poji%20-%20Pipo%20Pipo.mp3",
+          },
+        ];
+        //
+        //
+        //
+        //
+        //
+
+        function loadTrack(track_index) {
+          clearInterval(updateTimer);
+          resetValues();
+
+          // load a new track
+          curr_track.src = track_list[track_index].path;
+          curr_track.load();
+
+          // set an interval of 1000 milliseconds for updating the seek slider
+          updateTimer = setInterval(seekUpdate, 1000);
+
+          // move to the next track if the current one finishes playing
+          curr_track.addEventListener("ended", nextTrack);
+        }
+
+        // reset values
+        function resetValues() {
+          curr_time.textContent = "0:00";
+          total_duration.textContent = "0:00";
+          seek_slider.value = 0;
+        }
+
+        // checks if song is playing
+        function playpauseTrack() {
+          if (!isPlaying) playTrack();
+          else pauseTrack();
+        }
+
+        // plays track when play button is pressed
+        function playTrack() {
+          curr_track.play();
+          isPlaying = true;
+
+          // replace icon with the pause icon
+          playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+          curr_track.pause();
+          isPlaying = false;
+
+          // replace icon with the play icon
+          playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+
+        // moves to the next track
+        function nextTrack() {
+          if (track_index < track_list.length - 1) track_index += 1;
+          else track_index = 0;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // moves to the previous track
+        function prevTrack() {
+          if (track_index > 0) track_index -= 1;
+          else track_index = track_list.length;
+          loadTrack(track_index);
+          playTrack();
+        }
+
+        // seeker slider
+        function seekTo() {
+          seekto = curr_track.duration * (seek_slider.value / 100);
+          curr_track.currentTime = seekto;
+        }
+
+        function seekUpdate() {
+          let seekPosition = 0;
+
+          // check if the current track duration is a legible number
+          if (!isNaN(curr_track.duration)) {
+            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+            seek_slider.value = seekPosition;
+
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(
+              curr_track.currentTime - currentMinutes * 60
+            );
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(
+              curr_track.duration - durationMinutes * 60
+            );
+
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) {
+              currentSeconds = "0" + currentSeconds;
+            }
+            if (durationSeconds < 10) {
+              durationSeconds = "0" + durationSeconds;
+            }
+            if (currentMinutes < 10) {
+              currentMinutes = currentMinutes;
+            }
+            if (durationMinutes < 10) {
+              durationMinutes = durationMinutes;
+            }
+
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent =
+              durationMinutes + ":" + durationSeconds;
+          }
+        }
+
+        // load the first track in the tracklist
+        loadTrack(track_index);
+      </script>
+      <!-- music script end -->
+
+      <!-- cbox -->
+      <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+      <script>
+        chattable.initialize({
+          stylesheet: "chattable.css",
+        });
+      </script>
+    </main>
+  </body>
+</html>
