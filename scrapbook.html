@@ -17,610 +17,690 @@
     <script src="scripts/tooltip.js"></script>
 
     <script src="scripts/script.js"></script>
+    <script src="scripts/scrapbook.js" defer></script>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body class="scrapbook">
-    <main>
-      <div id="schobo">
-        <img
-          src="assets/images/hobonichi.png"
-          loading="lazy"
-          alt="a ball pen"
-        />
-      </div>
-      <div class="rowflex">
-        <div class="table-section columnflex" style="margin-left: 10px">
-          <div class="lipodmain">
-            <div class="lipodbar">
-              <img
-                src="assets/images/ipod_bar.jpg"
-                width="165"
-                loading="lazy"
-                alt="ipod bar"
-              />
-            </div>
-
-            <div class="songbox">
-              <p class="songboxp">1 of 1</p>
-              <div class="lipodalbum">
-                <img
-                  src="assets/images/squeezal.webp"
-                  alt="serani poji album cover"
-                />
-                <p>
-                  clover <br />
-                  Plus-Tech Squ.. <br />
-                  FAKEVOX
-                </p>
-              </div>
-            </div>
-
-            <!-- music player code -->
-            <div id="musicplayer">
-              <div class="songtitlebox">
-                <div class="songtitle"></div>
-              </div>
-
-              <div class="seeking mseeking">
-                <div class="current-time">00:00</div>
-
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  value="0"
-                  class="seek_slider"
-                  onchange="seekTo()"
-                />
-
-                <div class="total-duration">0:00</div>
-              </div>
-
-              <audio id="music" src=""></audio>
-            </div>
-
-            <div class="controls">
-              <div class="playpause-track" onclick="playpauseTrack()">
-                <i class="fas fa-play"></i>
-              </div>
-              <div class="playpause-track" onclick="playpauseTrack()">
-                <i class="fas fa-pause"
-                  ><img
-                    src="assets/items/pause.png"
-                    height="10"
-                    class="lpausebtn"
-                    alt="a pause button"
-                    onclick="clicksound.playclip()"
-                /></i>
-              </div>
-            </div>
+    <div id="scwraper">
+      <div class="scsection">
+        <div id="sidebox1">
+          <div class="header">
+            <p style="margin-left: 4%" id="month-label">JAN 1月 2025</p>
           </div>
-        </div>
-      </div>
 
-      <div class="col right">
-        <div class="lmiddle">
-          <div class="blurbs">
-            <div class="inner">
-              <div class="section">
+          <div class="day">
+            <div class="date">
+              <p>1</p>
+              <p>MON</p>
+              <p>月</p>
+              <p>🌑︎</p>
+            </div>
+            <div class="menu1 handwritten"></div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day">
+            <div class="date">
+              <p>2</p>
+              <p>TUE</p>
+              <p>火</p>
+              <p>🌒︎</p>
+            </div>
+            <div class="menu1 handwritten"></div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day">
+            <div class="date">
+              <p>3</p>
+              <p>WED</p>
+              <p>水</p>
+              <p>🌒︎</p>
+            </div>
+            <div class="menu1 handwritten"></div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day">
+            <div class="date">
+              <p>4</p>
+              <p>THU</p>
+              <p>木</p>
+              <p>🌓︎</p>
+            </div>
+            <div class="menu1 handwritten"></div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day">
+            <div class="date">
+              <p>5</p>
+              <p>FRI</p>
+              <p>金</p>
+              <p>🌔︎</p>
+            </div>
+            <div class="menu1 handwritten">
+              <a
+                href="#"
+                title="welcome to my digital journal, my scrapbook of oddities if you may!"
+                >WHERE THE HELL AM I?</a
+              >
+            </div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day">
+            <div class="date">
+              <p>6</p>
+              <p>SAT</p>
+              <p>土</p>
+              <p>🌔︎</p>
+            </div>
+            <div class="menu1 handwritten">
+              <div class="scmarquee">
                 <div class="marquee">
-                  <ul class="marquee__content">
+                  <ul class="scmq1__content">
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/dprj26.gif"
-                      />
+                      <img src="assets/stamps/dprj26.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/bjcj03.jpeg"
-                      />
+                      <img src="assets/stamps/bjcj03.jpeg" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tmblr001.png"
-                      />
+                      <img src="assets/stamps/tmblr001.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tumblr002.png"
-                      />
+                      <img src="assets/stamps/tumblr002.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/IMG-0007.gif"
-                      />
+                      <img src="assets/stamps/IMG-0007.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/996e07.png"
-                      />
+                      <img src="assets/stamps/996e07.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/IMG-3032.gif"
-                      />
+                      <img src="assets/stamps/IMG-3032.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/daqvpf.png"
-                      />
+                      <img src="assets/stamps/tumblrcatt.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/dkuz17.gif"
-                      />
+                      <img src="assets/stamps/tumblrdolle.webp" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tmblr004.png"
-                      />
+                      <img src="assets/stamps/tumblrmelo.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/bb078186.png"
-                      />
+                      <img src="assets/stamps/tumblryello.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/wq25l9.png"
-                      />
+                      <img src="assets/stamps/daqvpf.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hvrfn7.png"
-                      />
+                      <img src="assets/stamps/dkuz17.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/evfwl1.gif"
-                      />
+                      <img src="assets/stamps/tmblr004.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/ugjn3g.png"
-                      />
+                      <img src="assets/stamps/bb078186.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/LufzMCJmyyyEgoobdmGx.png"
-                      />
+                      <img src="assets/stamps/wq25l9.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tif1uw.gif"
-                      />
+                      <img src="assets/stamps/hvrfn7.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/kj4ndy.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/81h05b.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/g54abo.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/3hny6t.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hup6jp.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/yfnsop.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/aemhc4.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/qgs86r.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hbcv83.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hnvrsm.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/2elboy.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/axeb79.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/7px941.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/vx65cv.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/40zg54.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/i39ks1.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/h9k08s.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/n6hw0f.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/2l43ka.gif"
-                      />
+                      <img src="assets/stamps/evfwl1.gif" />
                     </li>
                   </ul>
 
                   <!-- mirrors the content above -->
 
-                  <ul class="marquee__content">
+                  <ul class="scmq1__content">
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/dprj26.gif"
-                      />
+                      <img src="assets/stamps/dprj26.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/bjcj03.jpeg"
-                      />
+                      <img src="assets/stamps/bjcj03.jpeg" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tmblr001.png"
-                      />
+                      <img src="assets/stamps/tmblr001.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tumblr002.png"
-                      />
+                      <img src="assets/stamps/tumblr002.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/IMG-0007.gif"
-                      />
+                      <img src="assets/stamps/IMG-0007.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/996e07.png"
-                      />
+                      <img src="assets/stamps/996e07.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/IMG-3032.gif"
-                      />
+                      <img src="assets/stamps/IMG-3032.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/daqvpf.png"
-                      />
+                      <img src="assets/stamps/tumblrcatt.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/dkuz17.gif"
-                      />
+                      <img src="assets/stamps/tumblrdolle.webp" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tmblr004.png"
-                      />
+                      <img src="assets/stamps/tumblrmelo.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/bb078186.png"
-                      />
+                      <img src="assets/stamps/tumblryello.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/wq25l9.png"
-                      />
+                      <img src="assets/stamps/daqvpf.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hvrfn7.png"
-                      />
+                      <img src="assets/stamps/dkuz17.gif" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/evfwl1.gif"
-                      />
+                      <img src="assets/stamps/tmblr004.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/ugjn3g.png"
-                      />
+                      <img src="assets/stamps/bb078186.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/LufzMCJmyyyEgoobdmGx.png"
-                      />
+                      <img src="assets/stamps/wq25l9.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/tif1uw.gif"
-                      />
+                      <img src="assets/stamps/hvrfn7.png" />
                     </li>
                     <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/kj4ndy.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/81h05b.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/g54abo.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/3hny6t.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hup6jp.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/yfnsop.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/aemhc4.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/qgs86r.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hbcv83.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/hnvrsm.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/2elboy.gif"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/axeb79.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/7px941.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/vx65cv.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/40zg54.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/i39ks1.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/h9k08s.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/n6hw0f.png"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://file.garden/ZxOOS50ya2Lt0FdH/stamps/2l43ka.gif"
-                      />
+                      <img src="assets/stamps/evfwl1.gif" />
                     </li>
                   </ul>
                 </div>
+              </div>
+            </div>
+            <div class="menu2 handwritten"></div>
+            <div class="menu3 handwritten"></div>
+          </div>
+          <div class="day last-day">
+            <div
+              class="date"
+              style="color: red; border-bottom: 1px solid var(--lightborder)"
+            >
+              <p>7</p>
+              <p>SUN</p>
+              <p>日</p>
+              <p>🌕︎</p>
+            </div>
+            <div
+              class="menu1 handwritten"
+              style="border-bottom: 1px solid var(--lightborder)"
+            >
+              <div class="scmarquee">
+                <div class="marquee">
+                  <ul class="scmq2__content">
+                    <li>
+                      <img src="assets/stamps/ugjn3g.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/LufzMCJmyyyEgoobdmGx.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tif1uw.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/kj4ndy.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/81h05b.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/g54abo.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/3hny6t.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hup6jp.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblr_mori.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/yfnsop.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblremuo.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/aemhc4.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/qgs86r.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hbcv83.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hnvrsm.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/2elboy.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblrmel.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/axeb79.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/7px941.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/vx65cv.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/40zg54.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/i39ks1.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblr_mado.webp" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/h9k08s.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/n6hw0f.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/2l43ka.gif" />
+                    </li>
+                  </ul>
+
+                  <!-- mirrors the content above -->
+
+                  <ul class="scmq2__content">
+                    <li>
+                      <img src="assets/stamps/ugjn3g.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/LufzMCJmyyyEgoobdmGx.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tif1uw.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/kj4ndy.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/81h05b.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/g54abo.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/3hny6t.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hup6jp.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblr_mori.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/yfnsop.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblremuo.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/aemhc4.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/qgs86r.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hbcv83.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/hnvrsm.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/2elboy.gif" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblrmel.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/axeb79.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/7px941.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/vx65cv.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/40zg54.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/i39ks1.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/tumblr_mado.webp" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/h9k08s.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/n6hw0f.png" />
+                    </li>
+                    <li>
+                      <img src="assets/stamps/2l43ka.gif" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu2 handwritten"
+              style="border-bottom: 1px solid var(--lightborder)"
+            ></div>
+            <div
+              class="menu3 handwritten"
+              style="border-bottom: 1px solid var(--lightborder)"
+            ></div>
+          </div>
+          <div class="quote">
+            <p style="margin-left: 4%">
+              Do you think that I count the days? There is only one day left,
+              <br />
+              always starting over: It is given to us at dawn, <br />and taken
+              away from us at dusk <br />
+            </p>
+          </div>
+        </div>
+
+        <div id="spirals">
+          <img src="https://hmln.neocities.org/media/spiral.png" />
+        </div>
+
+        <div id="sidebox2">
+          <div class="notes">
+            <iframe
+              id="calendarframe"
+              name="calendarframe"
+              src="entries/scrap/calendar25.html"
+              allowtransparency="true"
+            ></iframe>
+          </div>
+
+          <div class="tape2" style="pointer-events: none"></div>
+          <div class="scpolaroid"><div class="polins"></div></div>
+
+          <div class="quote">
+            <div class="quote-author">
+              <p style="margin-left: 13%">
+                "<b>Nausea</b>" —— Jean-Paul Sartre
+              </p>
+            </div>
+            <div class="corner-calendar">
+              <div class="calendar-wrapper">
+                <div class="calendar" id="calendar"></div>
+                <div class="current-week-border" id="week-border"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- music script -->
-      <script>
-        // initiate variables
-        let track_name = document.querySelector(".songtitle");
+      <div id="schandle"><div id="scinhandle"></div></div>
 
-        let playpause_btn = document.querySelector(".playpause-track");
-        let next_btn = document.querySelector(".next-track");
-        let prev_btn = document.querySelector(".prev-track");
+      <div id="sctabs">
+        <div class="bkmrk" style="margin-left: 15px; background-color: #feffe7">
+          <div class="bkmrkin">
+            <a href="scrapbook.html">calendar</a>
+          </div>
+        </div>
+        <div class="bkmrk" style="margin-left: 15px; background-color: #d5e9f3">
+          <div class="bkmrkin">
+            <a href="entries/scrap/lang.html" target="calendarframe"
+              >language</a
+            >
+          </div>
+        </div>
+        <div class="bkmrk" style="margin-left: 15px; background-color: #ffc8e2">
+          <div class="bkmrkin">
+            <a href="entries/scrap/ephemera.html" style="margin-left: -1px"
+              >ephemera</a
+            >
+          </div>
+        </div>
+        <div class="bkmrk" style="margin-left: 15px; background-color: #feffe7">
+          <div class="bkmrkin">
+            <a href="entries/scrap/memos.html">memos</a>
+          </div>
+        </div>
+        <div class="bkmrk" style="margin-left: 15px; background-color: #fbe9c9">
+          <div class="bkmrkin">
+            <a href="entries/scrap/dict.html">diction.</a>
+          </div>
+        </div>
+      </div>
 
-        let seek_slider = document.querySelector(".seek_slider");
-        let curr_time = document.querySelector(".current-time");
-        let total_duration = document.querySelector(".total-duration");
+      <div id="sckitch">
+        <img
+          src="assets/images/heartkey.webp"
+          loading="lazy"
+          title="@piningrevisited on instagram"
+          alt="a keychain"
+        />
+      </div>
+    </div>
 
-        let track_index = 0;
-        let isPlaying = false;
-        let updateTimer;
+    <div id="scpenc">
+      <div class="draggable">
+        <img
+          src="assets/images/mujipen.webp"
+          loading="lazy"
+          alt="a ball pen"
+          title="i can be moved! click me twice and drag :)"
+        />
+      </div>
+    </div>
 
-        // create new audio element
-        let curr_track = document.getElementById("music");
+    <div id="scpausewrap"></div>
+    <div class="tape" style="pointer-events: none"></div>
+    <div id="sudoku">
+      <div style="transform: scale(0.83)">
+        <iframe
+          src="http://www.free-sudoku.com/sudoku-webmaster.php?mescandi1=0&fondspage=FFFFFF&lesliens=4A4C87&coubo1=000&couli1=ACACAC&coucp1=FFFFFF&counp1=A0A0A0&counn1=3F428A&couce1=FFFFFF&coune1=FF0000&coucr1=FFFFFF&hauteur111=570"
+          width="273"
+          height="390"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
 
-        let track_list = [
-          {
-            name: "Serani Poji - ぴぽぴぽ",
-            path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/clover-FAKEVOX.mp3",
-          },
-        ];
-        //
-        //
-        //
-        //
-        //
+    <div class="scmusic">
+      <!-- music player code -->
+      <div id="musicplayer">
+        <div class="seeking scseeking">
+          <div class="current-time">00:00</div>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+          <div class="total-duration">0:00</div>
+        </div>
 
-        function loadTrack(track_index) {
-          clearInterval(updateTimer);
-          resetValues();
+        <audio id="music" src=""></audio>
+      </div>
 
-          // load a new track
-          curr_track.src = track_list[track_index].path;
-          curr_track.load();
+      <div class="scpause" title="clover by Plus-Tech Squeeze Box ♪">
+        <div class="controls">
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fas fa-pause"
+              ><img
+                src="assets/images/musicon.jpg"
+                height="62"
+                class="scpausebtn"
+                alt="a pause button"
+                onclick="clicksound.playclip()"
+            /></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          // set an interval of 1000 milliseconds for updating the seek slider
-          updateTimer = setInterval(seekUpdate, 1000);
+    <!-- music script -->
+    <script>
+      // initiate variables
+      let track_name = document.querySelector(".songtitle");
 
-          // move to the next track if the current one finishes playing
-          curr_track.addEventListener("ended", nextTrack);
-        }
+      let playpause_btn = document.querySelector(".playpause-track");
+      let next_btn = document.querySelector(".next-track");
+      let prev_btn = document.querySelector(".prev-track");
 
-        // reset values
-        function resetValues() {
-          curr_time.textContent = "0:00";
-          total_duration.textContent = "0:00";
-          seek_slider.value = 0;
-        }
+      let seek_slider = document.querySelector(".seek_slider");
+      let curr_time = document.querySelector(".current-time");
+      let total_duration = document.querySelector(".total-duration");
 
-        // checks if song is playing
-        function playpauseTrack() {
-          if (!isPlaying) playTrack();
-          else pauseTrack();
-        }
+      let track_index = 0;
+      let isPlaying = false;
+      let updateTimer;
 
-        // plays track when play button is pressed
-        function playTrack() {
-          curr_track.play();
-          isPlaying = true;
+      // create new audio element
+      let curr_track = document.getElementById("music");
 
-          // replace icon with the pause icon
-          playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
-        }
+      let track_list = [
+        {
+          name: "FAKEVOX - clover",
+          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/clover-FAKEVOX.mp3",
+        },
+      ];
+      //
+      //
+      //
+      //
+      //
 
-        // pauses track when pause button is pressed
-        function pauseTrack() {
-          curr_track.pause();
-          isPlaying = false;
+      function loadTrack(track_index) {
+        clearInterval(updateTimer);
+        resetValues();
 
-          // replace icon with the play icon
-          playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
-        }
+        // load a new track
+        curr_track.src = track_list[track_index].path;
+        curr_track.load();
 
-        // moves to the next track
-        function nextTrack() {
-          if (track_index < track_list.length - 1) track_index += 1;
-          else track_index = 0;
-          loadTrack(track_index);
-          playTrack();
-        }
+        // set an interval of 1000 milliseconds for updating the seek slider
+        updateTimer = setInterval(seekUpdate, 1000);
 
-        // moves to the previous track
-        function prevTrack() {
-          if (track_index > 0) track_index -= 1;
-          else track_index = track_list.length;
-          loadTrack(track_index);
-          playTrack();
-        }
+        // move to the next track if the current one finishes playing
+        curr_track.addEventListener("ended", nextTrack);
+      }
 
-        // seeker slider
-        function seekTo() {
-          seekto = curr_track.duration * (seek_slider.value / 100);
-          curr_track.currentTime = seekto;
-        }
+      // reset values
+      function resetValues() {
+        curr_time.textContent = "0:00";
+        total_duration.textContent = "0:00";
+        seek_slider.value = 0;
+      }
 
-        function seekUpdate() {
-          let seekPosition = 0;
+      // checks if song is playing
+      function playpauseTrack() {
+        if (!isPlaying) playTrack();
+        else pauseTrack();
+      }
 
-          // check if the current track duration is a legible number
-          if (!isNaN(curr_track.duration)) {
-            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-            seek_slider.value = seekPosition;
+      // plays track when play button is pressed
+      function playTrack() {
+        curr_track.play();
+        isPlaying = true;
 
-            // calculate the time left and the total duration
-            let currentMinutes = Math.floor(curr_track.currentTime / 60);
-            let currentSeconds = Math.floor(
-              curr_track.currentTime - currentMinutes * 60
-            );
-            let durationMinutes = Math.floor(curr_track.duration / 60);
-            let durationSeconds = Math.floor(
-              curr_track.duration - durationMinutes * 60
-            );
+        // replace icon with the pause icon
+        playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+      }
 
-            // adding a zero to the single digit time values
-            if (currentSeconds < 10) {
-              currentSeconds = "0" + currentSeconds;
-            }
-            if (durationSeconds < 10) {
-              durationSeconds = "0" + durationSeconds;
-            }
-            if (currentMinutes < 10) {
-              currentMinutes = currentMinutes;
-            }
-            if (durationMinutes < 10) {
-              durationMinutes = durationMinutes;
-            }
+      // pauses track when pause button is pressed
+      function pauseTrack() {
+        curr_track.pause();
+        isPlaying = false;
 
-            curr_time.textContent = currentMinutes + ":" + currentSeconds;
-            total_duration.textContent =
-              durationMinutes + ":" + durationSeconds;
-          }
-        }
+        // replace icon with the play icon
+        playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+      }
 
-        // load the first track in the tracklist
+      // moves to the next track
+      function nextTrack() {
+        if (track_index < track_list.length - 1) track_index += 1;
+        else track_index = 0;
         loadTrack(track_index);
-      </script>
-      <!-- music script end -->
-    </main>
+        playTrack();
+      }
+
+      // moves to the previous track
+      function prevTrack() {
+        if (track_index > 0) track_index -= 1;
+        else track_index = track_list.length;
+        loadTrack(track_index);
+        playTrack();
+      }
+
+      // seeker slider
+      function seekTo() {
+        seekto = curr_track.duration * (seek_slider.value / 100);
+        curr_track.currentTime = seekto;
+      }
+
+      function seekUpdate() {
+        let seekPosition = 0;
+
+        // check if the current track duration is a legible number
+        if (!isNaN(curr_track.duration)) {
+          seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+          seek_slider.value = seekPosition;
+
+          // calculate the time left and the total duration
+          let currentMinutes = Math.floor(curr_track.currentTime / 60);
+          let currentSeconds = Math.floor(
+            curr_track.currentTime - currentMinutes * 60
+          );
+          let durationMinutes = Math.floor(curr_track.duration / 60);
+          let durationSeconds = Math.floor(
+            curr_track.duration - durationMinutes * 60
+          );
+
+          // adding a zero to the single digit time values
+          if (currentSeconds < 10) {
+            currentSeconds = "0" + currentSeconds;
+          }
+          if (durationSeconds < 10) {
+            durationSeconds = "0" + durationSeconds;
+          }
+          if (currentMinutes < 10) {
+            currentMinutes = currentMinutes;
+          }
+          if (durationMinutes < 10) {
+            durationMinutes = durationMinutes;
+          }
+
+          curr_time.textContent = currentMinutes + ":" + currentSeconds;
+          total_duration.textContent = durationMinutes + ":" + durationSeconds;
+        }
+      }
+
+      // load the first track in the tracklist
+      loadTrack(track_index);
+    </script>
+    <!-- music script end -->
   </body>
 </html>

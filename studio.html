@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- embed settings -->
+    <meta property="og:title" content="僕は答える—ぴぽぴぽ~♪" />
+    <meta name="twitter:title" content="僕は答える—ぴぽぴぽ~♪" />
+
+    <meta property="og:image" content="embed_image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="tash's personal website ★" />
+    <meta name="keywords" content="kawaii, 2000s, dreamy" />
+    <meta name="author" content="tasha" />
+    <meta name="twitter:description" content="tash's personal website ★" />
+    <meta content="#ffffff " data-react-helmet="true" name="theme-color" />
+
     <!-- website settings -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
     <title>僕は答える—ぴぽぴぽ~♪</title>
 
@@ -20,332 +32,37 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
-  <body class="logs">
+  <body class="shrines">
     <main>
-      <div class="rowflex">
-        <div class="table-section ltable-section">
-          <div class="inner rowflex">
-            <iframe
-              name="mainbox"
-              id="mainframe"
-              class="mainbox"
-              src=""
-              allowtransparency="true"
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="table-section columnflex" style="margin-left: 10px">
-          <div class="lipodmain">
-            <div class="lipodbar">
-              <img
-                src="assets/images/ipod_bar.jpg"
-                width="165"
-                loading="lazy"
-                alt="ipod bar"
-              />
-            </div>
-
-            <div class="songbox">
-              <p class="songboxp">1 of 1</p>
-              <div class="lipodalbum">
-                <img
-                  src="assets/images/squeezal.webp"
-                  alt="serani poji album cover"
-                />
-                <p>
-                  clover <br />
-                  Plus-Tech Squ.. <br />
-                  FAKEVOX
-                </p>
-              </div>
-            </div>
-
-            <!-- music player code -->
-            <div id="musicplayer">
-              <div class="songtitlebox">
-                <div class="songtitle"></div>
-              </div>
-
-              <div class="seeking mseeking">
-                <div class="current-time">00:00</div>
-
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  value="0"
-                  class="seek_slider"
-                  onchange="seekTo()"
-                />
-
-                <div class="total-duration">0:00</div>
-              </div>
-
-              <audio id="music" src=""></audio>
-            </div>
-
-            <div class="controls">
-              <div class="playpause-track" onclick="playpauseTrack()">
-                <i class="fas fa-play"></i>
-              </div>
-              <div class="playpause-track" onclick="playpauseTrack()">
-                <i class="fas fa-pause"
-                  ><img
-                    src="assets/items/pause.png"
-                    height="10"
-                    class="lpausebtn"
-                    alt="a pause button"
-                    onclick="clicksound.playclip()"
-                /></i>
-              </div>
-            </div>
-          </div>
-          <div class="lquiz" title="@getmadz on twitter">
-            <div id="lmikuborder"></div>
-          </div>
-        </div>
+      <div id="ipad-header">
+        <img src="assets/images/ipad_header.jpg" width="677px" />
       </div>
-
-      <div class="col right">
-        <div class="lmiddle">
-          <div class="cd-insert">
-            <div class="cd-main">
-              <img
-                src="assets/images/cdperfume.webp"
-                class="cd-img cdone active"
-                loading="lazy"
-                alt="a cd scan"
-                id="cd-1"
-              />
-
-              <img
-                src="assets/images/cdcibo.webp"
-                class="cd-img cdone"
-                id="cd-2"
-                loading="lazy"
-                alt="a cd scan"
-              />
-
-              <img
-                src="assets/images/cdfaye.webp"
-                class="cd-img cdone"
-                style="transform: rotate(-25deg)"
-                id="cd-3"
-                loading="lazy"
-                alt="a cd scan"
-              />
-
-              <img
-                src="assets/images/cdillit.webp"
-                class="cd-img cdone"
-                id="cd-4"
-                loading="lazy"
-                alt="a cd scan"
-              />
-
-              <img
-                src="assets/images/cdsmiths.webp"
-                class="cd-img cdone"
-                id="cd-5"
-                loading="lazy"
-                alt="a cd scan"
-              />
-
-              <img
-                src="assets/images/cdtommy.webp"
-                class="cd-img cdone"
-                id="cd-6"
-                loading="lazy"
-                alt="a cd scan"
-              />
-
-              <img
-                src="assets/images/cdyves.webp"
-                class="cd-img cdone"
-                style="transform: rotate(15deg)"
-                id="cd-7"
-                loading="lazy"
-                alt="a cd scan"
-              />
-            </div>
-            <div class="cd-hub"></div>
-            <div class="cd-grip"></div>
-          </div>
-
-          <!-- Buttons -->
-          <div class="cd-buttons">
-            <button class="cd-btn" data-cd="1">1</button>
-            <button class="cd-btn" data-cd="2">2</button>
-            <button class="cd-btn" data-cd="3">3</button>
-            <button class="cd-btn" data-cd="4">4</button>
-            <button class="cd-btn" data-cd="5">5</button>
-            <button class="cd-btn" data-cd="6">6</button>
-            <button class="cd-btn" data-cd="7">7</button>
-          </div>
-
-          <!-- cd script -->
-          <script>
-            document.querySelectorAll(".cd-btn").forEach((button) => {
-              button.addEventListener("click", () => {
-                const cdId = button.dataset.cd;
-
-                // Hide all CDs
-                document.querySelectorAll(".cd-img").forEach((cd) => {
-                  cd.classList.remove("active");
-                });
-
-                // Show selected CD
-                document.getElementById(`cd-${cdId}`).classList.add("active");
-              });
-            });
-          </script>
-        </div>
+      <div class="ipad-in">
+        <div class="lines" style="height: 430px"></div>
+        under construction except this one will need my portfolio completed
+        before i can even start working on it..
       </div>
-
-      <!-- music script -->
-      <script>
-        // initiate variables
-        let track_name = document.querySelector(".songtitle");
-
-        let playpause_btn = document.querySelector(".playpause-track");
-        let next_btn = document.querySelector(".next-track");
-        let prev_btn = document.querySelector(".prev-track");
-
-        let seek_slider = document.querySelector(".seek_slider");
-        let curr_time = document.querySelector(".current-time");
-        let total_duration = document.querySelector(".total-duration");
-
-        let track_index = 0;
-        let isPlaying = false;
-        let updateTimer;
-
-        // create new audio element
-        let curr_track = document.getElementById("music");
-
-        let track_list = [
-          {
-            name: "Serani Poji - ぴぽぴぽ",
-            path: "https://file.garden/ZxOOS50ya2Lt0FdH/clover-FAKEVOX.mp3",
-          },
-        ];
-        //
-        //
-        //
-        //
-        //
-
-        function loadTrack(track_index) {
-          clearInterval(updateTimer);
-          resetValues();
-
-          // load a new track
-          curr_track.src = track_list[track_index].path;
-          curr_track.load();
-
-          // set an interval of 1000 milliseconds for updating the seek slider
-          updateTimer = setInterval(seekUpdate, 1000);
-
-          // move to the next track if the current one finishes playing
-          curr_track.addEventListener("ended", nextTrack);
-        }
-
-        // reset values
-        function resetValues() {
-          curr_time.textContent = "0:00";
-          total_duration.textContent = "0:00";
-          seek_slider.value = 0;
-        }
-
-        // checks if song is playing
-        function playpauseTrack() {
-          if (!isPlaying) playTrack();
-          else pauseTrack();
-        }
-
-        // plays track when play button is pressed
-        function playTrack() {
-          curr_track.play();
-          isPlaying = true;
-
-          // replace icon with the pause icon
-          playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
-        }
-
-        // pauses track when pause button is pressed
-        function pauseTrack() {
-          curr_track.pause();
-          isPlaying = false;
-
-          // replace icon with the play icon
-          playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
-        }
-
-        // moves to the next track
-        function nextTrack() {
-          if (track_index < track_list.length - 1) track_index += 1;
-          else track_index = 0;
-          loadTrack(track_index);
-          playTrack();
-        }
-
-        // moves to the previous track
-        function prevTrack() {
-          if (track_index > 0) track_index -= 1;
-          else track_index = track_list.length;
-          loadTrack(track_index);
-          playTrack();
-        }
-
-        // seeker slider
-        function seekTo() {
-          seekto = curr_track.duration * (seek_slider.value / 100);
-          curr_track.currentTime = seekto;
-        }
-
-        function seekUpdate() {
-          let seekPosition = 0;
-
-          // check if the current track duration is a legible number
-          if (!isNaN(curr_track.duration)) {
-            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-            seek_slider.value = seekPosition;
-
-            // calculate the time left and the total duration
-            let currentMinutes = Math.floor(curr_track.currentTime / 60);
-            let currentSeconds = Math.floor(
-              curr_track.currentTime - currentMinutes * 60
-            );
-            let durationMinutes = Math.floor(curr_track.duration / 60);
-            let durationSeconds = Math.floor(
-              curr_track.duration - durationMinutes * 60
-            );
-
-            // adding a zero to the single digit time values
-            if (currentSeconds < 10) {
-              currentSeconds = "0" + currentSeconds;
-            }
-            if (durationSeconds < 10) {
-              durationSeconds = "0" + durationSeconds;
-            }
-            if (currentMinutes < 10) {
-              currentMinutes = currentMinutes;
-            }
-            if (durationMinutes < 10) {
-              durationMinutes = durationMinutes;
-            }
-
-            curr_time.textContent = currentMinutes + ":" + currentSeconds;
-            total_duration.textContent =
-              durationMinutes + ":" + durationSeconds;
-          }
-        }
-
-        // load the first track in the tracklist
-        loadTrack(track_index);
-      </script>
-      <!-- music script end -->
     </main>
+
+    <!-- timer -->
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        hours = hours % 12;
+        hours = hours ? hours : 12; // Handle midnight
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        var timeString = hours + ":" + minutes + ":" + seconds + " ";
+        // Display the time string in the HTML element with id="iclock"
+        document.getElementById("iclock").textContent = timeString;
+      }
+      // Update the clock every second
+      setInterval(updateClock, 1000);
+      // Initial call to display the clock immediately
+      updateClock();
+    </script>
   </body>
 </html>

@@ -25,13 +25,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <!-- Font Awesome Kit -->
-    <link rel="stylesheet" href="styles/fontawesome/kit-upload.css" />
+    <link rel="stylesheet" href="styles/tweet.css" />
 
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/blog.css" />
   </head>
 
-  <body>
+  <body class="blog">
     <main>
       <div class="topbar">
         <div class="login">
@@ -114,11 +114,11 @@
                 <img
                   src="assets/gifs/heart-pad.gif"
                   width="100%"
-                  style="margin-bottom: -5px"
+                  style="margin-bottom: -4px"
                 />
               </div>
             </div>
-            <div class="post-tags">
+            <div class="post-tags" style="margin-top: 20px">
               <a class="post-tag" href="#toggled">#all posts</a>
             </div>
             <div class="post-footer">
@@ -173,20 +173,25 @@
               repliesHTML = post.replies
                 .map(
                   (reply) => `
-      <div class="reply-block">
-        <div class="reply-line" style="height: ${
-          reply.lineHeight || "100%"
-        };"></div>
-        <div class="replybody">
-          <div class="post-author">
-            <div class="post-pfp"></div>
-            <div class="author-name">${reply.author}</div>
-            <div class="author-url">${reply.url}</div>
-          </div>
-          <div class="post-body">${reply.content}</div>
-        </div>
-      </div>
-    `
+<div class="reply-block">
+  <div class="reply-line" style="height: ${reply.lineHeight || "100%"};"></div>
+  <div class="replybody">
+    <div class="post-author">
+      <div class="post-pfp"></div>
+      <div class="author-name">${reply.author}</div>
+      <div class="author-url">${reply.url}</div>
+    </div>
+    <div class="post-body">
+      ${reply.content}
+      ${
+        reply.image
+          ? `<div class="post-media"><img src="${reply.image}" width="100%" loading="lazy" style="margin-bottom: -4px" /></div>`
+          : ""
+      }
+    </div>
+  </div>
+</div>
+`
                 )
                 .join("");
             }
@@ -322,28 +327,23 @@
               </div>
             </div>
             <div id="tags">
-              <div class="subtitles" style="margin-top: 5px">
+              <div class="subtitles" style="margin: -21px 0 0 12px">
                 Mood&nbsp;·&nbsp;390K posts
               </div>
               <a
                 href="#"
-                class="post-tag"
-                style="
-                  margin-bottom: 10px;
-                  border: none;
-                  font-size: 16px;
-                  padding: 0;
-                "
+                class="post-tag no-hover"
+                style="margin: 0 0 10px 12px"
                 >#status</a
               >
-              <div class="subtitles" style="margin-top: 5px">
-                Writing&nbsp;·&nbsp;120K posts
+              <div class="subtitles" style="margin: 5px 0 0 12px">
+                Interests&nbsp;·&nbsp;120K posts
               </div>
-              <a
-                href="#"
-                class="post-tag"
-                style="border: none; font-size: 16px; padding: 0; margin: 0"
-                >#poetry</a
+              <a href="#" class="post-tag no-hover" style="margin-left: 12px"
+                >#music</a
+              ><span style="margin-left: -6px">,</span>
+              <a href="#" class="post-tag no-hover" style="margin: 0"
+                >#history</a
               >
             </div>
           </div>

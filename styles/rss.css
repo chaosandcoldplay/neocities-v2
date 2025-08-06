@@ -1,6 +1,6 @@
-/* status content */ 
+/* status content */
 body {
-  margin-top: 27px;
+  margin-top: 24px;
   background-color: transparent;
   font-size: 14px;
   line-height: 22px;
@@ -10,26 +10,26 @@ body {
 }
 
 /* status title (your username) */
-a{
+a {
   display: none;
   text-decoration: none;
   color: #ff729f;
   cursor: url(../assets/items/select.png), pointer;
   transition: 0.1s all ease-in-out;
 }
-a:visited{
+a:visited {
   color: #ff729f;
 }
-a:hover{
+a:hover {
   color: #ffc2d5;
 }
 
- /* hide scrollbar */
+/* hide scrollbar */
 .example::-webkit-scrollbar {
   display: none;
 }
- 
+
 .example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

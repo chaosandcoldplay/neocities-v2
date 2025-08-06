@@ -443,6 +443,16 @@ a.post-tag:hover {
   background: #f2f6f7;
 }
 
+a.post-tag.no-hover {
+  border: none !important;
+  font-size: 16px !important;
+  padding: 0 !important;
+}
+
+a.post-tag.no-hover:hover {
+  background: none !important;
+}
+
 .post-media {
   border-radius: 8px;
   border: 1px #e8eced solid;
@@ -545,6 +555,7 @@ a.post-tag:hover {
   border: 1px #e8eced solid;
   border-radius: 8px;
   width: 238px;
+  height: 208px;
   overflow: hidden;
   position: relative;
   margin: 8px 0 29px 10px;
@@ -579,8 +590,7 @@ a.post-tag:hover {
 }
 
 #tags {
-  display: flex;
-  flex-direction: column;
+  display: inline;
   margin: -10px 0 0 12px;
 }
 
@@ -658,7 +668,7 @@ a.post-tag:hover {
   width: 36px;
   height: 36px;
   border-radius: 100%;
-  background: url(https://catboo.neocities.org/images/miniblog/bbg2.png);
+  background: url(https://catboo.neocities.org/images/microblog/bbg2.png);
   background-size: cover;
   background-position: center center;
 }

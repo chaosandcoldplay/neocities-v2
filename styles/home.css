@@ -298,8 +298,9 @@ footer {
 
 .general-about {
   background: #fff;
-  background-image: url(../assets/images/bg1.png);
-  background-size: cover;
+  background-image: url(../assets/images/purinweb.webp);
+  background-size: 900px;
+  background-position: 100% 5%;
   border-radius: 0 0 10px 10px !important;
   top: 65px;
   padding: 5px 5px 40px;
@@ -342,6 +343,7 @@ footer {
 
 .status {
   background: url(../assets/backgrounds/bluenote.jpg) center/cover;
+  background-position: 0 2%;
   border: 4px ridge #d7b999;
   width: 263px;
   height: 135px;
