@@ -58,7 +58,7 @@ a {
 /* tooltip styling */
 #s-m-t-tooltip {
   z-index: 9999;
-  font-family: "PC98";
+  font-family: "Times New Roman";
   background-color: rgba(250, 250, 255, 0.75);
   border-bottom: 2px solid #223388;
   border-right: 2px solid #223388;
@@ -500,12 +500,32 @@ footer {
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
 }
 
+/* #smokescr {
+  float: ;
+  position: fixed;
+  pointer-events: none;
+  left: 200px;
+  bottom: 220px;
+  transform: rotate(11deg);
+  z-index: 900;
+}
+
+#smoker:hover #smokescr {
+  display: block;
+} */
+
 /* footer */
 footer a {
   margin-top: 40px !important;
   display: inline-block;
   color: #00f !important;
   text-decoration: underline;
+}
+
+.footrimg {
+  position: absolute;
+  margin: 35px 0 0 178px;
+  transform: rotate(-15deg);
 }
 
 footer {

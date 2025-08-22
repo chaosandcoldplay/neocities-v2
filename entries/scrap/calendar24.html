@@ -17,7 +17,6 @@
     <script src="scripts/tooltip.js"></script>
 
     <script src="../../scripts/script.js"></script>
-    <script src="../../scripts/scrapbook.js" defer></script>
     <link rel="stylesheet" href="../../styles/style.css" />
   </head>
 
@@ -37,9 +36,7 @@
         window.addEventListener("DOMContentLoaded", () => {
           const wrapper = document.getElementById("calendar-cover");
 
-          fetch(
-            "https://opensheet.elk.sh/1S5taRbn7fCozVmemopER13V0gc8aSd2FdBM7Jd2485c/year24"
-          )
+          fetch("year24.json")
             .then((res) => res.json())
             .then((entries) => {
               const data = {};

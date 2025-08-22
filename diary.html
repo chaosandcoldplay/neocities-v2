@@ -24,6 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+    <!-- tooltips -->
+    <script src="scripts/tooltip-jquary.js"></script>
+    <script src="scripts/tooltip.js"></script>
+
     <script src="scripts/script.js"></script>
     <script
       type="module"
@@ -52,20 +56,9 @@
               width="47px"
               style="margin-left: 2px; border-radius: 8px"
             />
-            <p style="margin-top: 4px">Twitter</p></a
-          >
+          </a>
+          <p style="margin-top: 4px">Twitter</p>
         </div>
-      </div>
-      <div class="startbar">
-        <span
-          ><button id="start_button" class="button">
-            <img
-              src="assets/images/WindowsIcon.png"
-              width="33px"
-              alt="windows logo"
-            /></button
-        ></span>
-        <div id="clock"></div>
       </div>
 
       <!-- year window -->
@@ -185,6 +178,99 @@
                   width="30px"
                 />
                 <p style="margin-top: 5px">muse log</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="startmenuz">
+        <input type="checkbox" id="start_toggle" hidden />
+        <div class="startbar">
+          <span
+            ><label for="start_toggle" id="start_button" class="button">
+              <img
+                src="assets/images/WindowsIcon.png"
+                alt="windows logo" /></label
+          ></span>
+          <div id="clock"></div>
+        </div>
+        <div id="startmcon" style="pointer-events: auto">
+          <div
+            class="startpanel"
+            id="startpanel"
+            style="display: flex; pointer-events: auto"
+          >
+            <div class="start-header" style="pointer-events: auto">
+              <img
+                src="assets/images/dipfp.png"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <span class="username">@creamroll</span>
+            </div>
+            <div class="start-content" style="pointer-events: auto">
+              <div class="diapp-list">
+                <div class="diapp showimage" onclick="popsound.playclip()">
+                  <a>
+                    <img src="assets/images/dnotepad.jpg" class="app-icon" />
+                    <span>Notepad</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="diary.html">
+                    <img src="assets/images/dvlc.jpg" class="app-icon" />
+                    <span>Media⠀Player</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="sitemap.html">
+                    <img src="assets/images/dexplore.jpg" class="app-icon" />
+                    <span>Explorer</span>
+                  </a>
+                </div>
+                <div class="diapp showimage" onclick="popsound.playclip()">
+                  <a>
+                    <img src="assets/images/dmusic.jpg" class="app-icon" />
+                    <span>Music</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="http://wholegrain.straw.page/">
+                    <img src="assets/images/dpaint.jpg" class="app-icon" />
+                    <span>Paint</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="diary.html">
+                    <img src="assets/images/ddesktop.jpg" class="app-icon" />
+                    <span>Desktop</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="app-list pink-bg" style="pointer-events: auto">
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="https://nikki.top/profile.php?id=21" target="_blank">
+                    <img src="assets/images/dnotepage.jpg" class="app-icon" />
+                    <span>Feed</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="https://status.cafe/users/tea" target="_blank">
+                    <img src="assets/images/dquest.jpg" class="app-icon" />
+                    <span>Status</span>
+                  </a>
+                </div>
+                <div class="diapp" onclick="popsound.playclip()">
+                  <a href="https://www.tumblr.com/teasized" target="_blank">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3670/3670265.png"
+                      class="app-icon"
+                    />
+                    <span>Tumblr</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -376,6 +462,81 @@
       </div>
     </main>
 
+    <div class="entry hidden draggable toggle">
+      <div class="note_header" style="width: 300px">
+        Notepad
+        <img
+          class="hideimage diaryexit"
+          style="float: right"
+          src="assets/items/button_3.gif"
+          alt=""
+          onclick="clicksound.playclip()"
+        />
+      </div>
+      <div class="window-content" style="height: 210px; pointer-events: auto">
+        <textarea
+          placeholder="Введите текст здесь..."
+          style="pointer-events: auto"
+        >
+ⓘ this window is draggable + can be written in
+
+to-dos: switch to a custom domain, finish about page, diary taskbar, scrapbook mini pages, album + cafe layout, first shrine!
+
+(thank you for stopping by~)
+</textarea
+        >
+      </div>
+    </div>
+
+    <div class="dipodmain hidden draggable toggle">
+      <div class="songbox">
+        <div class="dipodalbum">
+          <img src="assets/images/frenesial.jpg" />
+        </div>
+      </div>
+
+      <!-- music player code -->
+      <div id="musicplayer">
+        <div class="songtitlebox">
+          <div class="songtitle"></div>
+        </div>
+
+        <div class="dseeking seeking">
+          <div class="current-time" style="margin-left: -51px"></div>
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+
+          <div class="total-duration"></div>
+        </div>
+
+        <audio id="music" src=""></audio>
+      </div>
+
+      <div class="controls" title="泡のワルツ by Frenesi ♪">
+        <div class="playpause-track" onclick="playpauseTrack()">
+          <i class="fas fa-play"></i>
+        </div>
+        <div class="playpause-track" onclick="playpauseTrack()">
+          <i class="fas fa-pause"
+            ><img
+              src="assets/items/playbtn.jpg"
+              height="32"
+              class="dpausebtn"
+              alt="a pause button"
+              onclick="clicksound.playclip()"
+          /></i>
+        </div>
+      </div>
+    </div>
+    <img src="assets/items/puc21.png" height="1" class="hideimage" />
+
     <!-- timer -->
     <script>
       function updateClock() {
@@ -396,5 +557,147 @@
       // Initial call to display the clock immediately
       updateClock();
     </script>
+
+    <!-- music script -->
+    <script>
+      // initiate variables
+      let track_name = document.querySelector(".songtitle");
+
+      let playpause_btn = document.querySelector(".playpause-track");
+      let next_btn = document.querySelector(".next-track");
+      let prev_btn = document.querySelector(".prev-track");
+
+      let seek_slider = document.querySelector(".seek_slider");
+      let curr_time = document.querySelector(".current-time");
+      let total_duration = document.querySelector(".total-duration");
+
+      let track_index = 0;
+      let isPlaying = false;
+      let updateTimer;
+
+      // create new audio element
+      let curr_track = document.getElementById("music");
+
+      let track_list = [
+        {
+          name: "Frenesi - 泡のワルツ",
+          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/frenesi.mp3",
+        },
+      ];
+      //
+      //
+      //
+      //
+      //
+
+      function loadTrack(track_index) {
+        clearInterval(updateTimer);
+        resetValues();
+
+        // load a new track
+        curr_track.src = track_list[track_index].path;
+        curr_track.load();
+
+        // set an interval of 1000 milliseconds for updating the seek slider
+        updateTimer = setInterval(seekUpdate, 1000);
+
+        // move to the next track if the current one finishes playing
+        curr_track.addEventListener("ended", nextTrack);
+      }
+
+      // reset values
+      function resetValues() {
+        curr_time.textContent = "0:00";
+        total_duration.textContent = "0:00";
+        seek_slider.value = 0;
+      }
+
+      // checks if song is playing
+      function playpauseTrack() {
+        if (!isPlaying) playTrack();
+        else pauseTrack();
+      }
+
+      // plays track when play button is pressed
+      function playTrack() {
+        curr_track.play();
+        isPlaying = true;
+
+        // replace icon with the pause icon
+        playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+      }
+
+      // pauses track when pause button is pressed
+      function pauseTrack() {
+        curr_track.pause();
+        isPlaying = false;
+
+        // replace icon with the play icon
+        playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+      }
+
+      // moves to the next track
+      function nextTrack() {
+        if (track_index < track_list.length - 1) track_index += 1;
+        else track_index = 0;
+        loadTrack(track_index);
+        playTrack();
+      }
+
+      // moves to the previous track
+      function prevTrack() {
+        if (track_index > 0) track_index -= 1;
+        else track_index = track_list.length;
+        loadTrack(track_index);
+        playTrack();
+      }
+
+      // seeker slider
+      function seekTo() {
+        seekto = curr_track.duration * (seek_slider.value / 100);
+        curr_track.currentTime = seekto;
+      }
+
+      function seekUpdate() {
+        let seekPosition = 0;
+
+        // check if the current track duration is a legible number
+        if (!isNaN(curr_track.duration)) {
+          seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+          seek_slider.value = seekPosition;
+
+          // calculate the time left and the total duration
+          let currentMinutes = Math.floor(curr_track.currentTime / 60);
+          let currentSeconds = Math.floor(
+            curr_track.currentTime - currentMinutes * 60
+          );
+          let durationMinutes = Math.floor(curr_track.duration / 60);
+          let durationSeconds = Math.floor(
+            curr_track.duration - durationMinutes * 60
+          );
+
+          // adding a zero to the single digit time values
+          if (currentSeconds < 10) {
+            currentSeconds = "0" + currentSeconds;
+          }
+          if (durationSeconds < 10) {
+            durationSeconds = "0" + durationSeconds;
+          }
+          if (currentMinutes < 10) {
+            currentMinutes = currentMinutes;
+          }
+          if (durationMinutes < 10) {
+            durationMinutes = durationMinutes;
+          }
+
+          curr_time.textContent = currentMinutes + ":" + currentSeconds;
+          total_duration.textContent = durationMinutes + ":" + durationSeconds;
+        }
+      }
+
+      // load the first track in the tracklist
+      loadTrack(track_index);
+    </script>
+    <!-- music script end -->
   </body>
 </html>

@@ -20,23 +20,13 @@ window.addEventListener("popstate", function (e) {
     }
 });
 
-//Checks to see if a page parameter exists and sets the mainframe src to that page
+//Checks to see if a page parameter exists and sets the mainframe src to that page.
 function setMainFrame() {
     let params = new URLSearchParams(window.location.search);
     let page = params.get(pageParam);
-
-    if (page) {
-        page = page.replace("javascript:", "");
+    if (page != null) {
+        page = page.replace("javascript:", ""); // Security to stop url scripts
         mainFrame.src = page;
-    } else if (!mainFrame.src || mainFrame.src === "about:blank") {
-        // Load default page based on current HTML filename
-        let currentPage = window.location.pathname.split("/").pop();
-
-        if (currentPage === "home.html" || currentPage === "") {
-            mainFrame.src = "main.html";
-        } else if (currentPage === "main.html") {
-            mainFrame.src = "title.html";
-        }
     }
 }
 
@@ -61,6 +51,8 @@ async function updateHistory() {
     if (updateTitle) {
         document.title = title;
     }
+
+    //Save a hit - Optionally run this if a hit counter has been defined
     if (hitCounterFunction != undefined) {
         hitCounterFunction();
     }

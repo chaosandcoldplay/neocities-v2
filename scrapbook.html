@@ -84,7 +84,7 @@
               <a
                 href="#"
                 title="welcome to my digital journal, my scrapbook of oddities if you may!"
-                >WHERE THE HELL AM I?</a
+                >Where the hell am I?</a
               >
             </div>
             <div class="menu2 handwritten"></div>
@@ -224,7 +224,7 @@
           <div class="day last-day">
             <div
               class="date"
-              style="color: red; border-bottom: 1px solid var(--lightborder)"
+              style="color: red; border-bottom: 1px solid var(--heavyborder)"
             >
               <p>7</p>
               <p>SUN</p>
@@ -233,7 +233,7 @@
             </div>
             <div
               class="menu1 handwritten"
-              style="border-bottom: 1px solid var(--lightborder)"
+              style="border-bottom: 1px solid var(--heavyborder)"
             >
               <div class="scmarquee">
                 <div class="marquee">
@@ -405,11 +405,11 @@
             </div>
             <div
               class="menu2 handwritten"
-              style="border-bottom: 1px solid var(--lightborder)"
+              style="border-bottom: 1px solid var(--heavyborder)"
             ></div>
             <div
               class="menu3 handwritten"
-              style="border-bottom: 1px solid var(--lightborder)"
+              style="border-bottom: 1px solid var(--heavyborder)"
             ></div>
           </div>
           <div class="quote">
@@ -436,8 +436,12 @@
             ></iframe>
           </div>
 
+          <div class="grid-bg"></div>
           <div class="tape2" style="pointer-events: none"></div>
           <div class="scpolaroid"><div class="polins"></div></div>
+          <div class="scsquig">
+            <img src="assets/items/M12.png" loading="lazy" />
+          </div>
 
           <div class="quote">
             <div class="quote-author">
@@ -463,37 +467,59 @@
             <a href="scrapbook.html">calendar</a>
           </div>
         </div>
-        <div class="bkmrk" style="margin-left: 15px; background-color: #d5e9f3">
+        <div
+          class="bkmrk"
+          style="
+            margin-left: 15px;
+            background: url(assets/backgrounds/fadebl.jpeg) repeat;
+          "
+        >
           <div class="bkmrkin">
             <a href="entries/scrap/lang.html" target="calendarframe"
               >language</a
             >
           </div>
         </div>
-        <div class="bkmrk" style="margin-left: 15px; background-color: #ffc8e2">
+        <div
+          class="bkmrk"
+          style="
+            margin-left: 15px;
+            background: url(assets/backgrounds/fadepi.jpeg) repeat;
+          "
+        >
           <div class="bkmrkin">
-            <a href="entries/scrap/ephemera.html" style="margin-left: -1px"
+            <a
+              href="entries/scrap/ephemera.html"
+              target="calendarframe"
+              style="margin-left: -1px"
               >ephemera</a
             >
           </div>
         </div>
         <div class="bkmrk" style="margin-left: 15px; background-color: #feffe7">
           <div class="bkmrkin">
-            <a href="entries/scrap/memos.html">memos</a>
+            <a href="entries/scrap/memos.html" target="calendarframe">memos</a>
           </div>
         </div>
-        <div class="bkmrk" style="margin-left: 15px; background-color: #fbe9c9">
+        <div
+          class="bkmrk"
+          style="
+            margin-left: 15px;
+            background: url(assets/backgrounds/fadebr.jpeg) repeat;
+          "
+        >
           <div class="bkmrkin">
-            <a href="entries/scrap/dict.html">diction.</a>
+            <a href="entries/scrap/dict.html" target="calendarframe"
+              >diction.</a
+            >
           </div>
         </div>
       </div>
 
       <div id="sckitch">
         <img
-          src="assets/images/heartkey.webp"
+          src="assets/images/donutpink.webp"
           loading="lazy"
-          title="@piningrevisited on instagram"
           alt="a keychain"
         />
       </div>
@@ -510,16 +536,27 @@
       </div>
     </div>
 
+    <div class="scsti3">
+      <img src="assets/images/melost1.webp" loading="lazy" />
+    </div>
+    <div class="scsti2">
+      <img src="assets/images/melost2.webp" loading="lazy" />
+    </div>
+    <div class="scsti1">
+      <img src="assets/images/bltxs1.jpg" loading="lazy" />
+    </div>
     <div id="scpausewrap"></div>
     <div class="tape" style="pointer-events: none"></div>
     <div id="sudoku">
       <div style="transform: scale(0.83)">
-        <iframe
-          src="http://www.free-sudoku.com/sudoku-webmaster.php?mescandi1=0&fondspage=FFFFFF&lesliens=4A4C87&coubo1=000&couli1=ACACAC&coucp1=FFFFFF&counp1=A0A0A0&counn1=3F428A&couce1=FFFFFF&coune1=FF0000&coucr1=FFFFFF&hauteur111=570"
-          width="273"
-          height="390"
-          frameborder="0"
-        ></iframe>
+        <div class="crop-container">
+          <iframe
+            src="http://www.free-sudoku.com/sudoku-webmaster.php?mescandi1=0&fondspage=FFFFFF&lesliens=4A4C87&coubo1=000&couli1=ACACAC&coucp1=FFFFFF&counp1=A0A0A0&counn1=3F428A&couce1=FFFFFF&coune1=FF0000&coucr1=FFFFFF&hauteur111=570"
+            width="273"
+            height="390"
+            frameborder="0"
+          ></iframe>
+        </div>
       </div>
     </div>
 
@@ -542,7 +579,7 @@
         <audio id="music" src=""></audio>
       </div>
 
-      <div class="scpause" title="clover by Plus-Tech Squeeze Box ♪">
+      <div class="scpause" title="sweet time replay by CAPSULE ♪">
         <div class="controls">
           <div class="playpause-track" onclick="playpauseTrack()">
             <i class="fas fa-play"></i>
@@ -583,8 +620,8 @@
 
       let track_list = [
         {
-          name: "FAKEVOX - clover",
-          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/clover-FAKEVOX.mp3",
+          name: "CAPSULE - sweet time replay",
+          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/sweet%20time%20replay.mp3",
         },
       ];
       //
