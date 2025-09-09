@@ -16,8 +16,8 @@ jobs:
         uses: bcomnes/deploy-to-neocities@v3
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          neocities_site: milk-tea
-          dist_dir: .                        # everything at repo root
+          neocities_site: chaosandcoldplay   # replace with your Neocities site name
+          dist_dir: .                        # repo root = deploy directory
           cleanup: true
 
         api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
