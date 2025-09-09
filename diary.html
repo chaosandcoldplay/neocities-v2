@@ -218,9 +218,11 @@
                   </a>
                 </div>
                 <div class="diapp" onclick="popsound.playclip()">
-                  <a href="diary.html">
+                  <a
+                    href="https://www.youtube.com/embed/mhcdGABjwSY?si=lMYB4fgUl4OsU8qL/"
+                  >
                     <img src="assets/images/dvlc.jpg" class="app-icon" />
-                    <span>Media⠀Player</span>
+                    <span>Player</span>
                   </a>
                 </div>
                 <div class="diapp" onclick="popsound.playclip()">
@@ -229,12 +231,14 @@
                     <span>Explorer</span>
                   </a>
                 </div>
-                <div class="diapp showimage" onclick="popsound.playclip()">
-                  <a>
-                    <img src="assets/images/dmusic.jpg" class="app-icon" />
-                    <span>Music</span>
-                  </a>
-                </div>
+                <label for="mus_toggle"
+                  ><div class="diapp" onclick="popsound.playclip()">
+                    <a>
+                      <img src="assets/images/dmusic.jpg" class="app-icon" />
+                      <span>Music</span>
+                    </a>
+                  </div></label
+                >
                 <div class="diapp" onclick="popsound.playclip()">
                   <a href="http://wholegrain.straw.page/">
                     <img src="assets/images/dpaint.jpg" class="app-icon" />
@@ -246,6 +250,55 @@
                     <img src="assets/images/ddesktop.jpg" class="app-icon" />
                     <span>Desktop</span>
                   </a>
+                </div>
+              </div>
+
+              <input type="checkbox" id="mus_toggle" hidden />
+              <div class="dipodmain draggable">
+                <div class="songbox">
+                  <div class="dipodalbum">
+                    <img src="assets/images/squeezal.webp" />
+                  </div>
+                </div>
+
+                <!-- music player code -->
+                <div id="musicplayer">
+                  <div class="songtitlebox">
+                    <div class="songtitle"></div>
+                  </div>
+
+                  <div class="dseeking seeking">
+                    <div class="current-time" style="margin-left: -51px"></div>
+
+                    <input
+                      type="range"
+                      min="1"
+                      max="100"
+                      value="0"
+                      class="seek_slider"
+                      onchange="seekTo()"
+                    />
+
+                    <div class="total-duration"></div>
+                  </div>
+
+                  <audio id="music" src=""></audio>
+                </div>
+
+                <div class="controls" title="clover by FAKEVOX ♪">
+                  <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fas fa-play"></i>
+                  </div>
+                  <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fas fa-pause"
+                      ><img
+                        src="assets/items/playbtn.jpg"
+                        height="32"
+                        class="dpausebtn"
+                        alt="a pause button"
+                        onclick="clicksound.playclip()"
+                    /></i>
+                  </div>
                 </div>
               </div>
 
@@ -488,55 +541,6 @@ to-dos: switch to a custom domain, finish about page, diary taskbar, scrapbook m
       </div>
     </div>
 
-    <div class="dipodmain hidden draggable toggle">
-      <div class="songbox">
-        <div class="dipodalbum">
-          <img src="assets/images/frenesial.jpg" />
-        </div>
-      </div>
-
-      <!-- music player code -->
-      <div id="musicplayer">
-        <div class="songtitlebox">
-          <div class="songtitle"></div>
-        </div>
-
-        <div class="dseeking seeking">
-          <div class="current-time" style="margin-left: -51px"></div>
-
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="0"
-            class="seek_slider"
-            onchange="seekTo()"
-          />
-
-          <div class="total-duration"></div>
-        </div>
-
-        <audio id="music" src=""></audio>
-      </div>
-
-      <div class="controls" title="泡のワルツ by Frenesi ♪">
-        <div class="playpause-track" onclick="playpauseTrack()">
-          <i class="fas fa-play"></i>
-        </div>
-        <div class="playpause-track" onclick="playpauseTrack()">
-          <i class="fas fa-pause"
-            ><img
-              src="assets/items/playbtn.jpg"
-              height="32"
-              class="dpausebtn"
-              alt="a pause button"
-              onclick="clicksound.playclip()"
-          /></i>
-        </div>
-      </div>
-    </div>
-    <img src="assets/items/puc21.png" height="1" class="hideimage" />
-
     <!-- timer -->
     <script>
       function updateClock() {
@@ -580,8 +584,8 @@ to-dos: switch to a custom domain, finish about page, diary taskbar, scrapbook m
 
       let track_list = [
         {
-          name: "Frenesi - 泡のワルツ",
-          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/frenesi.mp3",
+          name: "FAKEVOX - clover",
+          path: "https://file.garden/ZxOOS50ya2Lt0FdH/music/clover-FAKEVOX.mp3",
         },
       ];
       //

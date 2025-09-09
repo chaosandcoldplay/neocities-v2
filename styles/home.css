@@ -366,7 +366,7 @@ footer {
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(1px 1px 0 #0000004d);
-  letter-spacing: 2px;
+  letter-spacing: -1px;
   z-index: 895;
   position: absolute;
   padding: 0;

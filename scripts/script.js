@@ -151,3 +151,22 @@ $(document).ready(function () {
     window.location.hash = "#home"; // sets the visible hash in the URL
 }
 });
+
+/* image toggle */
+function filterByTag(tag) {
+  const cells = document.querySelectorAll(".grid-cell");
+  cells.forEach(cell => {
+    if (cell.dataset.tag === tag) {
+      cell.style.display = "flex";
+    } else {
+      cell.style.display = "none";
+    }
+  });
+}
+
+function showAll() {
+  const cells = document.querySelectorAll(".grid-cell");
+  cells.forEach(cell => {
+    cell.style.display = "flex";
+  });
+}

@@ -21,16 +21,228 @@
   </head>
 
   <body style="background: transparent">
-    <div class="grid-bg"></div>
     <main>
       <div id="calendar-cover">
-        <div class="scheader">
+        <div class="scheader" style="margin: -39px 0 0 -81px">
           <p>
-            <a href="calendar24.html">2024</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-              href="#"
-              >2025</a
-            >&nbsp;&nbsp;&nbsp;&nbsp;2026
+            <span onclick="showAll()">全</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+              onclick="filterByTag('music')"
+              >MUSÎ</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="filterByTag('tv')">TV</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="filterByTag('film')"
+              >FILM</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="filterByTag('books')"
+              >BOOK</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="filterByTag('game')"
+              >GAME</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="filterByTag('misc')"
+              >雑多</span
+            >
           </p>
+        </div>
+      </div>
+      <div class="notesline" style="width: 308px"></div>
+
+      <div class="grid-wrapper">
+        <div class="grid-cell" data-tag="music">
+          <div class="cell-banner"><b>Yung Lean</b><br /><i>Kyoto</i></div>
+          <div class="cell-content">
+            see me swervin through, they want me locked up,<br /><br />
+            been locked up in my own mind<br /><br />
+            my thoughts will never be shallow
+          </div>
+          <div class="celltag1" onclick="filterByTag('music')"></div>
+        </div>
+        <div class="grid-cell" data-tag="music">
+          <div class="cell-banner">
+            <b>The Microphones</b><br /><i>III. Universe</i>
+          </div>
+          <div class="cell-content">
+            how many times have I learned this before?<br /><br />
+            how many times have I made up this song before?<br /><br />
+            how many times have I died up here before?<br /><br />
+            [...] "Universe, I know you"
+          </div>
+          <div class="celltag1" onclick="filterByTag('music')"></div>
+        </div>
+        <div class="grid-cell" data-tag="tv">
+          <div class="cell-banner">
+            <b>Severance</b>
+          </div>
+          <div class="cell-content">
+            every time you find yourself here, it's because you chose to come
+            back
+          </div>
+          <div class="celltag3" onclick="filterByTag('tv')"></div>
+        </div>
+        <div class="grid-cell" data-tag="game">
+          <div class="cell-banner">
+            <b>Disco Elysium</b>
+          </div>
+          <div class="cell-content">
+            no, this is somewhere to be. this is all you have, but it's still
+            something. streets and sodium lights. the sky, the world. you're
+            still alive
+          </div>
+          <div class="celltag2" onclick="filterByTag('game')"></div>
+        </div>
+        <div class="grid-cell" data-tag="misc">
+          <div class="cell-banner">
+            <b
+              ><a
+                href="https://www.instagram.com/p/DMzVLHfBS8J/"
+                target="_blank"
+                >@talesfromeclipse</a
+              ></b
+            >
+          </div>
+          <div class="cell-content">
+            i can’t be an atheist towards myself. i am the God that governs my
+            fate and so i must believe in myself. i cannot afford to borrow
+            faith from others
+          </div>
+          <div class="celltag6" onclick="filterByTag('misc')"></div>
+        </div>
+        <div class="grid-cell" data-tag="music">
+          <div class="cell-banner">
+            <b>Mitski</b><br /><i>A Burning Hill</i>
+          </div>
+          <div class="cell-content">
+            i am a forest fire and i am the fire and i am the forest and i am a
+            witness watching it
+          </div>
+          <div class="celltag1" onclick="filterByTag('music')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner">
+            <b>Oscar Wilde</b><br /><i>The Critic as Artist</i>
+          </div>
+          <div class="cell-content">
+            for a dreamer is one who can only find his way by moonlight, and his
+            punishment is that he sees the dawn before the rest of the world
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="film">
+          <div class="cell-banner">
+            <b>Dr. Brand</b><br /><i>Interstellar</i>
+          </div>
+          <div class="cell-content">
+            i'm not afraid of death, i'm an old physicist - i'm afraid of time
+          </div>
+          <div class="celltag4" onclick="filterByTag('film')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner">
+            <b>Johannes Kepler</b><br /><i>Harmonices Mundi</i>
+          </div>
+          <div class="cell-content">
+            the heavenly motions are nothing but a continuous song for several
+            voices, perceived not by the ear but by the intellect, a figured
+            music which sets landmarks in the immeasurable flow of time
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="tv">
+          <div class="cell-banner">
+            <b>Akaashi Keiji</b><br /><i>Haikyuu!!!</i>
+          </div>
+          <div class="cell-content">
+            no matter what they say, we are the protagonists of the world
+          </div>
+          <div class="celltag3" onclick="filterByTag('tv')"></div>
+        </div>
+        <div class="grid-cell" data-tag="tv">
+          <div class="cell-banner">
+            <b>Hinata Shoyo</b><br /><i>Haikyuu!!!</i>
+          </div>
+          <div class="cell-content">
+            before my eyes, it blocks my path. a high, high wall. what sort of
+            scene is on the other side? what will I be able to see there? “the
+            view from the top”. a scenery i will never be able to see on my own.
+            but if i’m not alone, then, i might be able to see it
+          </div>
+          <div class="celltag3" onclick="filterByTag('tv')"></div>
+        </div>
+        <div class="grid-cell" data-tag="music">
+          <div class="cell-banner">
+            <b>Gang of Youth</b><br /><i>Fear Trembling</i>
+          </div>
+          <div class="cell-content">
+            and i waited on forever, but forever never came<br /><br />just a
+            latent sense of loyalty to the things i love in vain
+          </div>
+          <div class="celltag1" onclick="filterByTag('music')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner">
+            <b>Pseudonymous Bosch</b><br /><i>Secret Series</i>
+          </div>
+          <div class="cell-content">
+            you must have your wits about you. no wandering minds allowed
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner">
+            <b>Edgar Allan Poe</b><br /><i>The Black Cat</i>
+          </div>
+          <div class="cell-content">
+            have we not a perpetual inclination, in the teeth of our best
+            judgement, to violate that which is law, merely because we
+            understand it to be such?
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner">
+            <b>Halle Butler</b><br /><i>The New Me</i>
+          </div>
+          <div class="cell-content">
+            people took comfort, unknowingly, in the anger that filled them, the
+            anger that took them out of themselves and into another dimension—a
+            hallucination of the perfect future. no one thought about the scope
+            of history that would evade them, the sea of identical people who
+            would replace them as time made its waves back and forth, back and
+            forth, seemingly linear, deceptive, stationary and changing all at
+            once
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="music">
+          <div class="cell-banner">
+            <b>Florence Welch</b><br /><i>What The Water Gave Me</i>
+          </div>
+          <div class="cell-content">
+            and oh, poor Atlas
+            <br /><br />the world's a beast of a burden<br /><br />you’ve been
+            holding on a long time
+          </div>
+          <div class="celltag1" onclick="filterByTag('music')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner"><b>Herman Hesse</b><br /><i>Demian</i></div>
+          <div class="cell-content">
+            you must create for yourself a God that contains the devil too and
+            in front of which you needn’t close your eyes when the most natural
+            things in the world take place
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
+        </div>
+        <div class="grid-cell" data-tag="books">
+          <div class="cell-banner"><b>Herman Hesse</b><br /><i>Demian</i></div>
+          <div class="cell-content">
+            for it is the same indivisible divinity that is active through us
+            and in nature, and if the outside world were to be destroyed, a
+            single one of us would be capable of rebuilding it: mountain and
+            stream, tree and leaf, root and flower, yes, every natural form is
+            latent within us, originates in the soul whose essence is eternity
+            […] we consist of everything the world consists of, each of us, and
+            just as our body contains the genealogical table of evolution as far
+            back as the fish and even much further, so we bear everything in our
+            soul that once was alive in the soul of men
+          </div>
+          <div class="celltag5" onclick="filterByTag('books')"></div>
         </div>
       </div>
     </main>
