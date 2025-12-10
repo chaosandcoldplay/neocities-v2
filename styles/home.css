@@ -399,7 +399,7 @@ footer {
 
 .contact {
   width: 23% !important;
-  top: 315px;
+  top: 314.5px;
   border: 0 !important;
   position: fixed;
   left: 1%;
@@ -410,7 +410,7 @@ footer {
   background: #fff;
   border: 1px solid #000;
   border-radius: 0 0 10px 10px;
-  height: 130px;
+  height: 143px;
   overflow-y: auto;
   position: relative;
 }
@@ -428,8 +428,8 @@ footer {
   border-radius: 10px;
   background: navajowhite;
   padding: 4px;
-  height: 63px;
-  width: 63px;
+  height: 60px;
+  width: 60px;
   position: relative;
 }
 
@@ -441,7 +441,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding: 4px;
-  margin: 4px 0 0 4px;
+  margin: 4px 0 0 9px;
 }
 
 .app:hover {
@@ -531,13 +531,17 @@ footer a {
 footer {
   border-radius: 10px;
   width: 23%;
-  height: 101px;
-  border: 1px solid #000;
-  background: #fff;
+  height: 104px;
+  border: 3.5px ridge #8d6e6888;
+  background: linear-gradient(#fff, #b4dffb, #fff);
+  /* background-image: radial-gradient(circle, #ffdcf1 25%, transparent 25%),
+    radial-gradient(circle, #ffdcf1 25%, transparent 25%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px; */
   top: 477px;
   text-align: center;
   font-size: 70%;
-  margin: 10px 0 10px;
+  margin: 23px 0 10px;
   position: fixed;
   left: 1%;
   display: flex;
@@ -555,17 +559,17 @@ footer p {
 
 #footer-pic {
   width: 165px;
-  height: 99.5px;
+  height: 98px;
   background: url(../assets/images/pudding_slash.jpg) bottom/contain;
   background-size: cover;
-  border-radius: 10px 0 0 10px;
-  border-right: 1px solid #000;
+  border-radius: 8px 0 0 8px;
+  border-right: 1.5px solid #8d6e6888;
   margin: 0 !important;
 }
 
 /* page iframe */
 .page {
-  height: 568px;
+  height: 579px;
   width: 960px;
   overflow: auto;
   border: none;

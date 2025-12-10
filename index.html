@@ -39,7 +39,8 @@
   </head>
 
   <body class="index">
-    <main>
+    <div id="index-background"></div>
+    <main class="index">
       <div class="wrapper">
         <div id="inpinkcircle">
           <img src="assets/items/puc21.png" loading="lazy" alt="pink circle" />
@@ -183,11 +184,40 @@
             alt="a plate of donuts"
           />
         </div>
-        <div class="curved-text" onclick="clicksound.popclip()">
-          <a href="https://milk-tea.neocities.org/home.html">
+
+        <input type="checkbox" id="toggle" hidden />
+        <label for="toggle" class="open">
+          <div class="curved-text" onclick="clicksound.popclip()">
             <span>E</span><span>n</span><span>t</span><span>e</span
             ><span>r</span><span>?</span>
-          </a>
+          </div>
+        </label>
+
+        <div class="modal">
+          <div class="modal-content">
+            <img src="assets/images/HARK.webp" alt="a memo pad" />
+            <div id="modal-warn">
+              <p>
+                in case you skipped through the initial info-card, be warned
+                that this site is <strong>Balls on phones</strong> and will
+                <strong>never</strong> be optimized for them! the site is meant
+                primari -ly <strong>for me</strong> and is a digital scrapbook
+                incorporating bits and snippets of code from quite literally
+                everywhere, so <strong>accesibility</strong> isn't always paid
+                attention to. lots of <strong>javascript</strong> and
+                <strong>iframes</strong>! if you're on a phone, or a pc w/o the
+                required elements but want to <strong>go ahead</strong> (and
+                willingly subject yourself to the resulting monstrosity),
+                <a href="home.html" style="color: inherit"
+                  ><strong>click here</strong></a
+                >!
+              </p>
+            </div>
+            <div class="modalsig">
+              <img src="assets/images/signat.webp" alt="my signature" />
+            </div>
+            <label for="toggle" class="close">✕ close</label>
+          </div>
         </div>
 
         <div id="inparent">

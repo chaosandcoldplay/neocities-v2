@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Neuromorphic Calendar — Scrapbook</title>
+    <style>
+      /* --- Palette & base --- */
+      :root {
+        --bg: #f9eef2;
+        --card: #fff6fb;
+        --accent: #f7c9e0;
+        --muted: #f3e9ef;
+        --text: #333;
+        --shadow1: 10px 10px 20px rgba(180, 155, 180, 0.25);
+        --shadow2: -8px -8px 18px rgba(255, 255, 255, 0.9);
+        --inset: inset 4px 4px 8px rgba(180, 155, 180, 0.12);
+        --radius: 14px;
+        --soft-radius: 10px;
+        --header-height: 64px;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      body {
+        background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+        color: var(--text);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 28px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* --- Frame --- */
+      .wrap {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9),
+          rgba(249, 238, 242, 0.95)
+        );
+        border-radius: 22px;
+        padding: 22px;
+        box-shadow: var(--shadow1), var(--shadow2);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+
+      /* --- Header (month) --- */
+      .month-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .month-bar {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, #fff, #fff6fb);
+        box-shadow: var(--inset), 6px 6px 14px rgba(200, 170, 200, 0.12),
+          -6px -6px 14px rgba(255, 255, 255, 0.9);
+        font-size: 22px;
+        font-weight: 700;
+        color: #d6418b;
+      }
+      .controls {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .btn {
+        background: var(--muted);
+        border-radius: 10px;
+        padding: 8px 10px;
+        box-shadow: 6px 6px 12px rgba(200, 170, 200, 0.12),
+          -6px -6px 12px rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      /* --- Calendar grid --- */
+      .calendar {
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+      .dow {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+      .dow .d {
+        background: linear-gradient(180deg, #fff, #fff6fb);
+        padding: 8px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 700;
+        box-shadow: 4px 4px 10px rgba(200, 170, 200, 0.08),
+          -4px -4px 10px rgba(255, 255, 255, 0.9);
+        color: #a66b8e;
+        font-size: 13px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 12px;
+      }
+      .cell {
+        min-height: 64px;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #fff, #fff6fb);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 8px;
+        position: relative;
+        box-shadow: var(--inset), 6px 6px 12px rgba(200, 170, 200, 0.06),
+          -6px -6px 12px rgba(255, 255, 255, 0.9);
+        transition: transform 0.12s ease, box-shadow 0.12s ease;
+        user-select: none;
+      }
+      .cell.empty {
+        opacity: 0.75;
+      }
+      .cell.clickable {
+        cursor: pointer;
+      }
+      .cell:hover {
+        transform: translateY(-4px);
+        box-shadow: 14px 14px 24px rgba(180, 155, 180, 0.09),
+          -10px -10px 20px rgba(255, 255, 255, 0.9);
+      }
+      .cell .date-num {
+        font-weight: 700;
+        color: #7b5472;
+        font-size: 14px;
+        background: linear-gradient(180deg, #fff, #fff6fb);
+        padding: 6px 8px;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.02);
+      }
+
+      /* small indicator if items exist */
+      .dot {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      /* --- Modal --- */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(20, 10, 20, 0.25);
+        z-index: 50;
+        padding: 20px;
+      }
+      .modal-backdrop.show {
+        display: flex;
+      }
+      .modal {
+        width: 100%;
+        max-width: 680px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(249, 242, 246, 0.98)
+        );
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: 18px 18px 40px rgba(100, 70, 100, 0.18),
+          -12px -12px 30px rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .modal h3 {
+        margin: 6px 0 10px 0;
+        font-size: 18px;
+        color: #b93f89;
+      }
+      .modal .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 60vh;
+        overflow: auto;
+        padding-right: 6px;
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(249, 242, 246, 0.98)
+        );
+        box-shadow: 6px 6px 12px rgba(200, 170, 200, 0.06),
+          -6px -6px 12px rgba(255, 255, 255, 0.9);
+      }
+      .type-badge {
+        min-width: 44px;
+        padding: 8px 10px;
+        border-radius: 9px;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 13px;
+      }
+      .title {
+        flex: 1;
+        font-weight: 700;
+        color: #4a2a48;
+      }
+      .finished {
+        font-size: 12px;
+        color: #7b5b74;
+      }
+
+      /* --- month list modal --- */
+      .months-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+      }
+      .month-card {
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        background: linear-gradient(180deg, #fff, #fff6fb);
+        box-shadow: 6px 6px 12px rgba(200, 170, 200, 0.06),
+          -6px -6px 12px rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      /* --- footer --- */
+      .footer {
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .meta {
+        font-size: 13px;
+        color: #7b5b74;
+      }
+
+      /* --- responsive --- */
+      @media (max-width: 640px) {
+        .card {
+          padding: 16px;
+          border-radius: 16px;
+        }
+        .cell {
+          min-height: 56px;
+          padding: 6px;
+        }
+        .month-bar {
+          font-size: 18px;
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card" id="app">
+        <div class="month-head">
+          <div class="month-bar" id="monthTitle">Loading...</div>
+          <div class="controls">
+            <button class="btn" id="prevMonthBtn" title="Previous month">
+              &larr;
+            </button>
+            <button class="btn" id="nextMonthBtn" title="Next month">
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="calendar">
+          <div class="dow" id="dowRow">
+            <div class="d">Sun</div>
+            <div class="d">Mon</div>
+            <div class="d">Tue</div>
+            <div class="d">Wed</div>
+            <div class="d">Thu</div>
+            <div class="d">Fri</div>
+            <div class="d">Sat</div>
+          </div>
+
+          <div class="grid" id="calendarGrid" aria-live="polite">
+            <!-- cells injected here -->
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="meta" id="metaCount">—</div>
+          <div style="display: flex; gap: 8px">
+            <button class="btn" id="viewMonthsBtn">View previous months</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- day modal -->
+    <div class="modal-backdrop" id="dayModal">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="dayTitle"
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+          "
+        >
+          <h3 id="dayTitle">Day</h3>
+          <button class="btn" id="closeDayModal">Close</button>
+        </div>
+        <div class="list" id="dayList"></div>
+      </div>
+    </div>
+
+    <!-- months list modal -->
+    <div class="modal-backdrop" id="monthsModal">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="monthsTitle"
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+          "
+        >
+          <h3 id="monthsTitle">Available months</h3>
+          <button class="btn" id="closeMonthsModal">Close</button>
+        </div>
+        <div class="months-list" id="monthsList"></div>
+      </div>
+    </div>
+
+    <script>
+      /*
+  Single-file neuromorphic calendar
+  - Fetches from your opensheet URL (JSON)
+  - Expects columns: type | title | finished
+  - Groups by finished date; shows single month view and previous months list
+*/
+
+      const SHEET_URL =
+        "https://opensheet.elk.sh/1KQpgW_MJFLZ4uguEkFq1R3gNaNCMVrf7FTIthlnvvt8/log";
+
+      let dataRows = []; // raw rows from opensheet
+      let grouped = {}; // grouped by YYYY-MM-DD -> [rows]
+      let months = []; // available months [{ym, year, month, label}]
+      let currentYearMonth = null; // 'YYYY-MM'
+
+      const app = {
+        gridEl: document.getElementById("calendarGrid"),
+        monthTitleEl: document.getElementById("monthTitle"),
+        metaCountEl: document.getElementById("metaCount"),
+        dayModal: document.getElementById("dayModal"),
+        dayList: document.getElementById("dayList"),
+        dayTitle: document.getElementById("dayTitle"),
+        monthsModal: document.getElementById("monthsModal"),
+        monthsList: document.getElementById("monthsList"),
+        viewMonthsBtn: document.getElementById("viewMonthsBtn"),
+        prevBtn: document.getElementById("prevMonthBtn"),
+        nextBtn: document.getElementById("nextMonthBtn"),
+      };
+
+      // pastel mapping per type (you can add more)
+      const TYPE_COLORS = {
+        movie: "#cfe7ff",
+        book: "#d8f8e1",
+        album: "#ffdfe6",
+        show: "#f1e6ff",
+        game: "#fff1cc",
+        poem: "#e7f9ff",
+        podcast: "#f7e6ff",
+        default: "#f3e9ef",
+      };
+
+      function typeColor(type) {
+        if (!type) return TYPE_COLORS.default;
+        const key = String(type).trim().toLowerCase();
+        return TYPE_COLORS[key] || TYPE_COLORS.default;
+      }
+
+      // robust date parsing - try multiple formats, return yyyy-mm-dd or null
+      function parseDateToISO(str) {
+        if (!str) return null;
+        str = String(str).trim();
+        // if it's already ISO-ish
+        const iso = new Date(str);
+        if (!isNaN(iso.valueOf())) {
+          // normalize to local date (yyyy-mm-dd)
+          const y = iso.getFullYear();
+          const m = String(iso.getMonth() + 1).padStart(2, "0");
+          const d = String(iso.getDate()).padStart(2, "0");
+          return `${y}-${m}-${d}`;
+        }
+        // try common slash formats (DD/MM/YYYY or MM/DD/YYYY)
+        const parts = str.split(/[\/\-\.\s]+/).map((s) => s.trim());
+        if (parts.length === 3) {
+          // attempt to infer which ordering: if first > 12 likely day first
+          let p0 = parseInt(parts[0], 10),
+            p1 = parseInt(parts[1], 10),
+            p2 = parseInt(parts[2], 10);
+          if (p2 < 100) p2 += 2000; // 2-digit year
+          let year = p2,
+            month = p1,
+            day = p0;
+          if (p0 > 12) {
+            day = p0;
+            month = p1;
+          } else {
+            // ambiguous, assume year last and p0 is month if <=12 and p1 > 12? fallback: treat as month/day
+            if (p1 > 12) {
+              day = p1;
+              month = p0;
+            }
+          }
+          if (month >= 1 && month <= 12 && day >= 1 && day <= 31) {
+            return `${year}-${String(month).padStart(2, "0")}-${String(
+              day
+            ).padStart(2, "0")}`;
+          }
+        }
+        return null;
+      }
+
+      function groupRows(rows) {
+        grouped = {};
+        months = [];
+        const monthSet = new Set();
+        for (const r of rows) {
+          // columns expected: type,title,finished (case-insensitive)
+          const type = r.type ?? r.Type ?? r.TYPE ?? "";
+          const title = r.title ?? r.Title ?? r.TITLE ?? "";
+          const finished = r.finished ?? r.Finished ?? r.FINISHED ?? "";
+          const iso = parseDateToISO(finished);
+          if (!iso) continue; // skip rows without parsable finished date
+          if (!grouped[iso]) grouped[iso] = [];
+          grouped[iso].push({
+            type,
+            title,
+            finished: iso,
+            rawFinished: finished,
+          });
+          const ym = iso.slice(0, 7);
+          if (!monthSet.has(ym)) {
+            monthSet.add(ym);
+            months.push(ym);
+          }
+        }
+        // sort months descending (latest first)
+        months.sort((a, b) => b.localeCompare(a));
+        // create friendly months array with labels
+        months = months.map((ym) => {
+          const [y, m] = ym.split("-");
+          const date = new Date(Number(y), Number(m) - 1, 1);
+          const label = date.toLocaleString(undefined, {
+            month: "long",
+            year: "numeric",
+          });
+          return { ym, year: Number(y), month: Number(m), label };
+        });
+      }
+
+      // build calendar grid for given year & month (1-based)
+      function buildCalendar(year, month) {
+        app.gridEl.innerHTML = "";
+        const first = new Date(year, month - 1, 1);
+        const startDay = first.getDay(); // 0=Sun
+        const daysInMonth = new Date(year, month, 0).getDate();
+        // fill leading empty cells
+        for (let i = 0; i < startDay; i++) {
+          const el = document.createElement("div");
+          el.className = "cell empty";
+          app.gridEl.appendChild(el);
+        }
+        let totalShown = 0;
+        let dayWithItems = 0;
+        for (let d = 1; d <= daysInMonth; d++) {
+          const iso = `${year}-${String(month).padStart(2, "0")}-${String(
+            d
+          ).padStart(2, "0")}`;
+          const el = document.createElement("div");
+          el.className = "cell";
+          const has = grouped[iso];
+          if (has && has.length > 0) {
+            el.classList.add("clickable");
+            // left dot color based on most frequent type
+            const primaryType = (has[0].type || "").toLowerCase();
+            const dot = document.createElement("div");
+            dot.className = "dot";
+            dot.style.background = typeColor(primaryType);
+            el.appendChild(dot);
+            dayWithItems++;
+          }
+          const num = document.createElement("div");
+          num.className = "date-num";
+          num.textContent = d;
+          el.appendChild(num);
+
+          // event preview (tiny)
+          if (has && has.length > 0) {
+            const p = document.createElement("div");
+            p.style.position = "absolute";
+            p.style.bottom = "8px";
+            p.style.left = "8px";
+            p.style.right = "8px";
+            p.style.fontSize = "11px";
+            p.style.color = "#7b5b74";
+            p.style.fontWeight = "700";
+            p.style.opacity = "0.95";
+            p.style.overflow = "hidden";
+            p.style.whiteSpace = "nowrap";
+            p.style.textOverflow = "ellipsis";
+            p.textContent = has
+              .slice(0, 2)
+              .map((x) => x.title)
+              .join(" • ");
+            el.appendChild(p);
+          }
+
+          // click handler shows modal
+          el.addEventListener("click", (ev) => {
+            if (!(has && has.length)) return;
+            showDayModal(iso, has);
+          });
+
+          app.gridEl.appendChild(el);
+          totalShown++;
+        }
+
+        // after building, update header & meta
+        const dt = new Date(year, month - 1, 1);
+        app.monthTitleEl.textContent = dt.toLocaleString(undefined, {
+          month: "long",
+          year: "numeric",
+        });
+        app.metaCountEl.textContent = `${dayWithItems} days with entries • ${totalShown} days shown`;
+        currentYearMonth = `${year}-${String(month).padStart(2, "0")}`;
+        // update prev/next buttons enabled state based on months available
+        const available = months.map((m) => m.ym);
+        app.prevBtn.disabled = !available.includes(prevYM(currentYearMonth));
+        app.nextBtn.disabled = !available.includes(nextYM(currentYearMonth));
+      }
+
+      // helpers to compute prev/next ym strings
+      function prevYM(ym) {
+        const [y, m] = ym.split("-").map(Number);
+        const dt = new Date(y, m - 2, 1); // month-2 because Date month is 0-index
+        return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(
+          2,
+          "0"
+        )}`;
+      }
+      function nextYM(ym) {
+        const [y, m] = ym.split("-").map(Number);
+        const dt = new Date(y, m, 1);
+        return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(
+          2,
+          "0"
+        )}`;
+      }
+
+      function showDayModal(iso, rows) {
+        app.dayTitle.textContent = new Date(iso).toLocaleDateString(undefined, {
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        });
+        app.dayList.innerHTML = "";
+        // sort by title
+        rows.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+        for (const r of rows) {
+          const item = document.createElement("div");
+          item.className = "item";
+          const badge = document.createElement("div");
+          badge.className = "type-badge";
+          badge.textContent = r.type || "unknown";
+          badge.style.background = typeColor(r.type);
+          const title = document.createElement("div");
+          title.className = "title";
+          title.textContent = r.title || "(untitled)";
+          const fin = document.createElement("div");
+          fin.className = "finished";
+          fin.textContent = r.finished;
+          item.appendChild(badge);
+          item.appendChild(title);
+          item.appendChild(fin);
+          app.dayList.appendChild(item);
+        }
+        app.dayModal.classList.add("show");
+      }
+
+      function hideDayModal() {
+        app.dayModal.classList.remove("show");
+      }
+
+      function showMonthsModal() {
+        app.monthsList.innerHTML = "";
+        for (const m of months) {
+          const c = document.createElement("div");
+          c.className = "month-card";
+          c.textContent = m.label;
+          c.addEventListener("click", () => {
+            buildCalendar(m.year, m.month);
+            hideMonthsModal();
+            // scroll to top of the calendar for UX
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+          app.monthsList.appendChild(c);
+        }
+        app.monthsModal.classList.add("show");
+      }
+      function hideMonthsModal() {
+        app.monthsModal.classList.remove("show");
+      }
+
+      document
+        .getElementById("closeDayModal")
+        .addEventListener("click", hideDayModal);
+      app.dayModal.addEventListener("click", (e) => {
+        if (e.target === app.dayModal) hideDayModal();
+      });
+      document
+        .getElementById("closeMonthsModal")
+        .addEventListener("click", hideMonthsModal);
+      app.monthsModal.addEventListener("click", (e) => {
+        if (e.target === app.monthsModal) hideMonthsModal();
+      });
+      app.viewMonthsBtn.addEventListener("click", showMonthsModal);
+
+      // prev/next navigation to nearest available month
+      app.prevBtn.addEventListener("click", () => {
+        const ym = prevYM(currentYearMonth);
+        // find nearest available <= current
+        const idx = months.findIndex((m) => m.ym === ym);
+        if (idx >= 0) {
+          buildCalendar(months[idx].year, months[idx].month);
+        } else {
+          // fallback: choose month before current in months list
+          const curIdx = months.findIndex((m) => m.ym === currentYearMonth);
+          if (curIdx < months.length - 1) {
+            // because months sorted desc
+            const next = months[curIdx + 1];
+            buildCalendar(next.year, next.month);
+          }
+        }
+      });
+      app.nextBtn.addEventListener("click", () => {
+        const ym = nextYM(currentYearMonth);
+        const idx = months.findIndex((m) => m.ym === ym);
+        if (idx >= 0) {
+          buildCalendar(months[idx].year, months[idx].month);
+        } else {
+          const curIdx = months.findIndex((m) => m.ym === currentYearMonth);
+          if (curIdx > 0) {
+            const prev = months[curIdx - 1];
+            buildCalendar(prev.year, prev.month);
+          }
+        }
+      });
+
+      // initial fetch
+      async function init() {
+        try {
+          const res = await fetch(SHEET_URL);
+          if (!res.ok) throw new Error("Failed to fetch sheet");
+          const rows = await res.json();
+          dataRows = rows;
+          groupRows(dataRows);
+          if (months.length === 0) {
+            app.monthTitleEl.textContent = "No entries in sheet";
+            app.metaCountEl.textContent = "No dates found in the sheet";
+            return;
+          }
+          // default month: latest month (months[0] due to sort desc)
+          const m0 = months[0];
+          buildCalendar(m0.year, m0.month);
+        } catch (err) {
+          console.error(err);
+          app.monthTitleEl.textContent = "Error loading sheet";
+          app.metaCountEl.textContent = "Check the sheet URL or network.";
+        }
+      }
+
+      init();
+    </script>
+  </body>
+</html>

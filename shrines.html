@@ -32,6 +32,37 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
+  <style>
+    body:before {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background-image: url(assets/loading/load2.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: yourAnimation 2s ease 0s 1 normal forwards;
+      pointer-events: none;
+    }
+
+    @keyframes yourAnimation {
+      0.0% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
   <body class="shrines">
     <main>
       <div id="ipad-header">
@@ -53,14 +84,14 @@
               <div
                 class="app"
                 style="
-                  background: url(assets/images/shrine/ningsh.jpg);
+                  background: url(assets/images/shrine/chuush.jpg);
                   background-size: cover;
                 "
               ></div>
             </div>
             <b class="shname" style="margin-left: 35px"
               >RoA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NING</b
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHUU</b
             >
             <div class="appset" style="margin-top: -10px">
               <div
@@ -74,7 +105,7 @@
               <div
                 class="app showimage"
                 style="
-                  background: url(assets/images/shrine/charash.png);
+                  background: url(assets/images/shrine/charsh.png);
                   background-size: cover;
                 "
               ></div>
@@ -116,7 +147,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;TV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp; binaria</b
+              &nbsp; &nbsp; NING</b
             >
           </div>
           <div class="iflex-3">
@@ -137,7 +168,7 @@
               <div
                 class="app"
                 style="
-                  background: url(assets/images/shrine/binariash.png);
+                  background: url(assets/images/shrine/ningsh.jpg);
                   background-size: cover;
                 "
               ></div>
@@ -164,7 +195,7 @@
             <div class="shappfrow" style="margin-top: -10px">
               <img src="assets/images/shrine/ashsh.JPG" />
               <img src="assets/images/shrine/luffysh.JPG" />
-              <img src="assets/images/shrine/elysiash.JPG" />
+              <img src="assets/images/shrine/elysiash.jpg" />
             </div>
             <div class="shfnames" style="margin-left: 23px">
               Ash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -172,14 +203,14 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Elysia
             </div>
             <div class="shappfrow" style="margin-top: -10px">
-              <img src="assets/images/shrine/jolentash.JPG" />
+              <img src="assets/images/shrine/yidhash.png" />
               <img src="assets/images/shrine/futash.JPG" />
-              <img src="assets/images/shrine/mydeish.JPG" />
+              <img src="assets/images/shrine/marinsh.jpg" />
             </div>
-            <div class="shfnames" style="margin-left: 14px">
-              Jolenta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="shfnames" style="margin-left: 15px">
+              Yidhari&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;Fuuta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mydei
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marin
             </div>
           </div>
           <div class="shfooter" style="margin-left: 106px">

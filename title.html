@@ -24,6 +24,37 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
+  <style>
+    body:before {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background-image: url(assets/loading/load1.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: yourAnimation 2s ease 0s 1 normal forwards;
+      pointer-events: none;
+    }
+
+    @keyframes yourAnimation {
+      0.0% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
   <body class="title">
     <main>
       <div id="goop">
@@ -35,7 +66,7 @@
       </div>
 
       <div id="torangesquig">
-        <img src="assets/items/F07.png" loading="lazy" alt="orange squiggle" />
+        <img src="assets/items/M12.png" loading="lazy" alt="orange squiggle" />
       </div>
 
       <div class="columnflex">
@@ -70,16 +101,21 @@
             <img src="assets/gifs/pommy.gif" />
           </div>
           <div class="titlebox">
-            nice to meet you! i am TASHA and i love <strong>maximalism</strong>,
-            <strong>bon-bons</strong> and
-            <strong>things you can poke around with</strong>. <br /><br />
-            <center><img src="assets/images/chrome.png" /></center>
+            <div style="margin-left: 90px; margin-top: 8px">
+              fancy seeing you here! im Tasha and i love
+              <strong3>bon-bons</strong3>, <strong3>maxi-malism</strong3> and
+              <strong3>digital interactivity</strong3>.
+            </div>
+            <br /><br />
+            <center>
+              <img src="https://file.garden/ZxOOS50ya2Lt0FdH/chrome.png" />
+            </center>
             <br />
-            tired of the general web's insincerity at the moment, i wanted my
-            own digital landpage for
-            <strong2>everything i love</strong2>! milk-tea, thus, is an
-            amalgamation of inspiration derived from various sites i've come
-            across + absorbed from!
+            <div style="margin-top: -12px; margin-left: 11px">
+              tired of the general web's insinc -erity @ the moment, i wanted my
+              own digital landpage for
+              <strong3>all the things dear 2 me</strong3>!
+            </div>
           </div>
         </div>
         <div id="corkboard">
@@ -97,7 +133,7 @@
           <div class="sticky" style="transform: rotate(-11deg)">
             <input type="checkbox" /> musings<br />
             <input type="checkbox" /> an ipad<br />
-            <input type="checkbox" /> 2 computers<br />
+            <input type="checkbox" /> 2 PCs<br />
             <input type="checkbox" /> whimsy<br />
           </div>
           <div class="sticky_head stickyh1">
@@ -134,7 +170,7 @@
           ></div>
         </div>
         <div id="tipudding">
-          <img src="assets/images/pudding-tag.webp" height="125px" />
+          <img src="assets/images/pudding-tag.webp" height="120px" />
         </div>
       </div>
     </main>

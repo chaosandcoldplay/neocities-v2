@@ -32,6 +32,37 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
+  <style>
+    body:before {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background-image: url(assets/loading/load1.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: yourAnimation 2s ease 0s 1 normal forwards;
+      pointer-events: none;
+    }
+
+    @keyframes yourAnimation {
+      0.0% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
   <body style="overflow: clip !important">
     <main>
       <div id="smclip">
@@ -178,9 +209,10 @@
                     <li><input type="checkbox" /> Show log</li>
                     <li><input type="checkbox" /> Movie log</li>
                     <li><input type="checkbox" /> Book log</li>
-                    <li><input type="checkbox" /> Essay log</li>
                     <li><input type="checkbox" /> Game log</li>
+                    <li><input type="checkbox" /> Essay log</li>
                     <li><input type="checkbox" /> Video log</li>
+                    <li><input type="checkbox" /> Play log</li>
                   </ul>
                 </li>
 
