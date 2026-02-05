@@ -4,6 +4,12 @@ body {
   background: transparent;
 }
 
+::selection {
+  color: #b4dffb;
+  background: #ffffe0;
+  backdrop-filter: blur(2px);
+}
+
 /* link styling */
 a,
 button,

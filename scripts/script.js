@@ -111,9 +111,9 @@ function nextImage() {
 
 /* 2-picrews */
 const images2 = [
-    "assets/images/about/picrews/download20250806124555.png",
-    "assets/images/about/picrews/download20250806132905.png",
     "assets/images/about/picrews/download20250801182440.png",
+    "assets/images/about/picrews/download20250806132905.png",
+    "assets/images/about/picrews/download20250806124555.png",
     "assets/images/about/picrews/download20250805212936.png",    
     "assets/images/about/picrews/download20250806154856.png",
     "assets/images/about/picrews/download20251003174500.png",
@@ -160,9 +160,9 @@ const images2 = [
     "assets/images/about/picrews/download20240700201922.png"
   ];
 const links2 = [
-    "https://picrew.me/en/image_maker/19569",
+    "https://picrew.me/en/image_maker/2112607",
   "https://picrew.me/ja/image_maker/2470419",
-  "https://picrew.me/en/image_maker/2112607",
+  "https://picrew.me/en/image_maker/19569",
   "https://picrew.me/en/image_maker/2300487",  
   "https://picrew.me/en/image_maker/1549525",
   "https://picrew.me/en/image_maker/2321144/",

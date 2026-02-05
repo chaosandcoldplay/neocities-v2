@@ -1,4 +1,4 @@
 status.cafe: direct code
-calendar: fetch(opensheet link)
 twitter: <script src="https://kit.fontawesome.com/d10173a287.js"></script>
-music files
+music files (direct host)
+jsons (opensheet): years24-25-26 (entries > scrap), currently (entries > media), medialog (entries > media), blessings (entries)

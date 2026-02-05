@@ -33,7 +33,7 @@
   </head>
 
   <style>
-    body:before {
+    #loading-screen {
       content: " ";
       height: 100%;
       width: 100%;
@@ -59,11 +59,13 @@
       }
       100% {
         opacity: 0;
+        visibility: hidden;
       }
     }
   </style>
 
   <body class="shrines">
+    <div id="loading-screen"></div>
     <main>
       <div id="ipad-header">
         <img src="assets/images/ipad_header.jpg" width="677px" />
@@ -145,9 +147,9 @@
               >CP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oshimi&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;TV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp; &nbsp; NING</b
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp; &nbsp;&nbsp; NING</b
             >
           </div>
           <div class="iflex-3">
@@ -158,7 +160,7 @@
               style="margin-bottom: -4px; padding: 10px; gap: 8px"
             >
               <div
-                class="app"
+                class="app showimage"
                 style="
                   margin-right: 10px;
                   background: url(assets/images/shrine/TVsh.png);
@@ -204,13 +206,59 @@
             </div>
             <div class="shappfrow" style="margin-top: -10px">
               <img src="assets/images/shrine/yidhash.png" />
-              <img src="assets/images/shrine/futash.JPG" />
+              <img src="assets/images/shrine/lukash.JPG" />
               <img src="assets/images/shrine/marinsh.jpg" />
             </div>
             <div class="shfnames" style="margin-left: 15px">
               Yidhari&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;Fuuta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
+              &nbsp;Luka&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marin
+            </div>
+          </div>
+          <div class="shfooter" style="margin-left: 106px">
+            <a href="shrines.html">Go back?</a>
+          </div>
+        </div>
+
+        <div class="shafolder hidden toggle">
+          <div class="shfheader" style="margin-left: 112px">TV</div>
+          <div class="shscreen2">
+            <div class="shappfrow">
+              <img src="assets/images/shrine/apush.JPEG" />
+              <a href="shchilde.html" target="_parent"
+                ><img src="assets/images/shrine/shinsh.jpg"
+              /></a>
+              <img src="assets/images/shrine/andysh.JPEG" />
+            </div>
+            <div class="shfnames" style="margin-left: 22px">
+              Apu³&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
+              &nbsp;Shinchan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;B99
+            </div>
+            <div class="shappfrow" style="margin-top: -10px">
+              <img src="assets/images/shrine/mobsh.JPEG" />
+              <img src="assets/images/shrine/mitsush.jpg" />
+              <img src="assets/images/shrine/ergosh.jpg" />
+            </div>
+            <div class="shfnames" style="margin-left: 8.5px">
+              Mob
+              Psy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
+              &nbsp;YN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Proxy 1
+            </div>
+            <div class="shappfrow" style="margin-top: -10px">
+              <img src="assets/images/shrine/darksh.jpg" />
+              <img src="assets/images/shrine/sonnysh.JPG" />
+              <img src="assets/images/shrine/paransh.JPEG" />
+            </div>
+            <div class="shfnames" style="margin-left: 21px; width: 220px">
+              Dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;Sonny
+              Boy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;Paranoia
             </div>
           </div>
           <div class="shfooter" style="margin-left: 106px">
@@ -248,12 +296,16 @@
     <!-- background blur -->
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
-        const showImage = document.querySelector(".showimage");
-        const toggleDiv = document.querySelector(".toggle");
+        const showImages = document.querySelectorAll(".showimage");
+        const folders = document.querySelectorAll(".shafolder");
         const body = document.body;
 
-        showImage.addEventListener("click", () => {
-          body.classList.toggle("blurred");
+        showImages.forEach((icon, index) => {
+          icon.addEventListener("click", () => {
+            body.classList.add("blurred");
+            folders.forEach((f) => f.classList.add("hidden"));
+            folders[index].classList.remove("hidden");
+          });
         });
       });
     </script>

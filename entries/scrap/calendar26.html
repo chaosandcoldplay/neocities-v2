@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- website settings -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="assets/items/favicon.png" />
+    <title>僕は答える—ぴぽぴぽ~♪</title>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- tooltips -->
+    <script src="scripts/tooltip-jquary.js"></script>
+    <script src="scripts/tooltip.js"></script>
+
+    <script src="../../scripts/script.js"></script>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+
+  <body style="background: transparent">
+    <main>
+      <div id="calendar-cover">
+        <div class="scheader">
+          <p>
+            <a href="calendar24.html">2024</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+              href="calendar25.html"
+              >2025</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">2026</a>
+          </p>
+        </div>
+      </div>
+      <div class="notesline"></div>
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const wrapper = document.getElementById("calendar-cover");
+
+          fetch("year26.json")
+            .then((res) => res.json())
+            .then((entries) => {
+              const data = {};
+
+              entries.forEach((entry) => {
+                if (entry.date && entry.notes) {
+                  // convert MM/DD/YY to YYYY-MM-DD
+                  const parts = entry.date.split("/");
+                  if (parts.length === 3) {
+                    const mm = parts[0].padStart(2, "0");
+                    const dd = parts[1].padStart(2, "0");
+                    let yy = parts[2];
+
+                    // assume 20xx (you can change this logic if needed)
+                    const yyyy = +yy < 50 ? "20" + yy : "19" + yy;
+
+                    const isoDate = `${yyyy}-${mm}-${dd}`;
+                    data[isoDate] = entry.notes.trim();
+                  }
+                }
+              });
+
+              const months = [
+                "JANUARY",
+                "FEBRUARY",
+                "MARCH",
+                "APRIL",
+                "MAY",
+                "JUNE",
+                "JULY",
+                "AUGUST",
+                "SEPTEMBER",
+                "OCTOBER",
+                "NOVEMBER",
+                "DECEMBER",
+              ];
+
+              const year = new Date().getFullYear();
+
+              const currentMonth = new Date().getMonth(); // 0 = Jan
+
+              const monthOrder = [];
+
+              // First: go backward to January
+              for (let i = currentMonth; i >= 0; i--) {
+                monthOrder.push(i);
+              }
+
+              // Then: go forward from next month to December
+              for (let i = currentMonth + 1; i < 12; i++) {
+                monthOrder.push(i);
+              }
+
+              monthOrder.forEach((m) => {
+                const daysInMonth = new Date(year, m + 1, 0).getDate();
+                const monthDiv = document.createElement("div");
+                monthDiv.className = "month-grid";
+
+                for (let i = 0; i < 32; i++) {
+                  const cell = document.createElement("div");
+                  cell.className = "day-block";
+
+                  if (i === 0) {
+                    const monthNum = String(m + 1); // no leading zero
+                    const reiwaYear = year - 2018;
+                    cell.classList.add("month-header");
+
+                    cell.innerHTML = `
+    <div class="month-banner">
+      <div class="year-block">
+        <div class="western-year">${year}</div>
+        <div class="japanese-year">令和${reiwaYear}年</div>
+      </div>
+      <div class="month-number">${monthNum}</div>
+    </div>
+    <div class="month-name">${months[m]}</div>
+  `;
+                  } else if (i <= daysInMonth) {
+                    const dateNum = i;
+                    const fullDate = `${year}-${String(m + 1).padStart(
+                      2,
+                      "0"
+                    )}-${String(dateNum).padStart(2, "0")}`;
+
+                    const date = new Date(year, m, i);
+
+                    const weekdayEnglish = [
+                      "SUN",
+                      "MON",
+                      "TUE",
+                      "WED",
+                      "THU",
+                      "FRI",
+                      "SAT",
+                    ][date.getDay()];
+                    const weekdayJapanese = [
+                      "日",
+                      "月",
+                      "火",
+                      "水",
+                      "木",
+                      "金",
+                      "土",
+                    ][date.getDay()];
+
+                    const weekdayDiv = document.createElement("div");
+                    weekdayDiv.className = "weekday-label";
+                    weekdayDiv.textContent = `${weekdayEnglish} ${weekdayJapanese}`;
+                    if (date.getDay() === 6)
+                      weekdayDiv.classList.add("saturday");
+                    if (date.getDay() === 0) weekdayDiv.classList.add("sunday");
+
+                    const dateDiv = document.createElement("div");
+                    dateDiv.className = "date-number";
+                    dateDiv.textContent = dateNum;
+
+                    const postDiv = document.createElement("div");
+                    postDiv.className = "post-entry";
+                    postDiv.dataset.date = fullDate;
+
+                    if (data[fullDate]) {
+                      postDiv.textContent = data[fullDate];
+                    }
+
+                    cell.appendChild(weekdayDiv);
+                    cell.appendChild(dateDiv);
+                    cell.appendChild(postDiv);
+                  }
+
+                  monthDiv.appendChild(cell);
+                }
+
+                wrapper.appendChild(monthDiv);
+              });
+            })
+            .catch((err) => console.error("Failed to load daylogs.json:", err));
+        });
+      </script>
+    </main>
+  </body>
+</html>

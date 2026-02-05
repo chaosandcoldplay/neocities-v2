@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- embed settings -->
@@ -81,6 +81,8 @@
           <p style="margin-left: 8px; margin-top: 4px">2024</p>
           <img class="showimage" src="assets/images/folder.png" width="50px" />
           <p style="margin-left: 8px; margin-top: 4px">2025</p>
+          <img class="showimage" src="assets/images/folder.png" width="50px" />
+          <p style="margin-left: 8px; margin-top: 4px">2026</p>
           <a href="blog.html">
             <img
               src="assets/images/twt.png"
@@ -209,6 +211,38 @@
                   width="30px"
                 />
                 <p style="margin-top: 5px">muse log</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ywindow hidden draggable toggle" style="margin-top: -250px">
+        <div class="divider">
+          <img
+            class="hideimage"
+            style="float: right; margin-top: -20px"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+          <img
+            style="float: right; margin-top: -20px; margin-right: 21px"
+            src="assets/items/button_1.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="screen2">
+          <div class="folderflex">
+            <div class="itemflex">
+              <div class="folder_item" style="margin-left: 3px">
+                <img
+                  class="showimage"
+                  src="assets/images/notepad.png"
+                  width="30px"
+                />
+                <p style="margin-top: 5px">feb 4.txt</p>
               </div>
             </div>
           </div>
@@ -544,6 +578,29 @@
           </zero-md>
         </div>
       </div>
+
+      <!-- 2026 -->
+
+      <!-- entries -->
+      <div class="entry hidden draggable toggle">
+        <div class="note_header">
+          feb 4.txt
+          <img
+            class="hideimage diaryexit"
+            style="float: right"
+            src="assets/items/button_3.gif"
+            alt=""
+            onclick="clicksound.playclip()"
+          />
+        </div>
+        <div class="note">
+          <zero-md src="entries/diary/2026-1.md">
+            <template>
+              <link rel="stylesheet" href="styles/style.css" />
+            </template>
+          </zero-md>
+        </div>
+      </div>
     </main>
 
     <div class="entry hidden draggable toggle">
@@ -704,11 +761,11 @@ to-dos: switch to a custom domain, finish about page, diary taskbar, scrapbook m
           // calculate the time left and the total duration
           let currentMinutes = Math.floor(curr_track.currentTime / 60);
           let currentSeconds = Math.floor(
-            curr_track.currentTime - currentMinutes * 60
+            curr_track.currentTime - currentMinutes * 60,
           );
           let durationMinutes = Math.floor(curr_track.duration / 60);
           let durationSeconds = Math.floor(
-            curr_track.duration - durationMinutes * 60
+            curr_track.duration - durationMinutes * 60,
           );
 
           // adding a zero to the single digit time values

@@ -93,6 +93,12 @@ p {
   font-weight: 400 !important;
 }
 
+::selection {
+  color: #b4dffb;
+  background: #ffffe0;
+  backdrop-filter: blur(2px);
+}
+
 @font-face {
   font-family: spirit;
   src: url(../assets/fonts/Spirit.ttf);
