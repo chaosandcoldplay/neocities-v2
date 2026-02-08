@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- website settings -->
@@ -516,7 +516,7 @@
               id="mainframe"
               class="calendarframe"
               name="mainframe"
-              src="entries/scrap/calendar25.html"
+              src="entries/scrap/calendar26.html"
               allowtransparency="true"
             ></iframe>
           </div>
@@ -790,11 +790,11 @@
           // calculate the time left and the total duration
           let currentMinutes = Math.floor(curr_track.currentTime / 60);
           let currentSeconds = Math.floor(
-            curr_track.currentTime - currentMinutes * 60
+            curr_track.currentTime - currentMinutes * 60,
           );
           let durationMinutes = Math.floor(curr_track.duration / 60);
           let durationSeconds = Math.floor(
-            curr_track.duration - durationMinutes * 60
+            curr_track.duration - durationMinutes * 60,
           );
 
           // adding a zero to the single digit time values

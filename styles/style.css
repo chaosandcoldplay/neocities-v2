@@ -200,11 +200,6 @@ strong3 {
 }
 
 @font-face {
-  font-family: redaction2;
-  src: url(../assets/fonts/RedactionN.otf);
-}
-
-@font-face {
   font-family: "acidic";
   src: url(../assets/fonts/ACIDIC.TTF);
   font-style: normal;
@@ -1912,20 +1907,25 @@ body::-webkit-scrollbar-corner {
 }
 
 .abill {
-  border: 1px solid #e3e3e39c;
+  border: 1px solid #c0c0c0eb;
   box-shadow:
-    inset 0px -6px 6px -5px #dadada,
-    5px 5px 6px -5px #dadada,
-    -5px 5px 6px -5px #dadada;
+    inset 0px -6px 6px -5px #dadadaad,
+    5px 5px 6px -5px #dadadaad,
+    -5px 5px 6px -5px #dadadaad;
   margin: 0 369px;
   position: absolute;
+  background-color: #fff;
   z-index: 389;
+}
+
+.abill:hover {
+  z-index: 1010;
 }
 
 .abillin {
   position: absolute;
   margin: -85px 0;
-  width: 160px;
+  width: 180px;
   height: 65px;
   overflow-y: auto;
   background-color: #fbfcfe;
@@ -1951,12 +1951,9 @@ body::-webkit-scrollbar-corner {
   border-left: 2px ridge #b5ebff;
   border-bottom: 2px ridge #b5ebff;
   border-right: 2px ridge #b5ebff;
-  border-radius: 5px;
-  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
-    drop-shadow(0 0 1px white) drop-shadow(0 0 1px #0000004d);
-  margin-left: 10px;
+  border-radius: 4px;
+  margin-left: 5px;
+  z-index: 1010;
   transform: scale(1.2);
 }
 
@@ -1964,7 +1961,7 @@ body::-webkit-scrollbar-corner {
   position: absolute;
   padding: 10px;
   font-size: 34px;
-  font-family: "Spirit";
+  font-family: "Redaction";
   filter: sepia(20%);
   font-weight: bold;
   letter-spacing: -1px;
@@ -1992,7 +1989,46 @@ body::-webkit-scrollbar-corner {
     -2px 4px 1px #8d6e68,
     2px 2px 0px #8d6e68,
     3px 4px 1px #00000022;
-  margin: 244px 66px 8px;
+  margin: 244px 73px 8px;
+}
+
+.ahead {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    #fff0b5 1%,
+    #ffffb9 49%,
+    #ffffb9 51%,
+    #ebf0f4 100%
+  );
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-shadow:
+    inset 0px -6px 6px -5px #dadadaad,
+    5px 5px 6px -5px #dadadaad,
+    -5px 5px 6px -5px #dadadaad;
+  padding: 5px 16px 6px 16px;
+  font-family: "Acidic";
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0.0001px rgb(79, 79, 255);
+  color: #00000000;
+  font-size: 18px;
+  filter: sepia(20%);
+  z-index: 1001;
+}
+
+.aheaddn {
+  position: absolute;
+  padding: 2px 4px;
+  font-family: "MS PGothic";
+  color: #000;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  letter-spacing: -1px;
+  font-size: 14px;
+  filter: sepia(20%);
+  z-index: 1001;
 }
 
 .abiscuit1 {
@@ -2049,6 +2085,33 @@ body::-webkit-scrollbar-corner {
   height: 100%;
 }
 
+.adoodleotd {
+  border: 1.5px solid #000000;
+  height: 199.5px;
+  width: 355px;
+  margin: -1px 0 0 375px;
+  padding: 10px;
+  position: absolute;
+  z-index: 390;
+}
+
+.afortune {
+  background-image: url(../assets/images/fortunepp.webp);
+  background-size: contain;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  box-shadow:
+    inset 0px -6px 6px -5px #dadadaad,
+    5px 5px 6px -5px #dadadaad,
+    -5px 5px 6px -5px #dadadaad;
+  height: 66px;
+  width: 230px;
+  margin: 206px 0 0 375px;
+  padding: 10px;
+  position: absolute;
+  z-index: 390;
+}
+
 .anews {
   width: 2700px;
   height: 438px;
@@ -2064,7 +2127,7 @@ body::-webkit-scrollbar-corner {
   z-index: 100;
 }
 
-.a-hanger {
+.ahanger {
   position: absolute;
   top: 6px;
   left: 60.6%;
@@ -2079,7 +2142,7 @@ body::-webkit-scrollbar-corner {
   align-items: center;
 }
 
-.a-hole {
+.ahole {
   width: 36px;
   height: 10px;
   background: #fff;
@@ -2087,7 +2150,7 @@ body::-webkit-scrollbar-corner {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.a-card {
+.acard {
   background: linear-gradient(
     to bottom,
     #ffffff 1%,
@@ -2101,22 +2164,7 @@ body::-webkit-scrollbar-corner {
   border: ridge 3px rgba(192, 146, 93, 0.6);
 }
 
-.aheader {
-  position: absolute;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.a-series {
-  background: rgba(0, 0, 255, 0.694);
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.a-blister {
+.ablister {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 22px;
   padding: 12px;
@@ -2125,7 +2173,7 @@ body::-webkit-scrollbar-corner {
     0 8px 18px rgba(172, 172, 172, 0.18);
 }
 
-.a-glossy {
+.aglossy {
   position: relative;
   overflow: hidden;
   background: linear-gradient(
@@ -2139,42 +2187,8 @@ body::-webkit-scrollbar-corner {
     0 12px 30px rgba(136, 136, 136, 0.25);
 }
 
-.a-glossy::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -40%;
-  width: 180%;
-  height: 60%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 255, 255, 0.35) 40%,
-    rgba(255, 255, 255, 0.15) 55%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  transform: rotate(-8deg);
-  pointer-events: none;
-}
-
-.a-glossy::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  height: 45%;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.55),
-    rgba(255, 255, 255, 0.05)
-  );
-  pointer-events: none;
-}
-
-.a-window {
-  background: url(../assets/images/purinweb.webp);
+.awindow {
+  background: url(../assets/images/adbgab.webp);
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -2187,7 +2201,7 @@ body::-webkit-scrollbar-corner {
     inset 0 -8px 16px rgba(255, 255, 255, 0.6);
 }
 
-.a-footer {
+.afooter {
   margin-top: 12px;
   display: flex;
   justify-content: space-between;
@@ -2217,10 +2231,40 @@ body::-webkit-scrollbar-corner {
     0px 0px 5px 0px gainsboro;
 }
 
-.a-name {
+#ataped {
+  position: absolute;
+  margin-left: -49px;
+  margin-top: -143px;
+  pointer-events: none;
+  z-index: 1200;
+}
+
+#ataped img {
+  height: 26px;
+  transform: rotate(-85deg);
+  filter: contrast(120%) opacity(97%) grayscale(60%) hue-rotate(-100deg)
+    saturate(170%);
+}
+
+#apricel {
+  position: absolute;
+  margin-left: 210px;
+  margin-top: -265px;
+  pointer-events: none;
+  z-index: 900;
+}
+
+#apricel img {
+  height: 140px;
+  transform: rotate(13deg);
+  filter: brightness(112%) contrast(105%) saturate(105%) hue-rotate(-120deg)
+    opacity(0.92);
+}
+
+.ablock {
   font-size: 18px;
   font-weight: 600;
-  color: #ff5f9e;
+  color: #fff;
   letter-spacing: 1px;
 }
 
@@ -2316,14 +2360,14 @@ body::-webkit-scrollbar-corner {
 
 #apenc {
   position: absolute;
-  margin-left: 700px;
-  margin-top: 400px;
+  margin-left: 560px;
+  margin-top: 520px;
   z-index: 1009;
 }
 
 #apenc img {
   height: 390px;
-  transform: rotate(213deg);
+  transform: rotate(205deg);
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
     drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
@@ -2407,7 +2451,7 @@ body::-webkit-scrollbar-corner {
 
 .abphone {
   animation: bobbing 3s ease-in-out infinite;
-  margin: -160px 300px;
+  margin: -160px 303px;
   z-index: 1000;
 }
 
@@ -2581,7 +2625,8 @@ body::-webkit-scrollbar-corner {
 }
 
 .message-out {
-  background: url(../assets/backgrounds/dotbg1.png);
+  background: url(../assets/backgrounds/grid-blue.png);
+  background-size: 10px;
   margin-right: 45px !important;
   color: #3568d6;
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white)
@@ -2670,7 +2715,7 @@ body::-webkit-scrollbar-corner {
   height: 194px;
   width: 194px;
   position: absolute;
-  margin: 700px 690px 0px;
+  margin: 795px 690px 0px;
   padding: 9px;
   z-index: 2002;
 }
@@ -2694,7 +2739,7 @@ body::-webkit-scrollbar-corner {
   text-decoration: underline;
   font-family: "MS PGothic";
   font-size: 14px;
-  margin: 60px 0;
+  margin: 10px 0;
 }
 
 /* diary */
@@ -4688,8 +4733,19 @@ body.shrines.blurred::before {
 
 .smhead {
   position: absolute;
-  background: #ffffb4;
-  border: 1px #000 solid;
+  background: linear-gradient(
+    to bottom,
+    #fff0b5 1%,
+    #ffffb9 49%,
+    #ffffb9 51%,
+    #ebf0f4 100%
+  );
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-shadow:
+    inset 0px -6px 6px -5px #dadadaad,
+    5px 5px 6px -5px #dadadaad,
+    -5px 5px 6px -5px #dadadaad;
   padding: 4px 40px 10px 30px;
   font-family: "Redaction";
   font-size: 40px;
